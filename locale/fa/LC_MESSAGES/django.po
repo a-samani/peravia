@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 13:36+0330\n"
-"PO-Revision-Date: 2024-01-28 10:06+0000\n"
+"POT-Creation-Date: 2024-01-28 13:40+0330\n"
+"PO-Revision-Date: 2024-01-28 10:12+0000\n"
 "Last-Translator: Anonymous User <ali@mail.com>\n"
 "Language-Team: \n"
 "Language: fa\n"
@@ -84,6 +84,85 @@ msgstr "پیام"
 msgid "Send message"
 msgstr "ارسال پیام"
 
+#: templates/main/FAQ.html:15 templates/main/Home_Page.html:256
+msgid "FAQ & Information"
+msgstr "سوالات متداول"
+
+#: templates/main/FAQ.html:28 templates/main/Home_Page.html:267
+msgid "Get to know us"
+msgstr "ما را بیشتر بشناسید"
+
+#: templates/main/FAQ.html:35 templates/main/Home_Page.html:274
+msgid ""
+"\n"
+"                                    Faraz Aseman Parsian Company (privately held Company), registered under the Peravia\n"
+"                                    brand, relying on its scientific and technical ability and using the capacity of the\n"
+"                                    most prominent domestic specialists, as well as in line with its values, designs and\n"
+"                                    manufactures various fluids used in the aviation industry has complied with reliable\n"
+"                                    international and national standards.\n"
+"                                    The company, which is currently the only producer of these fluids in Iran and the\n"
+"                                    only specialized company producing aviation fluids in the Middle East, has tried to\n"
+"                                    fulfill its social responsibility in protecting the environment by innovating,\n"
+"                                    diversifying and developing biodegradable products.\n"
+"                                    "
+msgstr ""
+"\n"
+"شرکت فراز آسمان پارسیان (شرکت خصوصی) ثبت شده با برند پرویا با تکیه بر توان علمی و فنی خود و با استفاده از توان برجسته ترین متخصصان داخلی و در راستای ارزش های خود، انواع سیالات مورد استفاده را طراحی و تولید می کند. صنعت هوانوردی با استانداردهای معتبر بین المللی و ملی مطابقت دارد.\n"
+"این شرکت که در حال حاضر تنها تولید کننده این سیالات در ایران و تنها شرکت تخصصی تولید سیالات هوانوردی در خاورمیانه است، با نوآوری، تنوع و توسعه محصولات زیست تخریب پذیر سعی در انجام مسئولیت اجتماعی خود در حفاظت از محیط زیست کرده است."
+
+#: templates/main/FAQ.html:54 templates/main/Home_Page.html:293
+msgid "What types of product does Peravia include?"
+msgstr "پرویا شامل چه نوع محصولاتی است؟"
+
+#: templates/main/FAQ.html:61 templates/main/Home_Page.html:301
+msgid ""
+"\n"
+"                                    Peravia includes four product categories: piston engine oils, jet engine oils,\n"
+"                                    hydraulic fluid and greases.\n"
+"                                    Peravia product development plan is to produce and supply all materials of the\n"
+"                                    aviation industry in the coming years.\n"
+"                                    "
+msgstr ""
+"\n"
+"پراویا شامل چهار دسته محصول است: روغن موتورهای پیستونی، روغن موتور جت، مایع هیدرولیک و گریس. برنامه توسعه محصول پراویا تولید و تامین کلیه مواد صنعت هوانوردی در سالهای آینده است."
+
+#: templates/main/FAQ.html:75
+#, fuzzy
+#| msgid ""
+#| "What can we do to buy a product or establish a business relationship?"
+msgid ""
+"\n"
+"                                        What can we do to buy a product or establish a business relationship?\n"
+"                                        "
+msgstr ""
+"\n"
+"برای خرید محصول یا ایجاد رابطه تجاری چه کنیم؟"
+
+#: templates/main/FAQ.html:84
+msgid ""
+"\n"
+"                                    To make a purchase request and any business connection, you can apply through the\n"
+"                                    "
+msgstr ""
+"\n"
+"برای درخواست خرید و هرگونه ارتباط تجاری، می توانید از طریق"
+
+#: templates/main/FAQ.html:88
+#| msgid ""
+#| "\n"
+#| "                        Faraz Aseman Parsian Company is a private joint stock company registered under\n"
+#| "                        the Peravia brand.\n"
+#| "                        "
+msgid ""
+"\n"
+"                                    telephone\n"
+"                                    number or social media networks.\n"
+"                                    "
+msgstr ""
+"\n"
+"تلفن\n"
+"شماره یا شبکه های اجتماعی"
+
 #: templates/main/Home_Page.html:18
 msgid "1.Peravia"
 msgstr "۱. پراویا"
@@ -139,8 +218,7 @@ msgid ""
 "                        "
 msgstr ""
 "\n"
-"Faraz Aseman Parsian Company is a private joint stock company registered under\n"
-"the Peravia brand."
+"شرکت فراز آسمان پارسیان یک شرکت سهامی خاص است که با برند پرویا به ثبت رسیده است."
 
 #: templates/main/Home_Page.html:134
 msgid ""
@@ -214,48 +292,6 @@ msgstr ""
 "\n"
 "با توجه به آب و هوا، شرایط عملیاتی و نیاز شرکت های مختلف در کشورهای مختلف، پرویا این قابلیت را دارد که محصول را با توجه به شرایط مختلف عرضه کند.\n"
 "علاوه بر این، پراویا در تلاش است تا مجموعه کاملی از محصولات پرتقاضا را ارائه دهد."
-
-#: templates/main/Home_Page.html:256
-msgid "FAQ & Information"
-msgstr "سوالات متداول"
-
-#: templates/main/Home_Page.html:267
-msgid "Get to know us"
-msgstr "ما را بیشتر بشناسید"
-
-#: templates/main/Home_Page.html:274
-msgid ""
-"\n"
-"                                    Faraz Aseman Parsian Company (privately held Company), registered under the Peravia\n"
-"                                    brand, relying on its scientific and technical ability and using the capacity of the\n"
-"                                    most prominent domestic specialists, as well as in line with its values, designs and\n"
-"                                    manufactures various fluids used in the aviation industry has complied with reliable\n"
-"                                    international and national standards.\n"
-"                                    The company, which is currently the only producer of these fluids in Iran and the\n"
-"                                    only specialized company producing aviation fluids in the Middle East, has tried to\n"
-"                                    fulfill its social responsibility in protecting the environment by innovating,\n"
-"                                    diversifying and developing biodegradable products.\n"
-"                                    "
-msgstr ""
-"\n"
-"شرکت فراز آسمان پارسیان (شرکت خصوصی) ثبت شده با برند پرویا با تکیه بر توان علمی و فنی خود و با استفاده از توان برجسته ترین متخصصان داخلی و در راستای ارزش های خود، انواع سیالات مورد استفاده را طراحی و تولید می کند. صنعت هوانوردی با استانداردهای معتبر بین المللی و ملی مطابقت دارد.\n"
-"این شرکت که در حال حاضر تنها تولید کننده این سیالات در ایران و تنها شرکت تخصصی تولید سیالات هوانوردی در خاورمیانه است، با نوآوری، تنوع و توسعه محصولات زیست تخریب پذیر سعی در انجام مسئولیت اجتماعی خود در حفاظت از محیط زیست کرده است."
-
-#: templates/main/Home_Page.html:293
-msgid "What types of product does Peravia include?"
-msgstr "پرویا شامل چه نوع محصولاتی است؟"
-
-#: templates/main/Home_Page.html:301
-msgid ""
-"\n"
-"                                    Peravia includes four product categories: piston engine oils, jet engine oils,\n"
-"                                    hydraulic fluid and greases.\n"
-"                                    Peravia product development plan is to produce and supply all materials of the\n"
-"                                    aviation industry in the coming years.\n"
-"                                    "
-msgstr ""
-"\n"
-"پراویا شامل چهار دسته محصول است: روغن موتورهای پیستونی، روغن موتور جت، مایع هیدرولیک و گریس. برنامه توسعه محصول پراویا تولید و تامین کلیه مواد صنعت هوانوردی در سالهای آینده است."
 
 #: templates/main/Home_Page.html:315
 msgid "What can we do to buy a product or establish a business relationship?"

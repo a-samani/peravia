@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 13:36+0330\n"
+"POT-Creation-Date: 2024-01-28 13:40+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,6 +80,77 @@ msgstr ""
 
 #: peravia_contact/templates/contact/Contact_Us_Page.html:85
 msgid "Send message"
+msgstr ""
+
+#: templates/main/FAQ.html:15 templates/main/Home_Page.html:256
+msgid "FAQ & Information"
+msgstr ""
+
+#: templates/main/FAQ.html:28 templates/main/Home_Page.html:267
+msgid "Get to know us"
+msgstr ""
+
+#: templates/main/FAQ.html:35 templates/main/Home_Page.html:274
+msgid ""
+"\n"
+"                                    Faraz Aseman Parsian Company (privately "
+"held Company), registered under the Peravia\n"
+"                                    brand, relying on its scientific and "
+"technical ability and using the capacity of the\n"
+"                                    most prominent domestic specialists, as "
+"well as in line with its values, designs and\n"
+"                                    manufactures various fluids used in the "
+"aviation industry has complied with reliable\n"
+"                                    international and national standards.\n"
+"                                    The company, which is currently the only "
+"producer of these fluids in Iran and the\n"
+"                                    only specialized company producing "
+"aviation fluids in the Middle East, has tried to\n"
+"                                    fulfill its social responsibility in "
+"protecting the environment by innovating,\n"
+"                                    diversifying and developing "
+"biodegradable products.\n"
+"                                    "
+msgstr ""
+
+#: templates/main/FAQ.html:54 templates/main/Home_Page.html:293
+msgid "What types of product does Peravia include?"
+msgstr ""
+
+#: templates/main/FAQ.html:61 templates/main/Home_Page.html:301
+msgid ""
+"\n"
+"                                    Peravia includes four product "
+"categories: piston engine oils, jet engine oils,\n"
+"                                    hydraulic fluid and greases.\n"
+"                                    Peravia product development plan is to "
+"produce and supply all materials of the\n"
+"                                    aviation industry in the coming years.\n"
+"                                    "
+msgstr ""
+
+#: templates/main/FAQ.html:75
+msgid ""
+"\n"
+"                                        What can we do to buy a product or "
+"establish a business relationship?\n"
+"                                        "
+msgstr ""
+
+#: templates/main/FAQ.html:84
+msgid ""
+"\n"
+"                                    To make a purchase request and any "
+"business connection, you can apply through the\n"
+"                                    "
+msgstr ""
+
+#: templates/main/FAQ.html:88
+msgid ""
+"\n"
+"                                    telephone\n"
+"                                    number or social media networks.\n"
+"                                    "
 msgstr ""
 
 #: templates/main/Home_Page.html:18
@@ -216,53 +287,6 @@ msgid ""
 "                            In addition, Peravia strives to offer a complete "
 "portfolio of high-demand products.\n"
 "                            "
-msgstr ""
-
-#: templates/main/Home_Page.html:256
-msgid "FAQ & Information"
-msgstr ""
-
-#: templates/main/Home_Page.html:267
-msgid "Get to know us"
-msgstr ""
-
-#: templates/main/Home_Page.html:274
-msgid ""
-"\n"
-"                                    Faraz Aseman Parsian Company (privately "
-"held Company), registered under the Peravia\n"
-"                                    brand, relying on its scientific and "
-"technical ability and using the capacity of the\n"
-"                                    most prominent domestic specialists, as "
-"well as in line with its values, designs and\n"
-"                                    manufactures various fluids used in the "
-"aviation industry has complied with reliable\n"
-"                                    international and national standards.\n"
-"                                    The company, which is currently the only "
-"producer of these fluids in Iran and the\n"
-"                                    only specialized company producing "
-"aviation fluids in the Middle East, has tried to\n"
-"                                    fulfill its social responsibility in "
-"protecting the environment by innovating,\n"
-"                                    diversifying and developing "
-"biodegradable products.\n"
-"                                    "
-msgstr ""
-
-#: templates/main/Home_Page.html:293
-msgid "What types of product does Peravia include?"
-msgstr ""
-
-#: templates/main/Home_Page.html:301
-msgid ""
-"\n"
-"                                    Peravia includes four product "
-"categories: piston engine oils, jet engine oils,\n"
-"                                    hydraulic fluid and greases.\n"
-"                                    Peravia product development plan is to "
-"produce and supply all materials of the\n"
-"                                    aviation industry in the coming years.\n"
-"                                    "
 msgstr ""
 
 #: templates/main/Home_Page.html:315
