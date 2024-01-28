@@ -1,27 +1,33 @@
 {% extends 'shared/_MainLayout.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
+    <html lang="en">
     {% include 'shared/TitleSection1.html' %}
+    <body>
     <section class="ls s-py-xl-160 s-py-lg-130 s-py-md-90 s-py-60">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-3 text-center">
                     <h2 class="special-heading text-center">
 								<span class="text-capitalize">
-									welcome!
+									{% trans "welcome!" %}
 								</span>
                     </h2>
                     <div class="divider-30"></div>
-                    <a class="btn btn-gradient big-btn" href="{% url 'contact:contact_page' %}">get a quote</a>
+                    <a class="btn btn-gradient big-btn" href="{% url 'contact:contact_page' %}">{% trans "get a quote" %}</a>
                 </div>
                 <div class="col-12 col-lg-9 text-center">
                     <div class="divider-35 hidden-above-lg"></div>
                     <div class="divider--5"></div>
                     <p class="excerpt">
+                        {% blocktrans %}
                         Faraz Aseman Parsian Company is a private joint stock company registered under
                         the Peravia brand.
+                        {% endblocktrans %}
                     </p>
                     <p class="text-left">
+                        {% blocktrans %}
                         It relies on scientific and technical ability of the most prominent domestic specialists.
                         Also, in line with its values, design and manufactures various fluids used in the aviation
                         industry has compiled with reliable international and national standards. Faraz Aseman Parsian
@@ -36,6 +42,7 @@
                         to its customers with quality guarantee,fixed price in Rials and permanent and easy supply with
                         the largest
                         number of product baskets compared to similar foreign companies.
+                        {% endblocktrans %}
                     </p>
                 </div>
             </div>
@@ -46,14 +53,14 @@
 						<div class="col-12">
 							<h2 class="special-heading text-center">
 								<span class="text-capitalize">
-									Our Team
+									{% trans "Our Team" %}
 								</span>
 							</h2>
 							<div class="divider-line bg-maincolor text-center"></div>
 							<div class="fw-divider-space divider-25"></div>
 							<p class="special-heading text-center">
 								<span>
-									Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results.
+                                    {% trans "Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results." %}
 								</span>
 							</p>
 							<div class="divider-35 hidden-below-lg"></div>
@@ -86,5 +93,8 @@
                         {% endfor %}
 					</div>
 				</div>
-			</section>
+			</section>>
+    </section>
+    </body>
+    </html>
 {% endblock %}

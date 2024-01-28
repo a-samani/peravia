@@ -6,12 +6,12 @@ from peravia_setting.models import SiteSetting, SocialMedia, Client, Certificate
 from django.core import serializers
 from peravia_team.models import Team
 from peravia_blog.models import News
-
+from django.utils.translation import gettext_lazy as _
 
 # ------------------------------------------------------------------------
 def homepage(request):
     team = Team.objects.all()
-    return render(request, 'main/Home_Page.html', {'title': 'Peravia | Home',
+    return render(request, 'main/Home_Page.html', {'title': _('Peravia | Home'),
                                                    'main_categories': MainCategory.objects.all(),
                                                    'clients': Client.objects.all(),
                                                    'members': Team.objects.all(),
@@ -21,14 +21,14 @@ def homepage(request):
 
 # ------------------------------------------------------------------------
 def about_us(request):
-    return render(request, 'main/About_Us.html', {'title': 'Peravia | About Us',
-                                                  'page_name': 'About Us',
+    return render(request, 'main/About_Us.html', {'title': _('Peravia | About Us'),
+                                                  'page_name': _('About Us'),
                                                   'members': Team.objects.all()})
                                                   
 # ------------------------------------------------------------------------
 def frequently_asked_questions(request):
-    return render(request, 'main/FAQ.html', {'title': 'Peravia | FAQ',
-                                             'page_name': 'FAQ'})
+    return render(request, 'main/FAQ.html', {'title': _('Peravia | FAQ'),
+                                             'page_name': _('FAQ')})
 
 
 # ------------------------------------------------------------------------

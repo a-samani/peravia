@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 13:46+0330\n"
-"PO-Revision-Date: 2024-01-28 10:20+0000\n"
+"POT-Creation-Date: 2024-01-28 14:07+0330\n"
+"PO-Revision-Date: 2024-01-28 10:38+0000\n"
 "Last-Translator: Anonymous User <ali@mail.com>\n"
 "Language-Team: \n"
 "Language: fa\n"
@@ -32,6 +32,30 @@ msgstr "فارسی"
 msgid "peravia_admin/"
 msgstr "ادمین"
 
+#: PeraviaWebsite/views.py:14
+msgid "Peravia | Home"
+msgstr "پراویا | خانه"
+
+#: PeraviaWebsite/views.py:24
+msgid "Peravia | About Us"
+msgstr "پراویا | درباره ما"
+
+#: PeraviaWebsite/views.py:25
+#, fuzzy
+#| msgid "About"
+msgid "About Us"
+msgstr "درباره ما"
+
+#: PeraviaWebsite/views.py:30
+#, fuzzy
+#| msgid "Peravia"
+msgid "Peravia | FAQ"
+msgstr "پراویا"
+
+#: PeraviaWebsite/views.py:31 templates/shared/Header.html:64
+msgid "FAQ"
+msgstr "سوالات پرتکرار"
+
 #: peravia_accounts/managers.py:9
 msgid "The Email must be set"
 msgstr "ایمیل باید وارد شود"
@@ -50,6 +74,7 @@ msgid "email address"
 msgstr "آدرس ایمیل"
 
 #: peravia_blog/templates/news/NewsDetail.html:90
+#: templates/main/Home_Page.html:438
 msgid "Latest News"
 msgstr "آخرین اخبار"
 
@@ -83,6 +108,64 @@ msgstr "پیام"
 #: peravia_contact/templates/contact/Contact_Us_Page.html:85
 msgid "Send message"
 msgstr "ارسال پیام"
+
+#: templates/main/About_Us.html:14 templates/main/Home_Page.html:118
+msgid "welcome!"
+msgstr "خوش آمدید!"
+
+#: templates/main/About_Us.html:18 templates/main/Home_Page.html:23
+#: templates/main/Home_Page.html:47 templates/main/Home_Page.html:73
+msgid "get a quote"
+msgstr "نظر دادن"
+
+#: templates/main/About_Us.html:24 templates/main/Home_Page.html:128
+msgid ""
+"\n"
+"                        Faraz Aseman Parsian Company is a private joint stock company registered under\n"
+"                        the Peravia brand.\n"
+"                        "
+msgstr ""
+"\n"
+"شرکت فراز آسمان پارسیان یک شرکت سهامی خاص است که با برند پرویا به ثبت رسیده است."
+
+#: templates/main/About_Us.html:30 templates/main/Home_Page.html:134
+msgid ""
+"\n"
+"                        It relies on scientific and technical ability of the most prominent domestic specialists.\n"
+"                        Also, in line with its values, design and manufactures various fluids used in the aviation\n"
+"                        industry has compiled with reliable international and national standards. Faraz Aseman Parsian\n"
+"                        is currently the only producer of these fluids in Iran and the only specialized company\n"
+"                        producing\n"
+"                        aviation fluids in the Middle East. It has tried to fulfill its social responsibility in\n"
+"                        protecting\n"
+"                        the environment by innovating, diversifying and developing biodegradable products. This company\n"
+"                        believes\n"
+"                        that there is no impasse to supply the products needed by customers. Faraz Aseman Parsian offers\n"
+"                        its products\n"
+"                        to its customers with quality guarantee,fixed price in Rials and permanent and easy supply with\n"
+"                        the largest\n"
+"                        number of product baskets compared to similar foreign companies.\n"
+"                        "
+msgstr ""
+"\n"
+"متکی بر توان علمی و فنی برجسته ترین متخصصان داخلی .\n"
+"همچنین در راستای ارزش های خود، طراحی و ساخت انواع سیالات مورد استفاده در صنعت هوانوردی را با استانداردهای معتبر بین المللی و ملی تدوین کرده است.\n"
+" فراز آسمان پارسیان در حال حاضر تنها تولید کننده این سیالات در ایران و تنها شرکت تخصصی تولید کننده سیالات هوانوردی در خاورمیانه می باشد،که تلاش کرده است با نوآوری، تنوع و توسعه محصولات زیست تخریب پذیر مسئولیت اجتماعی خود را در حفاظت از محیط زیست انجام دهد.\n"
+" این شرکت معتقد است برای تامین محصولات مورد نیاز مشتریان بن بست وجود ندارد. فراز آسمان پارسیان محصولات خود را با ضمانت کیفیت، قیمت ثابت ریالی و دائمی و آسان به مشتریان خود عرضه می کند و در مقایسه با شرکت های خارجی مشابه، بیشترین تعداد سبد کالا را به خود اختصاص داده است."
+
+#: templates/main/About_Us.html:56
+msgid "Our Team"
+msgstr "تیم ما"
+
+#: templates/main/About_Us.html:63
+msgid ""
+"Teamwork is the ability to work together toward a common vision. The ability"
+" to direct individual accomplishments toward organizational objectives. It "
+"is the fuel that allows common people to attain uncommon results."
+msgstr ""
+"کار گروهی توانایی همکاری با یکدیگر به سوی یک چشم انداز مشترک است. توانایی "
+"هدایت دستاوردهای فردی به سمت اهداف سازمانی. این سوختی است که به افراد عادی "
+"اجازه می دهد تا به نتایج مشترک دست یابند."
 
 #: templates/main/FAQ.html:15 templates/main/Home_Page.html:256
 msgid "FAQ & Information"
@@ -168,11 +251,6 @@ msgstr "۱. پراویا"
 msgid "Oils,Lubricants and Greases"
 msgstr "روغن،روان‌کننده و گریس"
 
-#: templates/main/Home_Page.html:23 templates/main/Home_Page.html:47
-#: templates/main/Home_Page.html:73
-msgid "get a quote"
-msgstr "نظر دادن"
-
 #: templates/main/Home_Page.html:24 templates/main/Home_Page.html:49
 #: templates/main/Home_Page.html:74
 msgid "or"
@@ -202,45 +280,6 @@ msgstr "۳. اولین در خاورمیانه"
 #: templates/main/Home_Page.html:70
 msgid "In commercial aviation lubricants"
 msgstr "در روان کننده های هوانوردی تجاری"
-
-#: templates/main/Home_Page.html:118
-msgid "welcome!"
-msgstr "خوش آمدید!"
-
-#: templates/main/Home_Page.html:128
-msgid ""
-"\n"
-"                        Faraz Aseman Parsian Company is a private joint stock company registered under\n"
-"                        the Peravia brand.\n"
-"                        "
-msgstr ""
-"\n"
-"شرکت فراز آسمان پارسیان یک شرکت سهامی خاص است که با برند پرویا به ثبت رسیده است."
-
-#: templates/main/Home_Page.html:134
-msgid ""
-"\n"
-"                        It relies on scientific and technical ability of the most prominent domestic specialists.\n"
-"                        Also, in line with its values, design and manufactures various fluids used in the aviation\n"
-"                        industry has compiled with reliable international and national standards. Faraz Aseman Parsian\n"
-"                        is currently the only producer of these fluids in Iran and the only specialized company\n"
-"                        producing\n"
-"                        aviation fluids in the Middle East. It has tried to fulfill its social responsibility in\n"
-"                        protecting\n"
-"                        the environment by innovating, diversifying and developing biodegradable products. This company\n"
-"                        believes\n"
-"                        that there is no impasse to supply the products needed by customers. Faraz Aseman Parsian offers\n"
-"                        its products\n"
-"                        to its customers with quality guarantee,fixed price in Rials and permanent and easy supply with\n"
-"                        the largest\n"
-"                        number of product baskets compared to similar foreign companies.\n"
-"                        "
-msgstr ""
-"\n"
-"متکی بر توان علمی و فنی برجسته ترین متخصصان داخلی .\n"
-"همچنین در راستای ارزش های خود، طراحی و ساخت انواع سیالات مورد استفاده در صنعت هوانوردی را با استانداردهای معتبر بین المللی و ملی تدوین کرده است.\n"
-" فراز آسمان پارسیان در حال حاضر تنها تولید کننده این سیالات در ایران و تنها شرکت تخصصی تولید کننده سیالات هوانوردی در خاورمیانه می باشد،که تلاش کرده است با نوآوری، تنوع و توسعه محصولات زیست تخریب پذیر مسئولیت اجتماعی خود را در حفاظت از محیط زیست انجام دهد.\n"
-" این شرکت معتقد است برای تامین محصولات مورد نیاز مشتریان بن بست وجود ندارد. فراز آسمان پارسیان محصولات خود را با ضمانت کیفیت، قیمت ثابت ریالی و دائمی و آسان به مشتریان خود عرضه می کند و در مقایسه با شرکت های خارجی مشابه، بیشترین تعداد سبد کالا را به خود اختصاص داده است."
 
 #: templates/main/Home_Page.html:168 templates/shared/Footer.html:12
 #: templates/shared/Header.html:44
@@ -303,6 +342,22 @@ msgstr ""
 "\n"
 "برای خرید یا هرگونه ارتباط میتوانید از طریق درباره ما در ارتباط باشید"
 
+#: templates/main/Home_Page.html:357
+msgid "Certificates"
+msgstr "گواهینامه ها"
+
+#: templates/main/Home_Page.html:443
+msgid "our blog"
+msgstr "بلاگ ما"
+
+#: templates/main/Home_Page.html:471 templates/main/Home_Page.html:512
+msgid "by"
+msgstr "با"
+
+#: templates/main/Home_Page.html:471 templates/main/Home_Page.html:512
+msgid "Admin"
+msgstr "ادمین"
+
 #: templates/shared/Footer.html:13
 msgid "persian aviation material"
 msgstr "مواد هوانوردی ایرانی"
@@ -363,10 +418,6 @@ msgstr "خانه"
 #: templates/shared/Header.html:57
 msgid "Products"
 msgstr "محصولات"
-
-#: templates/shared/Header.html:64
-msgid "FAQ"
-msgstr "سوالات پرتکرار"
 
 #: templates/shared/Header.html:67
 msgid "Contact"

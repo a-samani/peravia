@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 13:46+0330\n"
+"POT-Creation-Date: 2024-01-28 14:07+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,6 +30,26 @@ msgstr ""
 msgid "peravia_admin/"
 msgstr ""
 
+#: PeraviaWebsite/views.py:14
+msgid "Peravia | Home"
+msgstr ""
+
+#: PeraviaWebsite/views.py:24
+msgid "Peravia | About Us"
+msgstr ""
+
+#: PeraviaWebsite/views.py:25
+msgid "About Us"
+msgstr ""
+
+#: PeraviaWebsite/views.py:30
+msgid "Peravia | FAQ"
+msgstr ""
+
+#: PeraviaWebsite/views.py:31 templates/shared/Header.html:64
+msgid "FAQ"
+msgstr ""
+
 #: peravia_accounts/managers.py:9
 msgid "The Email must be set"
 msgstr ""
@@ -48,6 +68,7 @@ msgid "email address"
 msgstr ""
 
 #: peravia_blog/templates/news/NewsDetail.html:90
+#: templates/main/Home_Page.html:438
 msgid "Latest News"
 msgstr ""
 
@@ -80,6 +101,64 @@ msgstr ""
 
 #: peravia_contact/templates/contact/Contact_Us_Page.html:85
 msgid "Send message"
+msgstr ""
+
+#: templates/main/About_Us.html:14 templates/main/Home_Page.html:118
+msgid "welcome!"
+msgstr ""
+
+#: templates/main/About_Us.html:18 templates/main/Home_Page.html:23
+#: templates/main/Home_Page.html:47 templates/main/Home_Page.html:73
+msgid "get a quote"
+msgstr ""
+
+#: templates/main/About_Us.html:24 templates/main/Home_Page.html:128
+msgid ""
+"\n"
+"                        Faraz Aseman Parsian Company is a private joint "
+"stock company registered under\n"
+"                        the Peravia brand.\n"
+"                        "
+msgstr ""
+
+#: templates/main/About_Us.html:30 templates/main/Home_Page.html:134
+msgid ""
+"\n"
+"                        It relies on scientific and technical ability of the "
+"most prominent domestic specialists.\n"
+"                        Also, in line with its values, design and "
+"manufactures various fluids used in the aviation\n"
+"                        industry has compiled with reliable international "
+"and national standards. Faraz Aseman Parsian\n"
+"                        is currently the only producer of these fluids in "
+"Iran and the only specialized company\n"
+"                        producing\n"
+"                        aviation fluids in the Middle East. It has tried to "
+"fulfill its social responsibility in\n"
+"                        protecting\n"
+"                        the environment by innovating, diversifying and "
+"developing biodegradable products. This company\n"
+"                        believes\n"
+"                        that there is no impasse to supply the products "
+"needed by customers. Faraz Aseman Parsian offers\n"
+"                        its products\n"
+"                        to its customers with quality guarantee,fixed price "
+"in Rials and permanent and easy supply with\n"
+"                        the largest\n"
+"                        number of product baskets compared to similar "
+"foreign companies.\n"
+"                        "
+msgstr ""
+
+#: templates/main/About_Us.html:56
+msgid "Our Team"
+msgstr ""
+
+#: templates/main/About_Us.html:63
+msgid ""
+"Teamwork is the ability to work together toward a common vision. The ability "
+"to direct individual accomplishments toward organizational objectives. It is "
+"the fuel that allows common people to attain uncommon results."
 msgstr ""
 
 #: templates/main/FAQ.html:15 templates/main/Home_Page.html:256
@@ -165,11 +244,6 @@ msgstr ""
 msgid "Oils,Lubricants and Greases"
 msgstr ""
 
-#: templates/main/Home_Page.html:23 templates/main/Home_Page.html:47
-#: templates/main/Home_Page.html:73
-msgid "get a quote"
-msgstr ""
-
 #: templates/main/Home_Page.html:24 templates/main/Home_Page.html:49
 #: templates/main/Home_Page.html:74
 msgid "or"
@@ -198,48 +272,6 @@ msgstr ""
 
 #: templates/main/Home_Page.html:70
 msgid "In commercial aviation lubricants"
-msgstr ""
-
-#: templates/main/Home_Page.html:118
-msgid "welcome!"
-msgstr ""
-
-#: templates/main/Home_Page.html:128
-msgid ""
-"\n"
-"                        Faraz Aseman Parsian Company is a private joint "
-"stock company registered under\n"
-"                        the Peravia brand.\n"
-"                        "
-msgstr ""
-
-#: templates/main/Home_Page.html:134
-msgid ""
-"\n"
-"                        It relies on scientific and technical ability of the "
-"most prominent domestic specialists.\n"
-"                        Also, in line with its values, design and "
-"manufactures various fluids used in the aviation\n"
-"                        industry has compiled with reliable international "
-"and national standards. Faraz Aseman Parsian\n"
-"                        is currently the only producer of these fluids in "
-"Iran and the only specialized company\n"
-"                        producing\n"
-"                        aviation fluids in the Middle East. It has tried to "
-"fulfill its social responsibility in\n"
-"                        protecting\n"
-"                        the environment by innovating, diversifying and "
-"developing biodegradable products. This company\n"
-"                        believes\n"
-"                        that there is no impasse to supply the products "
-"needed by customers. Faraz Aseman Parsian offers\n"
-"                        its products\n"
-"                        to its customers with quality guarantee,fixed price "
-"in Rials and permanent and easy supply with\n"
-"                        the largest\n"
-"                        number of product baskets compared to similar "
-"foreign companies.\n"
-"                        "
 msgstr ""
 
 #: templates/main/Home_Page.html:168 templates/shared/Footer.html:12
@@ -306,6 +338,22 @@ msgid ""
 "                                    "
 msgstr ""
 
+#: templates/main/Home_Page.html:357
+msgid "Certificates"
+msgstr ""
+
+#: templates/main/Home_Page.html:443
+msgid "our blog"
+msgstr ""
+
+#: templates/main/Home_Page.html:471 templates/main/Home_Page.html:512
+msgid "by"
+msgstr ""
+
+#: templates/main/Home_Page.html:471 templates/main/Home_Page.html:512
+msgid "Admin"
+msgstr ""
+
 #: templates/shared/Footer.html:13
 msgid "persian aviation material"
 msgstr ""
@@ -365,10 +413,6 @@ msgstr ""
 
 #: templates/shared/Header.html:57
 msgid "Products"
-msgstr ""
-
-#: templates/shared/Header.html:64
-msgid "FAQ"
 msgstr ""
 
 #: templates/shared/Header.html:67
