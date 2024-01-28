@@ -1,0 +1,40 @@
+{% extends 'shared/_MainLayout.html' %}
+{% block content %}
+    {% include 'shared/TitleSection1.html' %}
+    <section class="ls s-pt-xl-160 s-pb-xl-280 s-pt-lg-130 s-pb-lg-250 s-py-md-90 s-py-60">
+        <div class="container">
+            <div class="row">
+                <main class="col-lg-12">
+                    <article>
+                        <div class="entry-content">
+                            <div class="woocommerce">
+                                <form class="woocomerce-form woocommerce-form-login login" method="post">
+                                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                        {{ login_form.email.label }}
+                                        {{ login_form.email }}
+                                    </p>
+                                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                        {{ login_form.password.label }}
+                                        {{ login_form.password }}
+                                    </p>
+                                    <p class="form-row">
+                                        <input type="submit" class="woocommerce-Button button" name="login"
+                                               value="Login">
+                                        <label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
+                                            {{ login_form.remember_me }}
+                                            <span>Remember me</span>
+                                        </label>
+                                    </p>
+                                    <p class="woocommerce-LostPassword lost_password">
+                                        <a href="">Lost your password?</a>
+                                    </p>
+                                    {% csrf_token %}
+                                </form>
+                            </div>
+                        </div>
+                    </article>
+                </main>
+            </div>
+        </div>
+    </section>
+{% endblock %}

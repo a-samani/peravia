@@ -1,0 +1,519 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <html lang="en">
+    <body>
+    <section class="page_slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li class="ds cover-image">
+                    <img loading="lazy" src="{% static 'images/landing-page.jpg' %}" alt="img">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="intro_layers_wrapper">
+                                    <div class="intro_layers">
+                                        <div class="intro_layer">
+                                            <h6 class="intro_before_featured_word">{% trans "1.Peravia" %}</h6>
+                                            <h4 class="text-capitalize intro_featured_word">
+                                                {% trans "Oils,Lubricants and Greases" %}
+                                            </h4>
+                                            <a href="{% url 'contact:contact_page' %}"
+                                               class="btn btn-outline-darkgrey big-btn">{% trans "get a quote" %}</a>
+                                            <span class="text-divider">{% trans "or" %}</span>
+                                            <a href="#write_us" class="btn just-link">{% trans "Request a Callback" %}</a>
+                                        </div>
+                                    </div> <!-- eof .intro_layers -->
+                                </div> <!-- eof .intro_layers_wrapper -->
+                            </div> <!-- eof .col-* -->
+                        </div><!-- eof .row -->
+                    </div><!-- eof .container-fluid -->
+                </li>
+                <li class="ds cover-image">
+                    <img loading="lazy" src="{% static 'images/01.jpg' %}" alt="img">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="intro_layers_wrapper">
+                                    <div class="intro_layers">
+                                        <div class="intro_layer">
+                                            <h6 class="intro_before_featured_word">2.There is no impasse</h6>
+                                            <h4 class="text-capitalize intro_featured_word">
+                                                Knowledge-based and eco-friendly company
+                                            </h4>
+                                            <a href="{% url 'contact:contact_page' %}"
+                                               class="btn btn-outline-darkgrey big-btn">get a quote</a>
+                                            <span class="text-divider">or</span>
+                                            <a href="#write_us" class="btn just-link">Request a Callback</a>
+                                        </div>
+                                    </div> <!-- eof .intro_layers -->
+                                </div> <!-- eof .intro_layers_wrapper -->
+                            </div> <!-- eof .col-* -->
+                        </div><!-- eof .row -->
+                    </div><!-- eof .container-fluid -->
+                </li>
+                <li class="ds cover-image">
+                    <img loading="lazy" src="{% static 'images/02.jpg' %}" alt="img">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="intro_layers_wrapper">
+                                    <div class="intro_layers">
+                                        <div class="intro_layer">
+                                            <h6 class="intro_before_featured_word">{% trans "3.The first in the middle east" %}</h6>
+                                            <h4 class="text-capitalize intro_featured_word">
+                                               {% trans  "In commercial aviation lubricants" %}
+                                            </h4>
+                                            <a href="{% url 'contact:contact_page' %}"
+                                               class="btn btn-outline-darkgrey big-btn">{% trans "get a quote" %}</a>
+                                            <span class="text-divider">{% trans "or"%}</span>
+                                            <a href="#write_us" class="btn just-link">{% trans "Request a Callback" %}</a>
+                                        </div>
+                                    </div> <!-- eof .intro_layers -->
+                                </div> <!-- eof .intro_layers_wrapper -->
+                            </div> <!-- eof .col-* -->
+                        </div><!-- eof .row -->
+                    </div><!-- eof .container-fluid -->
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="ds text-sm-left text-center container-px-0 c-gutter-0">
+        <div class="container-fluid">
+            <div class="row service-v2">
+                {% for category in main_categories %}
+                    <div class="col-sm-6 col-md-6 col-xl-3   ">
+                        <div class="icon-box service-single with-icon layout2 ds text-center">
+                            <a class="link-icon" href="{{ category.get_absolute_url }}">
+                                <div class="icon-styled  fs-50">
+                                    <i class="ico ico-{{ category.title }}"></i>
+                                </div>
+                            </a>
+                            <a href="{{ category.get_absolute_url }}">
+                                <h5>
+                                    {{ category.title|title }}
+                                </h5>
+                            </a>
+                            <p>{{ category.description }}</p>
+                            <a class="btn btn-outline-darkgrey" href="{{ category.get_absolute_url }}">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="ls main-testimonial s-py-xl-160 s-py-lg-130 s-py-md-90 s-py-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 text-center">
+                    <h2 class="special-heading text-center">
+								<span class="text-capitalize">
+									welcome!
+								</span>
+                    </h2>
+                    <div class="divider-30"></div>
+                    <a class="btn btn-gradient big-btn" href="{% url 'contact:contact_page' %}">get a quote</a>
+                </div>
+                <div class="col-12 col-lg-9 text-center">
+                    <div class="divider-35 hidden-above-lg"></div>
+                    <div class="divider--5"></div>
+                    <p class="excerpt">
+                        Faraz Aseman Parsian Company is a private joint stock company registered under
+                        the Peravia brand.
+                    </p>
+                    <p style="text-align:left">
+                        It relies on scientific and technical ability of the most prominent domestic specialists.
+                        Also, in line with its values, design and manufactures various fluids used in the aviation
+                        industry has compiled with reliable international and national standards. Faraz Aseman Parsian
+                        is currently the only producer of these fluids in Iran and the only specialized company
+                        producing
+                        aviation fluids in the Middle East. It has tried to fulfill its social responsibility in
+                        protecting
+                        the environment by innovating, diversifying and developing biodegradable products. This company
+                        believes
+                        that there is no impasse to supply the products needed by customers. Faraz Aseman Parsian offers
+                        its products
+                        to its customers with quality guarantee,fixed price in Rials and permanent and easy supply with
+                        the largest
+                        number of product baskets compared to similar foreign companies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ls  s-py-xl-160 s-py-lg-130 s-py-md-90 s-py-60 text-sm-left text-center container-px-0">
+        <div class="cover-image s-cover-left">
+            <a href="{% static 'images/logo.png' %}" class="photoswipe-link side-video" data-width="800" data-height="800" data-iframe="https://www.youtube.com/embed/GhthHC0s38A"></a>
+            <img src="{% static 'images/logo.png' %}" alt="01">
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-12 col-lg-6">
+                </div>
+                <div class="col-xs-12 col-12 col-lg-6">
+                    <div class="content-center">
+                        <h2 class="special-heading numeric text-sm-left text-center">
+                            <span class="text-capitalize">
+                                Peravia
+                            </span>
+                        </h2>
+                        <div class="divider-45 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                        <p>
+                            
+                        </p>
+                        <div class="divider-50 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ls  s-py-xl-160 s-py-lg-130 s-py-md-90 s-py-60 text-sm-left text-center container-px-0">
+        <div class="cover-image s-cover-right">
+            <img loading="lazy" src="{% static 'images/Product-customization.jpg' %}" alt="01">
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-12 col-lg-6">
+                    <div class="content-center">
+                        <h2 class="special-heading numeric text-sm-left text-center">
+									<span class="text-capitalize">
+                                        Quality and Price
+									</span>
+                        </h2>
+                        <div class="divider-45 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                        <p>
+                            Due to the fact that production costs in Iran are low, as a result, the price of the product
+                            will be offered to the market more economically. On the other hand, the quality of peravia
+                            products is equal to and higher than similar products in the world.
+                        </p>
+                        <div class="divider-45 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="ls  s-py-xl-160 s-py-lg-130 s-py-md-90 s-py-60 text-sm-left text-center container-px-0">
+        <div class="cover-image s-cover-left">
+            <img loading="lazy" src="{% static 'images/Quality-and-price.jpg' %}" alt="01">
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-12 col-lg-6">
+                </div>
+                <div class="col-xs-12 col-12 col-lg-6">
+                    <div class="content-center">
+                        <h2 class="special-heading numeric text-sm-left text-center">
+                            <span class="text-capitalize">
+                                Product Customization
+                            </span>
+                        </h2>
+                        <div class="divider-45 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                        <p>
+                            Due to the weather, operating conditions and needs of different companies in different
+                            countries, Peravia has the ability to offer the product according to different conditions.
+                            In addition, Peravia strives to offer a complete portfolio of high-demand products.
+                        </p>
+                        <div class="divider-45 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                        <div class="divider--10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq" class="ls ms s-py-xl-160 s-py-lg-130 s-py-md-90 s-py-60 text-sm-left text-center c-gutter-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2 class="special-heading text-sm-left text-center">
+								<span class="text-capitalize">
+									FAQ & Information
+								</span>
+                    </h2>
+                    <div class="divider-50 hidden-below-lg"></div>
+                    <div class="divider-30 hidden-above-lg"></div>
+                    <div id="accordion01" role="tablist">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="collapse01_header">
+                                <h5>
+                                    <a data-toggle="collapse" href="#collapse01" aria-expanded="true"
+                                       aria-controls="collapse01">
+                                        Get to know us
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapse01" class="collapse show" role="tabpanel"
+                                 aria-labelledby="collapse01_header" data-parent="#accordion01">
+                                <div class="card-body">
+                                    Faraz Aseman Parsian Company (privately held Company), registered under the Peravia
+                                    brand, relying on its scientific and technical ability and using the capacity of the
+                                    most prominent domestic specialists, as well as in line with its values, designs and
+                                    manufactures various fluids used in the aviation industry has complied with reliable
+                                    international and national standards.
+                                    The company, which is currently the only producer of these fluids in Iran and the
+                                    only specialized company producing aviation fluids in the Middle East, has tried to
+                                    fulfill its social responsibility in protecting the environment by innovating,
+                                    diversifying and developing biodegradable products.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="collapse02_header">
+                                <h5>
+                                    <a data-toggle="collapse" href="#collapse02" aria-expanded="false"
+                                       aria-controls="collapse01">
+                                        What types of product does Peravia include?
+                                    </a>
+                                </h5>
+                            </div>
+
+                            <div id="collapse02" class="collapse" role="tabpanel"
+                                 aria-labelledby="collapse01_header" data-parent="#accordion01">
+                                <div class="card-body">
+                                    Peravia includes four product categories: piston engine oils, jet engine oils,
+                                    hydraulic fluid and greases.
+                                    Peravia product development plan is to produce and supply all materials of the
+                                    aviation industry in the coming years.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="collapse03_header">
+                                <h5>
+                                    <a class="collapse" data-toggle="collapse" href="#collapse03" aria-expanded="false"
+                                       aria-controls="collapse03">
+                                        What can we do to buy a product or establish a business relationship?
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapse03" class="collapse" role="tabpanel" aria-labelledby="collapse03_header"
+                                 data-parent="#accordion01">
+                                <div class="card-body">
+                                    To make a purchase request and any business connection, you can apply through the
+                                    <a href="{% url 'contact:contact_page' %}">contact us</a> section on the site,
+                                    telephone
+                                    number or social media networks.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="divider-30 hidden-above-lg"></div>
+                    <div class="row isotope-wrapper masonry-layout images-grid c-mb-30 c-gutter-30">
+                        {% for client in clients %}
+                            <div class="col-xl-6 col-sm-12">
+                                <a href="{{ client.site_address }}" target="_blank">
+                                    <div class="bordered text-center p-50 rounded">
+                                        <img src="{{ client.image.url }}" title="{{ client.title }}">
+                                    </div>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="mt--30"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ls  s-py-xl-160 s-py-lg-130 s-py-md-90 s-py-60 text-sm-left text-center c-gutter-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="special-heading text-center">
+                        <span class="text-capitalize">
+                            Certificates
+                        </span>
+                    </h2>
+                    <div class="divider-50 hidden-below-lg"></div>
+                    <div class="divider-30 hidden-above-lg"></div>
+                    <div class="row isotope-wrapper masonry-layout images-grid c-mb-30 c-gutter-30">
+                        {% for certificate in certificates %}
+                            <div class="col-lg-4 col-sm-6">
+                                {% if certificate.pdf_file %}
+                                    <a href="{{ certificate.pdf_file.url }}" target="_blank">
+                                        <div class="bordered text-center p-xl-50 p-20 rounded">
+                                            {% if certificate.image %}
+                                                <img src="{{ certificate.image.url }}" loading="lazy">
+                                            {% endif %}
+                                        </div>
+                                    </a>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% comment %} <section id="team" class="ls s-py-xl-160 s-py-lg-130 s-py-md-90 s-py-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="special-heading text-center">
+                        <span class="text-capitalize">
+                            Our Team
+                        </span>
+                    </h2>
+                    <div class="divider-line bg-maincolor text-center"></div>
+                    <div class="fw-divider-space divider-25"></div>
+                    <p class="special-heading text-center">
+                        <span>
+                            Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results.
+                        </span>
+                    </p>
+                    <div class="divider-35 hidden-below-lg"></div>
+                    <div class="divider-30 hidden-above-lg"></div>
+                    <div class="owl-carousel team-carousel" data-center="false" data-nav="true" data-margin="30" data-loop="false" data-responsive-lg="4" data-responsive-md="4" data-responsive-sm="2" data-responsive-xs="1">
+                        {% for member in members %}
+                            <div class="vertical-item text-center">
+                                <div class="item-media">
+                                    {% if member.member_image %}
+                                    <img src="{{ member.member_image.url }}" loading="lazy" alt="team">
+                                    {% else %}
+                                    <img src="{% static 'images/team/01.png' %}" loading="lazy" alt="team">
+                                    {% endif %}
+                                    <div class="media-links">
+                                        <span class="social-icons">
+                                            <a href="{{ member.linkedin }}" class="fab fa-linkedin-in" title="linkedin"></a>                                        
+                                        </span>
+                                    </div>
+                                </div>
+                                <div style="flex-direction: column;" class="item-content">
+                                    <h6>
+                                        <a href="#">{{ member.name }} {{ member.family }}</a>
+                                    </h6>
+                                    <br>
+                                    <p class="small-text" title="{{ member.position }}">
+                                        {{ member.position }}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="mt--20"></div>
+        </div>
+    </section> {% endcomment %}
+    <section class="ls ms s-pt-xl-160 s-pt-lg-130 s-pt-md-90 s-pt-60 s-pb-xl-280 s-pb-lg-250 s-pb-md-90 s-pb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="special-heading text-center">
+                        <span class="text-capitalize">
+                            Latest News
+                        </span>
+                    </h2>
+                    <p class="special-heading text-center">
+                        <span class="text-capitalize color-darkgrey bold">
+                            our blog
+                        </span>
+                    </p>
+                    <div class="divider-50 hidden-below-lg"></div>
+                    <div class="divider-30 hidden-above-lg"></div>
+                    <div class="shortcode-posts row tiled-layout c-gutter-30 c-mb-30">
+                        <div class="bigitem col-xl-6 col-lg-5">
+                            {% for news in newslist|slice:':1'%}
+                                <article class="vertical-item ls rounded post type-post status-publish format-standard has-post-thumbnail">
+                                    <div class="item-media post-thumbnail">
+                                        <a href="{{ post.get_absolute_url }}">
+                                            {% if post.image %}
+                                                <img src="{{ news.news_image.url }}" loading="lazy" alt="img">
+                                            {% else %}
+                                                <img src="{% static 'images/blog/01.jpg' %}" loading="lazy" alt="img">
+                                            {% endif %}
+                                        </a>
+                                    </div>
+                                    <div class="item-content">
+                                        <header class="entry-header">
+                                            <div class="entry-meta">
+                                                <div class="byline">
+                                                    <span class="date">
+                                                        <a href="#" rel="bookmark">
+                                                            <time class="published entry-date" datetime="{{ news.created_on|date:'D d M Y' }}">{{ news.created_on|date:'D d M Y' }}</time>
+                                                        </a>
+                                                    </span>
+                                                    <span class="author vcard">
+                                                        <a class="url fn n" href="#" rel="author"><span>by</span> Admin</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="{{ news.get_absolute_url }}" rel="bookmark">
+                                                    {{ news.title|title }}
+                                                </a>
+                                            </h4>                                            
+                                        </header>
+                                        <div class="entry-content">
+                                            <p>
+                                                {{ news.summary }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                            {% endfor %}
+                        </div>
+                        <div class="smallitem col-xl-6 col-lg-7">
+                            {% for news in newslist|slice:'1:'%}
+                                <article class="vertical-item side-item ls rounded post type-post status-publish format-standard has-post-thumbnail">
+                                    <div class="item-media post-thumbnail">
+                                        <a href="{{ news.get_absolute_url }}">
+                                            {% if news.news_image.url %}
+                                                <img src="{{ news.news_image.url }}" loading="lazy" alt="img">
+                                            {% else %}
+                                                <img src="{% static 'images/blog/01.jpg' %}" loading="lazy" alt="img">
+                                            {% endif %}
+                                        </a>
+                                    </div><!-- .post-thumbnail -->
+                                    <div class="item-content">
+                                        <header class="entry-header">
+                                            <div class="entry-meta">
+                                                <div class="byline">
+                                                    <span class="date">
+                                                        <a href="#" rel="bookmark">
+                                                            <time class="published entry-date" datetime="{{ news.created_on|date:'D d M Y' }}">{{ news.created_on|date:'D d M Y' }}</time>
+                                                        </a>
+                                                    </span>
+                                                    <span class="author vcard">
+                                                        <a class="url fn n" href="#" rel="author"><span>by</span> Admin</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="{{ news.get_absolute_url }}" rel="bookmark">
+                                                    {{ news.title|title }}
+                                                </a>
+                                            </h4>
+
+                                            <!-- .entry-meta -->
+                                        </header>
+                                        <!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p>
+                                                {{ news.summary }}
+                                            </p>
+                                        </div><!-- .entry-content -->
+                                    </div><!-- .item-content -->
+                                </article>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="mt--30"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+    </html>
+{% endblock %}

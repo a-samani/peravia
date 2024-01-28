@@ -1,0 +1,36 @@
+{% load static %}
+<script src="{% static 'js/compressed.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: '{% url 'get_site_setting' %}',
+            dataType: 'json',
+            success: function (data) {
+                let categories = JSON.parse(data.main_categories)
+                $.each(categories,function(index, value)
+                {
+                    let category_title = value['fields']['title']
+                    let url = "{% url 'product:sub_category_list' 'main_category' %}";
+                    url = url.replace('main_category', category_title);
+                    $("#category_ul").append(`<li><a href="${url}">${category_title}</a></li>`)
+                });
+                let site_setting = JSON.parse(data.site_setting)[0]
+                let social_media = JSON.parse(data.social_media)
+                $('ul.top-includes li.metaphone').append(`<a href="tel:${site_setting.fields.phone}">${site_setting.fields.phone}</a>`)
+                $('#phone_setting').html(site_setting.fields.phone)
+                $('#fax_setting').html(site_setting.fields.fax)
+                $('#email_setting').append(`<a href="mailto:${site_setting.fields.support_email}">${site_setting.fields.support_email}</a>`)
+                $('#address_setting').html(site_setting.fields.address)
+                $('a.logo').next('p').html(site_setting.fields.short_description)
+                $('div.widget_about h3.widget-title').next('p').html(site_setting.fields.short_description)
+                $.each(social_media, function (index, value) {
+                    let title = value['fields']['title']
+                    let media_address = value['fields']['address']
+                    $('div.widget_social_icons').append(`<a target="_blank" href="${media_address}" class="fab fa-${title} rounded-icon bg-icon fs-16" title="${title}"></a>`)
+                    $('#social_media_setting').append(`<a target="_blank" href="${media_address}" class="fab fa-${title} rounded-icon bg-icon fs-16" title="${title}"></a>`)
+                });
+            }
+        });
+    });
+</script>

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Peravia</title>
+    {% endif %}
+    <meta charset="utf-8">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta name="description"
+          content="Peravia is a high-tech chemical company, specifically produces aviation engine oils, lubricants and greases">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    {% include 'shared/_HeaderReferences.html' %}
+    {% block header_ref %}{% endblock %}
+</head>
+<body>
+<div class="preloader">
+    <div class="preloader_image"></div>
+</div>
+{% include 'shared/_Messages.html' %}
+<div id="canvas">
+    <div id="box_wrapper">
+        {% include 'shared/Header.html' %}
+        {% block content %}{% endblock %}
+        {% include 'shared/Footer.html' %}
+        {% include 'shared/_FooterReferences.html' %}
+        {% block footer_ref %}{% endblock %}
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load i18n %}
+{% load static %}
+{% block header_ref %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+{% endblock %}
+{% block content %}
+
+    {% include 'shared/TitleSection1.html' %}
+    <html lang="en">
+    <body>
+    <section class="ls  container-px-xl-0">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-xl-7 ls ">
+                    <div class="special-column">
+                        <div class="fw-divider-space divider-xl-160 divider-lg-130 divider-md-90 divider-60"></div>
+                        <h2 class="special-heading text-left">
+									<span class="text-capitalize">
+										{% trans "Drop Us A Line" %}
+									</span>
+                        </h2>
+                        <div class="divider-line bg-maincolor"></div>
+                        <div class="fw-divider-space divider-25"></div>
+                        <p class="special-heading text-left">
+									<span>
+                                        {% trans "To make a purchase request and any business connection" %}
+
+									</span>
+                        </p>
+                        <div class="divider-50 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                        <form id="contact_us" onsubmit="Validate(v)" class="contact-form" method="post">
+                            {% csrf_token %}
+                            <div class="row c-mb-10 c-gutter-10">
+                                <div class="col-lg-6">
+                                    <div class="form-group has-placeholder">
+                                        <label for="{{ contact_form.fullname.id_for_label }}">{% trans "Full Name" %} <span
+                                                class="required">*</span></label>
+                                        <i class="fas fa-user"></i>
+                                        {{ contact_form.fullname }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group has-placeholder">
+                                        <label for="{{ contact_form.email.id_for_label }}">{% trans "Email address" %}<span
+                                                class="required">*</span></label>
+                                        <i class="fas fa-envelope"></i>
+                                        {{ contact_form.email }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row c-mb-10 c-gutter-10">
+                                <div class="col-lg-6">
+                                    <div class="form-group has-placeholder">
+                                        <label for="{{ contact_form.phone_number.id_for_label }}">{% trans "Full Name" %} <span
+                                                class="required">*</span></label>
+                                        <i class="fas fa-phone"></i>
+                                        {{ contact_form.phone_number }}
+                                        <span id="phone_valid_alert"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group has-placeholder">
+                                        <label for="{{ contact_form.subject.id_for_label }}">{% trans "Subject" %}<span
+                                                class="required">*</span></label>
+                                        <i class="fas fa-paperclip"></i>
+                                        {{ contact_form.subject }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row c-mb-10 c-gutter-10">
+                                <div class="col-sm-12">
+                                    <div class="form-group has-placeholder">
+                                        <label for="{{ contact_form.enquiry.id_for_label }}">{% trans "Message" %}</label>
+                                        <i class="fas fa-edit"></i>
+                                        {{ contact_form.enquiry }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row c-mb-10 c-gutter-10">
+                                <div class="col-sm-12 mb-0 mt-lg-50 mt-30">
+                                    <div class="form-group">
+                                        <input class="btn btn-gradient big-btn" type="submit" value={% trans "Send message" %}>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="fw-divider-space divider-xl-160 divider-lg-130 divider-md-90 divider-60"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-5 text-sm-left text-center ls ms animate" data-animation="scaleAppear">
+                    <div class="special-column2">
+                        <div class="fw-divider-space divider-xl-160 divider-lg-130 divider-md-90 divider-60"></div>
+                        <div class="media text-center text-sm-left">
+                            <div class="icon-styled fs-60 color-main">
+                                <i class="ico ico-location"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="">
+                                    Our Address
+                                </h6>
+                                <p class="">{{ settings.address }} </p>
+                            </div>
+                        </div>
+                        <div class="divider-50 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                        <div class="divider-line bg-maincolor text-center"></div>
+                        <div class="divider-60 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                        <div class="media text-center text-sm-left">
+                            <div class="icon-styled fs-60 color-main">
+                                <i class="ico ico-call"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="">
+                                    Our Numbers
+                                </h6>
+                                <p class="">Tel: {{ settings.phone }}<br>Fax: {{ settings.fax }}</p>
+                            </div>
+                        </div>
+                        <div class="divider-50 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                        <div class="divider-line bg-maincolor text-center"></div>
+                        <div class="divider-60 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                        <div class="media text-center text-sm-left">
+                            <div class="icon-styled fs-60 color-main">
+                                <i class="ico ico-email"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="">
+                                    Our Email
+                                </h6>
+                                <p class="">{{ settings.support_email }}</p>
+                            </div>
+                        </div>
+                        <div class="divider-50 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                        <div class="divider-line bg-maincolor text-center"></div>
+                        <div class="divider-60 hidden-below-lg"></div>
+                        <div class="divider-30 hidden-above-lg"></div>
+                        <span class="social-icons">
+                            {% for social in social_media%}
+                                <a href="{{ social.address }}" class="fab fa-{{ social }} bg-icon light-bg rounded-icon"></a>
+                            {%endfor%}
+                        </span>
+                    </div>
+                </div>
+                <!--.col-* -->
+            </div>
+        </div>
+    </section>
+    </body>
+    </html>
+{% endblock %}
+{% block footer_ref %}
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+        let phone_valid;
+        $('#phone').on('keyup', function () {
+            phoneInputField.value = phoneInput.getNumber();
+            phone_valid = phoneInput.isValidNumber();
+            if (!phone_valid && phoneInputField.value !== "") {
+                $('#phone_valid_alert').html('Phone number is not valid').css('color', 'red');
+            } else {
+                $('#phone_valid_alert').hide();
+            }
+        });
+
+        function Validate(v) {
+            if (phone_valid) {
+                $('#contact_us').submit();
+            } else v.preventDefault();
+        }
+    </script>
+{% endblock %}

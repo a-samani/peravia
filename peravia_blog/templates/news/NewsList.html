@@ -1,0 +1,77 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load static %}
+{% block content %}
+{% include 'shared/TitleSection1.html' %}
+<section class="ls ms s-pt-xl-160 s-pb-xl-280 s-pt-lg-130 s-pb-lg-250 s-py-md-90 s-py-60">
+  <div class="container">
+    <div class="row c-gutter-60">
+      <main class="offset-lg-1 col-lg-10">
+        {% for news in newslist %}
+          <article class="vertical-item ls text-center rounded post type-post status-publish format-standard has-post-thumbnail">
+            <div class="item-media post-thumbnail">
+              <a href="{{ news.get_absolute_url }}">
+                {% if news.news_image.url%}
+                  <img src="{{ news.news_image.url }}" alt="">
+                {% else %}
+                  <img src="{% static 'images/blog/01.jpg' %}" alt="">
+                {% endif %}
+              </a>
+            </div><!-- .post-thumbnail -->
+            <div class="item-content">
+              <header class="entry-header">
+                <div class="entry-meta">
+                  <div class="byline">
+                    <span class="date">
+                      <a href="#" rel="bookmark">
+                        <time class="published entry-date"
+                          datetime="{{ news.created_on}}">{{ news.created_on|date:"SHORT_DATE_FORMAT"}}</time>
+                      </a>
+                    </span>
+                    <span class="author vcard">
+                      <a class="url fn n" href="#" rel="author"><span>by</span> Admin</a>
+                    </span>
+                  </div>
+                </div>
+                <h3 class="entry-title">
+                  <a href="{{ news.get_absolute_url }}" rel="bookmark">
+                    {{ news.title|title }}
+                  </a>
+                </h3>
+                <!-- .entry-meta -->
+              </header>
+              <!-- .entry-header -->
+              <div class="entry-content">
+                {{ news.summary }}
+              </div><!-- .entry-content -->
+              <a class="btn btn-gradient big-btn" href="{{ news.get_absolute_url }}">read more</a>
+            </div><!-- .item-content -->
+          </article>
+        {% endfor %}
+        <nav class="navigation pagination " role="navigation">
+          <h2 class="screen-reader-text">Posts navigation</h2>
+          <div class="nav-links">
+            {% if page_obj.has_previous%}
+              <a class="prev page-numbers" href="?page={{ page_obj.previous_page_number }}">
+                <i class="fa fa-chevron-left"></i>
+                <span class="screen-reader-text">Previous page</span>
+              </a>
+            {% endif %}
+            {% for page in paginator.page_range %}
+              <a class="page-numbers {% if page == page_obj.number %} current {% endif %}" href="?page={{ page }}">
+                <span class="meta-nav screen-reader-text">Page </span>
+                {{ page }}
+              </a>
+            {% endfor %}
+            {% if page_obj.has_next %}
+              <a class="next page-numbers" href="?page={{ page_obj.next_page_number }}">
+                <span class="screen-reader-text">Next page</span>
+                <i class="fa fa-chevron-right"></i>
+              </a>
+            {% endif %}
+          </div>
+        </nav>
+      </main>
+    </div>
+  </div>
+</section>
+{% endblock %}

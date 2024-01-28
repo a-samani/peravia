@@ -1,0 +1,90 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load static %}
+{% block content %}
+    {% include 'shared/TitleSection1.html' %}
+    <section class="ls s-py-xl-160 s-py-lg-130 s-py-md-90 s-py-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 text-center">
+                    <h2 class="special-heading text-center">
+								<span class="text-capitalize">
+									welcome!
+								</span>
+                    </h2>
+                    <div class="divider-30"></div>
+                    <a class="btn btn-gradient big-btn" href="{% url 'contact:contact_page' %}">get a quote</a>
+                </div>
+                <div class="col-12 col-lg-9 text-center">
+                    <div class="divider-35 hidden-above-lg"></div>
+                    <div class="divider--5"></div>
+                    <p class="excerpt">
+                        Faraz Aseman Parsian Company is a private joint stock company registered under
+                        the Peravia brand.
+                    </p>
+                    <p class="text-left">
+                        It relies on scientific and technical ability of the most prominent domestic specialists.
+                        Also, in line with its values, design and manufactures various fluids used in the aviation
+                        industry has compiled with reliable international and national standards. Faraz Aseman Parsian
+                        is currently the only producer of these fluids in Iran and the only specialized company
+                        producing
+                        aviation fluids in the Middle East. It has tried to fulfill its social responsibility in
+                        protecting
+                        the environment by innovating, diversifying and developing biodegradable products. This company
+                        believes
+                        that there is no impasse to supply the products needed by customers. Faraz Aseman Parsian offers
+                        its products
+                        to its customers with quality guarantee,fixed price in Rials and permanent and easy supply with
+                        the largest
+                        number of product baskets compared to similar foreign companies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    <section class="ls ms post-type-archive-fw-team s-pt-xl-160 s-pt-lg-130 s-pt-md-90 s-pt-60 s-pb-xl-100 s-pb-lg-70 s-pb-md-30 s-pb-0 ">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<h2 class="special-heading text-center">
+								<span class="text-capitalize">
+									Our Team
+								</span>
+							</h2>
+							<div class="divider-line bg-maincolor text-center"></div>
+							<div class="fw-divider-space divider-25"></div>
+							<p class="special-heading text-center">
+								<span>
+									Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results.
+								</span>
+							</p>
+							<div class="divider-35 hidden-below-lg"></div>
+							<div class="divider-30 hidden-above-lg"></div>
+						</div>
+					</div>
+					<div class="row c-mb-60">
+                        {% for member in members %}
+						<div class="col-md-4 col-sm-6">
+							<div class="vertical-item text-center">
+								<div class="item-media">
+									<img src="{{ member.image.url }}" loading="lazy" alt="team">
+									<div class="media-links">
+										<span class="social-icons">
+											<a href="{{ member.linkedin }}" class="fab fa-linkedin-in" title="linkedin"></a>											
+										</span>
+									</div>
+
+								</div>
+								<div style="flex-direction: column;" class="item-content">
+									<h6>
+										<a href="#">{{ member.name }} {{ member.family }}</a>
+									</h6>
+									<p class="small-text">
+										{{ member.position }}
+									</p>
+								</div>
+							</div>
+						</div>
+                        {% endfor %}
+					</div>
+				</div>
+			</section>
+{% endblock %}

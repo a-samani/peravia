@@ -1,0 +1,97 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div class="header_absolute">
+    <header class="page_header_side header_slide header-special header_side_right ds">
+        <div class="scrollbar-macosx">
+            <div class="side_header_inner">
+                <p class="text-right mb-0 close-wrapper"><a href="javascript:void(0)">×</a></p>
+                <div class="widget widget_about">
+                    <h3 class="widget-title">{% trans "About" %}</h3>
+                    <p>
+                    </p>
+                </div>
+                <div class="widget widget_mailchimp">
+                    <h3 class="widget-title">{% trans "Search" %}</h3>
+                    <form class="search" action="{% url 'product:product_search' %}">
+                        <label for="search-form-top">
+                            <span class="screen-reader-text">{% trans "Search:" %}</span>
+                        </label>
+                        <input required="" type="search" id="search-form-top" class="search-field form-control"
+                               placeholder="Search keyword" value="" name="q">
+                        <button type="submit" class="search-submit">
+                            <span class="screen-reader-text">{% trans "Search" %}</span>
+                        </button>
+                        <div class="response"></div>
+                    </form>
+                </div>
+                <div class="widget widget_social_icons">
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="page_header header-1 ds bg-transparent s-py-xl-20 s-py-10 ">
+
+        <div class="container-fluid">
+
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-xl-3 col-md-4 col-12 text-center">
+                    <a href="/" class="logo">
+                        <img src="{% static 'images/logo.png' %}" alt="">
+                        <span class="d-flex flex-column">
+										<span class="logo-text color-darkgrey">{% trans "Peravia" %}</span>
+										<span class="logo-subtext text-left">{% trans "persian aviation materials" %}</span>
+									</span>
+                    </a>
+                </div>
+                <div class="col-xl-6 col-1 text-left">
+                    <!-- main nav start -->
+                    <nav class="top-nav">
+                        <ul class="nav sf-menu">
+                            <li>
+                                <a href="/">{% trans "Home" %}</a>
+                            </li>
+                            <li>
+                                <a href="#">{% trans "Products" %}</a>
+                                <ul id="category_ul"></ul>
+                            </li>
+                            <li>
+                                <a href="{% url 'about' %}">{% trans "About" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'faq' %}">{% trans "FAQ" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contact:contact_page' %}">{% trans "Contact" %}</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                                <ul>
+                                    <li><a href="{% url 'blog:news_list' %}">{% trans "News" %}</a></li>
+                                    <li><a href="{% url 'blog:article_list' %}">{% trans "Articles" %}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- eof main nav -->
+                </div>
+                <div class="col-xl-3 col-md-7 col-12  d-flex justify-content-md-end">
+                    <ul class="top-includes">
+                        <li class="metaphone">
+
+                        </li>
+                        <li class="special-menu">
+                            <span class="toggle_menu toggle_menu_side header-slide toggle_menu_side_special"><span></span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <span class="toggle_menu"><span>menu</span></span>
+    </header>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load static %}
+{% block content %}
+    {% include 'shared/TitleSection1.html' %}
+    <section class="ls ms text-center tax-fw-portfolio-category s-pt-xl-160 s-pt-lg-130 s-pt-md-90 s-pt-60 s-pb-xl-280 s-pb-lg-250 s-pb-md-90 s-pb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row portfolio isotope-wrapper masonry-layout c-gutter-30 c-mb-30">
+                        {% for category in categories %}
+                            <div class="col-xl-4 col-md-6 innovations corporate">
+                                <div class="vertical-item bordered rounded overflow-hidden text-center ">
+                                    <div class="item-media">
+                                        {% if category.image %}
+                                            <img src="{{ category.image.url }}" loading="lazy" alt="img">
+                                        {% else %}
+                                            <img src="{% static 'images/cover1.jpg' %}" loading="lazy" alt="img">
+                                        {% endif %}
+                                        <div class="media-links">
+                                            <div class="links-wrap">
+                                                <a class="link-zoom" title="" href="{{ category.get_absolute_url }}"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-content small-padding">
+                                        <h6>
+                                            <a href="{{ category.get_absolute_url }}">{{ category.title|title }}</a>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <!-- .isotope-wrapper-->
+                </div>
+            </div>
+            <div class="mt--30"></div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends 'shared/_MainLayout.html' %}
+{% block content %}
+    {% include 'shared/TitleSection1.html' %}
+    <section class="ls s-pt-xl-160 s-pb-xl-280 s-pt-lg-130 s-pb-lg-250 s-py-md-90 s-py-60 c-gutter-30">
+        <div class="container">
+            <div class="row">
+                <main class="col-lg-7 col-xl-9">
+                    <div class="product type-product ">
+                        <div class="images" data-columns="1">
+                            <figure>
+                                <div data-thumb="{{ product.image.url }}">
+                                    <a href="{{ product.image.url }}">
+                                        <img src="{{ product.image.url }}" alt="" data-caption=""
+                                            data-src="{{ product.image.url }}" data-large_image="{{ product.image.url }}"
+                                            data-large_image_width="1000" data-large_image_height="1000">
+                                    </a>
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="summary entry-summary">
+                            <h1 class="product_title entry-title">{{ product.title }}</h1>
+                            <div>
+                                <h2>Description</h2>
+                                <p>{{ product.description }}</p>
+                            </div>
+                        </div>
+                        <div class="woocommerce-tabs wc-tabs-wrapper">
+                            <ul class="tabs wc-tabs" role="tablist">
+                                <li class="description_tab" id="tab-title-description" role="tab"
+                                    aria-controls="tab-description">
+                                    <a href="#tab-description">Information</a>
+                                </li>
+                                <li class="additional_information_tab active" id="tab-title-additional_information"
+                                    role="tab" aria-controls="tab-additional_information">
+                                    <a href="#tab-additional_information">Additional information</a>
+                                </li>
+                                <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
+                                    <a href="#tab-reviews">Characteristics</a>
+                                </li>
+                            </ul>
+                            <div class="panel wc-tab" id="tab-description" role="tabpanel"
+                                aria-labelledby="tab-title-description">
+                                <h2>Main Application</h2>
+                                <p>{{ product.main_application }}</p>
+                                <hr>
+                                <h2>Caution</h2>
+                                <p>{{ product.caution }}</p>
+                            </div>
+                            <div class="panel wc-tab" id="tab-additional_information" role="tabpanel"
+                                aria-labelledby="tab-title-additional_information">
+                                <h2>Specifications</h2>
+                                <ul>
+                                    {% for spec in product.specification_set.all %}
+                                        <li>{{ spec.title }}</li>
+                                    {% endfor %}
+                                </ul>
+                                <hr>
+                                <h2>Advantages</h2>
+                                <ul>
+                                    {% for adv in product.advantage_set.all %}
+                                        <li>{{ adv.title }}</li>
+                                    {% endfor %}
+                                </ul>
+                                <hr>
+                                <h2>Health and Safety</h2>
+                                <ul>
+                                    <li>Do not use as medicine or food product.</li>
+                                    <li>If swallowed, get medical assistance. If medical assistance is not immediately
+                                        available, induce vomiting.
+                                    </li>
+                                    <li>
+                                        After handling wash thoroughly and immediately with soap and water. Launder oily
+                                        clothing before reuse.
+                                    </li>
+                                    <li>
+                                        Discard oil-soaked shoes or boots.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="panel wc-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+                                <h2>Characteristics</h2>
+                                <iframe src="{{ product.characteristics.url }}" frameBorder="0" scrolling="auto" height="100%" width="100%" ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #product-22 -->
+                </main>
+                <aside class="col-lg-5 col-xl-3">
+
+                    <div class="widget widget_product_search">
+
+                        <h3 class="widget-title">Search</h3>
+
+                        <form role="search" method="get" class="woocommerce-product-search"
+                            action="{% url 'product:product_search' %}">
+
+                            <label class="screen-reader-text" for="woocommerce-product-search-field-widget">
+                                Search for:
+                            </label>
+
+                            <input type="search" id="woocommerce-product-search-field-widget" class="search-field"
+                                placeholder="Search" value="{{ request.GET.q }}" name="q">
+                            <input type="submit" value="Search">
+                        </form>
+                    </div>
+                    <div class="widget woocommerce widget_product_categories">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul class="product-categories" id="category_list">
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+    {% block footer_ref %}
+    <script>
+        function titleCase(str) {
+            str = str.toLowerCase().split(' ');
+            for (var i = 0; i < str.length; i++) {
+                str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+            }
+            return str.join(' ');
+        }
+
+        $(document).ready(function () {
+            $.ajax({
+                url: '{% url 'get_categories' %}',
+                dataType: 'json',
+                success: function (data) {
+                    let categories = JSON.parse(data['categories']);
+                    $.each(categories, function (index, value) {
+                        let category_title = value['fields']['title']
+                        let category_url = category_title.replace(' ', '-')
+                        let url = "{% url 'product:sub_category_list' 'category' %}";
+                        url = url.replace('category', category_url);
+                        $('#category_list').append(
+                            `<li class="cat-item"><a href="${url}">${titleCase(category_title)}</a></li>`)
+                    });
+                }
+            });
+        });
+    </script>
+{% endblock %}

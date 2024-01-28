@@ -1,0 +1,144 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+{% include 'shared/TitleSection1.html' %}
+<section class="ls ms s-pt-xl-160 s-pb-xl-280 s-pt-lg-130 s-pb-lg-250 s-py-md-90 s-py-60 c-gutter-60">
+  <div class="container">
+    <div class="row">
+      <main class="col-lg-7 col-xl-8">
+        <article class="vertical-item single-post bordered post type-post status-publish format-standard has-post-thumbnail">
+          <!-- .post-thumbnail -->
+          <div class="item-media post-thumbnail">
+            {% if news.news_image.url %}
+              <img src="{{ news.news_image.url }}" alt="">
+            {% else %}
+              <img src="{% static 'images/blog/01.jpg' %}" alt="">
+            {% endif %}
+          </div>
+          <div class="item-content">
+            <div class="entry-content">
+              {{ post.content|safe }}
+            </div>
+            <footer class="entry-footer">
+              <div class="after-meta">
+                <div class="share_buttons">
+                  <span>share:</span>
+                  <a href="https://www.facebook.com?" class="rounded-icon bg-icon fab fa-facebook-f" target="_blank"></a>
+                  <a href="https://twitter.com" class="rounded-icon bg-icon fab fa-twitter" target="_blank"></a>
+                  <a href="https://pinterest.com" class="rounded-icon bg-icon fab fa-linkedin-in" target="_blank"></a>
+                  <a href="https://www.linkedin.com" class="rounded-icon bg-icon fab fa-instagram" target="_blank"></a>
+                </div>
+              </div>
+            </footer>
+            <!-- .entry-content -->
+          </div>
+          <!-- .item-content -->
+        </article>
+      </main>
+      <aside class="col-lg-5 col-xl-4">
+        {% comment %} <div class="widget widget_search">
+          <h3 class="widget-title">Search</h3>
+          <form role="search" method="get" class="search-form" action="/">
+            <label for="search-form-widget3">
+              <span class="screen-reader-text">Search for:</span>
+            </label>
+            <input type="search" id="search-form-widget3" class="search-field" placeholder="Search" value="" name="search">
+            <button type="submit" class="search-submit">
+              <span class="screen-reader-text">Search</span>
+            </button>
+          </form>
+        </div> {% endcomment %}
+        {% comment %} <div class="widget widget_categories">
+
+          <h3 class="widget-title">Categories</h3>
+
+          <ul>
+            <li class="cat-item">
+              <a href="blog-right.html">Corporate</a>
+              (12)
+              <ul class="children">
+                <li class="cat-item">
+                  <a href="blog-right.html">Business
+                  </a>
+                  (1)
+                </li>
+              </ul>
+            </li>
+            <li class="cat-item">
+              <a href="blog-right.html">Entertainment</a>
+              (21)
+            </li>
+            <li class="cat-item">
+              <a href="blog-right.html">Innovations</a>
+              (18)
+            </li>
+            <li class="cat-item">
+              <a href="blog-right.html">News</a>
+              (43)
+            </li>
+            <li class="cat-item">
+              <a href="blog-right.html">Knowledge
+              </a>
+              (8)
+            </li>
+          </ul>
+        </div> {% endcomment %}
+        <div class="widget widget_recent_posts">
+          <h3 class="widget-title">{% trans "Latest News" %}</h3>
+          <ul class="list-unstyled">
+            {% for ln in latest_news %}
+              <li class="media">
+                <a class="media-image" href="{{ ln.get_absolute_url }}">
+                  {% if ln.news_image.url %}
+                    <img src="{{ ln.news_image.url }}" alt="">
+                  {% else %}
+                    <img src="{% static 'images/blog/01.jpg' %}" alt="">
+                  {% endif %}
+                </a>
+                <div class="media-body">
+                  <h4>
+                    <a href="{{ ln.get_absolute_url }}"> {{ ln.title|title }}</a>
+                  </h4>
+                  <p class="item-meta">
+                    <i class="far fa-calendar-alt"></i>
+                    {{ ln.created_on|date:"SHORT_DATE_FORMAT" }}
+                  </p>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% comment %} <div class="widget widget_tag_cloud">
+
+          <h3 class="widget-title">Tags</h3>
+
+          <div class="tagcloud">
+
+            <a href="blog-right.html" class="tag-cloud-link">
+              oil
+            </a>
+
+            <a href="blog-right.html" class="tag-cloud-link">
+              gas
+            </a>
+
+            <a href="blog-right.html" class="tag-cloud-link">
+              industry
+            </a>
+
+            <a href="blog-right.html" class="tag-cloud-link">
+              plant
+            </a>
+
+            <a href="blog-right.html" class="tag-cloud-link">
+              lab
+            </a>
+
+          </div>
+        </div> {% endcomment %}
+      </aside>
+    </div>
+  </div>
+</section>
+{% endblock %}

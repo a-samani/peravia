@@ -1,0 +1,97 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load static %}
+{% block header_ref %}
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+{% endblock %}
+{% block content %}
+    {% include 'shared/TitleSection1.html' %}
+    <section class="ls s-pt-xl-160 s-pb-xl-280 s-pt-lg-130 s-pb-lg-250 s-py-md-90 s-py-60">
+        <div class="container">
+            <div class="row">
+                <main class="col-lg-12">
+                    <article>
+                        <div class="entry-content">
+                            <div class="woocommerce">
+                                <form onsubmit="Validate(v)" id="register"
+                                      class="woocomerce-form woocommerce-form-login login" method="post">
+                                    {% csrf_token %}
+                                    {{ register_form }}
+                                    <hr>
+                                    <span id="email_valid_alert"></span>
+                                    <span id="phone_valid_alert"></span>
+                                    <span id="password_check_alert"></span>
+                                    <p class="form-row">
+                                        <input id="submit-pass" type="submit"
+                                               class="woocommerce-Button button"
+                                               name="register"
+                                               value="Register">
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </article>
+                </main>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block footer_ref %}
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+        let email_valid, valid_phone, password_match
+        $('#id_email').on('change', function () {
+            let email = $('#id_email').val();
+            if (email !== "") {
+                $.ajax({
+                    url: '{% url 'validate_email_url' %}',
+                    data: {
+                        'email': email
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        email_valid = !data.is_taken;
+                    }
+                });
+                if (!email_valid) {
+                    $('#email_valid_alert').html('Email is already taken').css('color', 'red');
+                } else {
+                    $('#email_valid_alert').hide();
+                }
+            }
+        });
+        $('#phone').on('keyup', function () {
+            phoneInputField.value = phoneInput.getNumber();
+            valid_phone = phoneInput.isValidNumber();
+            if (!valid_phone && phoneInputField.value !== "") {
+                $('#phone_valid_alert').html('Phone number is not valid').css('color', 'red');
+            } else {
+                $('#phone_valid_alert').hide();
+            }
+        });
+
+        $('#password_confirm').on('keyup', function () {
+            const password = $('#password').val();
+            const confirm_password = $('#password_confirm').val();
+            password_match = (password === confirm_password);
+            if (!password_match) {
+                $('#password_check_alert').html('Password and confirmation password do not match').css('color', 'red');
+            } else {
+                $('#password_check_alert').hide();
+            }
+        });
+
+        function Validate(v) {
+            if (email_valid && valid_phone && password_match) {
+                $('#register').submit();
+            } else v.preventDefault();
+        }
+    </script>
+{% endblock %}

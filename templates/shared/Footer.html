@@ -1,0 +1,89 @@
+{% load static %}
+{% load i18n %}
+
+<footer class="page_footer text-center c-gutter-100 text-sm-left ds">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 order-1 order-lg-1 animate" data-animation="fadeInUp">
+                <div class="fw-divider-space divider-xl-160 divider-lg-130 divider-md-90 divider-60"></div>
+                <a href="{% url 'home' %}" class="logo">
+                    <img src="{% static 'images/logo.png' %}" alt="">
+                    <span class="d-flex flex-column">
+                        <span class="logo-text color-darkgrey">{% trans "Peravia" %}</span>
+                        <span class="logo-subtext">{% trans "persian aviation material" %}</span>
+                    </span>
+                </a>
+                <p>
+                    {% trans "Your additional text here" %}
+                </p>
+                <div id="social_media_setting">
+                    <!-- ... (your existing code) ... -->
+                </div>
+                <div class="fw-divider-space divider-xl-160 divider-lg-130 divider-md-60 divider-30"></div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 ls order-3 order-lg-2 footer-special-column text-center animate"
+                data-animation="fadeInUp">
+                <div id="write_us" class="form-wrapper">
+                    <form class="contact-form" method="post" action="{% url 'contact:write_us_fun' %}">
+                        {% csrf_token %}
+                        <div class="row c-mb-20">
+                            <div class="col-12 form-title text-center form-builder-item">
+                                <div class="header title">
+                                    <h2>{% trans "Write Us" %}</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row c-mb-10 c-gutter-10">
+                            <div class="col-lg-12 text-center">
+                                <div class="form-group has-placeholder">
+                                    <label for="name22335x5553">{% trans "Full Name" %} <span class="required">*</span></label>
+                                    <input required="true" type="text" aria-required="true" size="30" value=""
+                                        name="fullname" id="name22335x5553" class="form-control" placeholder="{% trans 'Full Name' %}">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ... (your existing code) ... -->
+                        <div class="row c-mb-10 c-gutter-10">
+                            <div class="col-lg-12 text-center">
+                                <div class="form-group has-placeholder">
+                                    <label for="name223355553">{% trans "Phone Number" %} <span class="required">*</span></label>
+                                    <input required="true" type="text" aria-required="true" size="30" value=""
+                                        name="phone_number" id="name223355553" class="form-control" placeholder="{% trans 'Phone Number' %}">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ... (your existing code) ... -->
+                        <div class="row c-mb-10 c-gutter-10">
+                            <div class="col-sm-12 text-center">
+                                <div class="form-group has-placeholder">
+                                    <label for="message22335553">{% trans "Message" %}</label>
+                                    <textarea required="true" aria-required="true" rows="6" cols="45" name="message"
+                                        id="message22335553" class="form-control" placeholder="{% trans 'Your Message' %}"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ... (your existing code) ... -->
+                    </form>
+                </div>
+                <h6 class="fs-12 text-uppercase">&copy; {% trans "Copyright" %} <span class="copyright_year">2019</span> {% trans "All Rights Reserved" %}</h6>
+            </div>
+
+            <div class="col-lg-4 col-md-6 order-2 order-lg-3 animate" data-animation="fadeInUp">
+                <div class="fw-divider-space divider-xl-160 divider-lg-130 divider-md-90"></div>
+                <div class="widget widget_icons_list">
+                    <ul>
+                        <li class="icon-inline">
+                            <div class="icon-styled icon-top bordered round fs-16">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <p id="phone_setting">{% trans "Your Phone Number here" %}</p>
+                        </li>
+                        <!-- ... (your existing code) ... -->
+                    </ul>
+                </div>
+                <div class="fw-divider-space divider-xl-160 divider-lg-130 divider-md-60 divider-30"></div>
+            </div>
+        </div>
+    </div>
+</footer>
