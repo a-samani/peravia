@@ -31,21 +31,24 @@
                     </div><!-- eof .container-fluid -->
                 </li>
                 <li class="ds cover-image">
-                    <img loading="lazy" src="{% static 'images/01.jpg' %}" alt="img">
+                    <img loading="lazy" src="{% static 'images/01.jpg' %}" alt="{% trans 'img' %}">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="intro_layers_wrapper">
                                     <div class="intro_layers">
                                         <div class="intro_layer">
-                                            <h6 class="intro_before_featured_word">2.There is no impasse</h6>
+                                            <h6 class="intro_before_featured_word">{% trans '2.There is no impasse' %}</h6>
                                             <h4 class="text-capitalize intro_featured_word">
-                                                Knowledge-based and eco-friendly company
+                                                {% trans 'Knowledge-based and eco-friendly company' %}
                                             </h4>
                                             <a href="{% url 'contact:contact_page' %}"
-                                               class="btn btn-outline-darkgrey big-btn">get a quote</a>
-                                            <span class="text-divider">or</span>
-                                            <a href="#write_us" class="btn just-link">Request a Callback</a>
+                                               class="btn btn-outline-darkgrey big-btn">
+                                                {% trans 'get a quote' %}
+                                            </a>
+                                            <span class="text-divider">{% trans 'or' %}</span>
+                                            <a href="#write_us"
+                                               class="btn just-link">{% trans 'Request a Callback' %}</a>
                                         </div>
                                     </div> <!-- eof .intro_layers -->
                                 </div> <!-- eof .intro_layers_wrapper -->
@@ -53,6 +56,7 @@
                         </div><!-- eof .row -->
                     </div><!-- eof .container-fluid -->
                 </li>
+
                 <li class="ds cover-image">
                     <img loading="lazy" src="{% static 'images/02.jpg' %}" alt="img">
                     <div class="container-fluid">
@@ -111,7 +115,7 @@
                 <div class="col-12 col-lg-3 text-center">
                     <h2 class="special-heading text-center">
 								<span class="text-capitalize">
-									welcome!
+                                    {% trans "welcome!"%}
 								</span>
                     </h2>
                     <div class="divider-30"></div>
@@ -121,10 +125,13 @@
                     <div class="divider-35 hidden-above-lg"></div>
                     <div class="divider--5"></div>
                     <p class="excerpt">
+                        {% blocktrans %}
                         Faraz Aseman Parsian Company is a private joint stock company registered under
                         the Peravia brand.
+                        {% endblocktrans %}
                     </p>
                     <p style="text-align:left">
+                        {% blocktrans %}
                         It relies on scientific and technical ability of the most prominent domestic specialists.
                         Also, in line with its values, design and manufactures various fluids used in the aviation
                         industry has compiled with reliable international and national standards. Faraz Aseman Parsian
@@ -139,6 +146,7 @@
                         to its customers with quality guarantee,fixed price in Rials and permanent and easy supply with
                         the largest
                         number of product baskets compared to similar foreign companies.
+                        {% endblocktrans %}
                     </p>
                 </div>
             </div>
@@ -157,13 +165,18 @@
                     <div class="content-center">
                         <h2 class="special-heading numeric text-sm-left text-center">
                             <span class="text-capitalize">
-                                Peravia
+                                {% trans "Peravia" %}
                             </span>
                         </h2>
                         <div class="divider-45 hidden-below-lg"></div>
                         <div class="divider-30 hidden-above-lg"></div>
                         <p>
-                            
+                            {% blocktrans %}
+                            Peravia is a high-tech chemical company, that specifically produces aviation engine oils,
+                            lubricants, and greases.In addition to aviation products,
+                            this company produces engine oils and lubricants for
+                            other industries such as the automotive industry
+                            {% endblocktrans %}
                         </p>
                         <div class="divider-50 hidden-below-lg"></div>
                         <div class="divider-30 hidden-above-lg"></div>
@@ -182,15 +195,17 @@
                     <div class="content-center">
                         <h2 class="special-heading numeric text-sm-left text-center">
 									<span class="text-capitalize">
-                                        Quality and Price
+                                        {% trans "Quality and Price" %}
 									</span>
                         </h2>
                         <div class="divider-45 hidden-below-lg"></div>
                         <div class="divider-30 hidden-above-lg"></div>
                         <p>
+                            {% blocktrans %}
                             Due to the fact that production costs in Iran are low, as a result, the price of the product
                             will be offered to the market more economically. On the other hand, the quality of peravia
                             products is equal to and higher than similar products in the world.
+                            {% endblocktrans %}
                         </p>
                         <div class="divider-45 hidden-below-lg"></div>
                         <div class="divider-30 hidden-above-lg"></div>
@@ -212,15 +227,17 @@
                     <div class="content-center">
                         <h2 class="special-heading numeric text-sm-left text-center">
                             <span class="text-capitalize">
-                                Product Customization
+                                {% trans "Product Customization" %}
                             </span>
                         </h2>
                         <div class="divider-45 hidden-below-lg"></div>
                         <div class="divider-30 hidden-above-lg"></div>
                         <p>
+                            {% blocktrans %}
                             Due to the weather, operating conditions and needs of different companies in different
                             countries, Peravia has the ability to offer the product according to different conditions.
                             In addition, Peravia strives to offer a complete portfolio of high-demand products.
+                            {% endblocktrans %}
                         </p>
                         <div class="divider-45 hidden-below-lg"></div>
                         <div class="divider-30 hidden-above-lg"></div>
@@ -236,7 +253,7 @@
                 <div class="col-12 col-lg-6">
                     <h2 class="special-heading text-sm-left text-center">
 								<span class="text-capitalize">
-									FAQ & Information
+									{% trans "FAQ & Information" %}
 								</span>
                     </h2>
                     <div class="divider-50 hidden-below-lg"></div>
@@ -247,13 +264,14 @@
                                 <h5>
                                     <a data-toggle="collapse" href="#collapse01" aria-expanded="true"
                                        aria-controls="collapse01">
-                                        Get to know us
+                                        {% trans "Get to know us" %}
                                     </a>
                                 </h5>
                             </div>
                             <div id="collapse01" class="collapse show" role="tabpanel"
                                  aria-labelledby="collapse01_header" data-parent="#accordion01">
                                 <div class="card-body">
+                                    {% blocktrans %}
                                     Faraz Aseman Parsian Company (privately held Company), registered under the Peravia
                                     brand, relying on its scientific and technical ability and using the capacity of the
                                     most prominent domestic specialists, as well as in line with its values, designs and
@@ -263,6 +281,7 @@
                                     only specialized company producing aviation fluids in the Middle East, has tried to
                                     fulfill its social responsibility in protecting the environment by innovating,
                                     diversifying and developing biodegradable products.
+                                    {% endblocktrans %}
                                 </div>
                             </div>
                         </div>
@@ -271,7 +290,7 @@
                                 <h5>
                                     <a data-toggle="collapse" href="#collapse02" aria-expanded="false"
                                        aria-controls="collapse01">
-                                        What types of product does Peravia include?
+                                        {% trans "What types of product does Peravia include?" %}
                                     </a>
                                 </h5>
                             </div>
@@ -279,10 +298,12 @@
                             <div id="collapse02" class="collapse" role="tabpanel"
                                  aria-labelledby="collapse01_header" data-parent="#accordion01">
                                 <div class="card-body">
+                                    {% blocktrans %}
                                     Peravia includes four product categories: piston engine oils, jet engine oils,
                                     hydraulic fluid and greases.
                                     Peravia product development plan is to produce and supply all materials of the
                                     aviation industry in the coming years.
+                                    {% endblocktrans %}
                                 </div>
                             </div>
                         </div>
@@ -291,17 +312,19 @@
                                 <h5>
                                     <a class="collapse" data-toggle="collapse" href="#collapse03" aria-expanded="false"
                                        aria-controls="collapse03">
-                                        What can we do to buy a product or establish a business relationship?
+                                        {% trans "What can we do to buy a product or establish a business relationship?" %}
                                     </a>
                                 </h5>
                             </div>
                             <div id="collapse03" class="collapse" role="tabpanel" aria-labelledby="collapse03_header"
                                  data-parent="#accordion01">
                                 <div class="card-body">
+                                    {% blocktrans with link=url target='contact:contact_page' %}
                                     To make a purchase request and any business connection, you can apply through the
-                                    <a href="{% url 'contact:contact_page' %}">contact us</a> section on the site,
+                                    <a href="{{ link }} {{target }}">contact us</a> section on the site,
                                     telephone
                                     number or social media networks.
+                                    {% endblocktrans %}
                                 </div>
                             </div>
                         </div>

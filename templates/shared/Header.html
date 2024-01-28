@@ -20,7 +20,7 @@
                             <span class="screen-reader-text">{% trans "Search:" %}</span>
                         </label>
                         <input required="" type="search" id="search-form-top" class="search-field form-control"
-                               placeholder="Search keyword" value="" name="q">
+                               placeholder={% trans "Search keyword" %} value="" name="q">
                         <button type="submit" class="search-submit">
                             <span class="screen-reader-text">{% trans "Search" %}</span>
                         </button>
@@ -67,7 +67,7 @@
                                 <a href="{% url 'contact:contact_page' %}">{% trans "Contact" %}</a>
                             </li>
                             <li>
-                                <a href="#">Blog</a>
+                                <a href="#">{% trans "Blog" %}</a>
                                 <ul>
                                     <li><a href="{% url 'blog:news_list' %}">{% trans "News" %}</a></li>
                                     <li><a href="{% url 'blog:article_list' %}">{% trans "Articles" %}</a></li>
@@ -89,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <span class="toggle_menu"><span>menu</span></span>
+        <span class="toggle_menu"><span>{% trans "menu" %}</span></span>
     </header>
 </div>
 </body>
