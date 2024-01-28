@@ -72,9 +72,7 @@
                                 <h5>
                                     <a class="collapsed" data-toggle="collapse" href="#collapse03" aria-expanded="false"
                                        aria-controls="collapse03">
-                                        {% blocktrans %}
-                                        What can we do to buy a product or establish a business relationship?
-                                        {% endblocktrans %}
+                                        {% trans "What can we do to buy a product or establish a business relationship?"%}
                                     </a>
                                 </h5>
                             </div>
@@ -84,7 +82,7 @@
                                     {% blocktrans %}
                                     To make a purchase request and any business connection, you can apply through the
                                     {% endblocktrans %}
-                                    <a href="{% url 'contact:contact_page' %}">contact us</a> section on the site,
+                                    <a href="{% url 'contact:contact_page' %}">{% trans "contact us" %}</a> {% trans "section on the site" %},
                                     {% blocktrans %}
                                     telephone
                                     number or social media networks.

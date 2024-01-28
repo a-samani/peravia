@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 13:40+0330\n"
-"PO-Revision-Date: 2024-01-28 10:12+0000\n"
+"POT-Creation-Date: 2024-01-28 13:46+0330\n"
+"PO-Revision-Date: 2024-01-28 10:20+0000\n"
 "Last-Translator: Anonymous User <ali@mail.com>\n"
 "Language-Team: \n"
 "Language: fa\n"
@@ -126,19 +126,11 @@ msgstr ""
 "\n"
 "پراویا شامل چهار دسته محصول است: روغن موتورهای پیستونی، روغن موتور جت، مایع هیدرولیک و گریس. برنامه توسعه محصول پراویا تولید و تامین کلیه مواد صنعت هوانوردی در سالهای آینده است."
 
-#: templates/main/FAQ.html:75
-#, fuzzy
-#| msgid ""
-#| "What can we do to buy a product or establish a business relationship?"
-msgid ""
-"\n"
-"                                        What can we do to buy a product or establish a business relationship?\n"
-"                                        "
-msgstr ""
-"\n"
-"برای خرید محصول یا ایجاد رابطه تجاری چه کنیم؟"
+#: templates/main/FAQ.html:75 templates/main/Home_Page.html:315
+msgid "What can we do to buy a product or establish a business relationship?"
+msgstr "برای خرید محصول یا ایجاد رابطه تجاری چه کنیم؟"
 
-#: templates/main/FAQ.html:84
+#: templates/main/FAQ.html:82
 msgid ""
 "\n"
 "                                    To make a purchase request and any business connection, you can apply through the\n"
@@ -147,12 +139,17 @@ msgstr ""
 "\n"
 "برای درخواست خرید و هرگونه ارتباط تجاری، می توانید از طریق"
 
-#: templates/main/FAQ.html:88
-#| msgid ""
-#| "\n"
-#| "                        Faraz Aseman Parsian Company is a private joint stock company registered under\n"
-#| "                        the Peravia brand.\n"
-#| "                        "
+#: templates/main/FAQ.html:85
+#, fuzzy
+#| msgid "Contact"
+msgid "contact us"
+msgstr "تماس با ما"
+
+#: templates/main/FAQ.html:85
+msgid "section on the site"
+msgstr "قسمت روی سایت"
+
+#: templates/main/FAQ.html:86
 msgid ""
 "\n"
 "                                    telephone\n"
@@ -188,7 +185,7 @@ msgstr "درخواست تماس"
 
 #: templates/main/Home_Page.html:34
 msgid "img"
-msgstr ""
+msgstr "تصویر"
 
 #: templates/main/Home_Page.html:41
 msgid "2.There is no impasse"
@@ -293,10 +290,6 @@ msgstr ""
 "با توجه به آب و هوا، شرایط عملیاتی و نیاز شرکت های مختلف در کشورهای مختلف، پرویا این قابلیت را دارد که محصول را با توجه به شرایط مختلف عرضه کند.\n"
 "علاوه بر این، پراویا در تلاش است تا مجموعه کاملی از محصولات پرتقاضا را ارائه دهد."
 
-#: templates/main/Home_Page.html:315
-msgid "What can we do to buy a product or establish a business relationship?"
-msgstr "برای خرید محصول یا ایجاد رابطه تجاری چه کنیم؟"
-
 #: templates/main/Home_Page.html:322
 #, python-format
 msgid ""
@@ -307,6 +300,8 @@ msgid ""
 "                                    number or social media networks.\n"
 "                                    "
 msgstr ""
+"\n"
+"برای خرید یا هرگونه ارتباط میتوانید از طریق درباره ما در ارتباط باشید"
 
 #: templates/shared/Footer.html:13
 msgid "persian aviation material"
@@ -392,6 +387,15 @@ msgstr "مقاله ها"
 #: templates/shared/Header.html:92
 msgid "menu"
 msgstr "منو"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "                                        What can we do to buy a product or establish a business relationship?\n"
+#~ "                                        "
+#~ msgstr ""
+#~ "\n"
+#~ "برای خرید محصول یا ایجاد رابطه تجاری چه کنیم؟"
 
 #~ msgid "Select an image to embed"
 #~ msgstr "یک تصویر را برای جاسازی انتخاب کنید"

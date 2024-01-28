@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 13:40+0330\n"
+"POT-Creation-Date: 2024-01-28 13:46+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,15 +129,11 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/main/FAQ.html:75
-msgid ""
-"\n"
-"                                        What can we do to buy a product or "
-"establish a business relationship?\n"
-"                                        "
+#: templates/main/FAQ.html:75 templates/main/Home_Page.html:315
+msgid "What can we do to buy a product or establish a business relationship?"
 msgstr ""
 
-#: templates/main/FAQ.html:84
+#: templates/main/FAQ.html:82
 msgid ""
 "\n"
 "                                    To make a purchase request and any "
@@ -145,7 +141,15 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/main/FAQ.html:88
+#: templates/main/FAQ.html:85
+msgid "contact us"
+msgstr ""
+
+#: templates/main/FAQ.html:85
+msgid "section on the site"
+msgstr ""
+
+#: templates/main/FAQ.html:86
 msgid ""
 "\n"
 "                                    telephone\n"
@@ -287,10 +291,6 @@ msgid ""
 "                            In addition, Peravia strives to offer a complete "
 "portfolio of high-demand products.\n"
 "                            "
-msgstr ""
-
-#: templates/main/Home_Page.html:315
-msgid "What can we do to buy a product or establish a business relationship?"
 msgstr ""
 
 #: templates/main/Home_Page.html:322
