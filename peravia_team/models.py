@@ -1,6 +1,6 @@
 from django.db import models
 from utilities.utils import *
-
+from django.utils.translation import gettext_lazy as _
 # ----------------------------------------------------------
 def upload_image_path(instance, filename):
     name, ext = get_filename_ext(filename)
@@ -10,14 +10,15 @@ def upload_image_path(instance, filename):
 # ----------------------------------------------------------
 class Team(models.Model):
     Positions = (
-        ('Co-Founder & CEO', 'Co-Founder & CEO'),
-        ('International Procurement Manager','International Procurement Manager'),
-        ('Procurement Manager','Procurement Manager'),
-        ('Administrative Manager','Administrative Manager'),
-        ('Financial Manager','Financial Manager'),
-        ('Industrial Accountant','Industrial Accountant'),
-        ('IT Manager','IT Manager'),
-        ('Brand Manager','Brand Manager')
+        (_('Co-Founder & CEO'), _('Co-Founder & CEO')),
+        (_('International Procurement Manager'), _('International Procurement Manager')),
+        (_('Procurement Manager'), _('Procurement Manager')),
+        (_('Administrative Manager'), _('Administrative Manager')),
+        (_('Financial Manager'), _('Financial Manager')),
+        (_('Industrial Accountant'), _('Industrial Accountant')),
+        (_('IT Manager'), _('IT Manager')),
+        (_('Brand Manager'), _('Brand Manager'))
+
     )
     Rank = tuple([(i+1,str(i+1)) for i in range(len(Positions))])
     name = models.CharField(max_length=150)

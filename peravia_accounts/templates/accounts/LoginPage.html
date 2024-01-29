@@ -1,4 +1,5 @@
 {% extends 'shared/_MainLayout.html' %}
+{% load i18n %}
 {% block content %}
     {% include 'shared/TitleSection1.html' %}
     <section class="ls s-pt-xl-160 s-pb-xl-280 s-pt-lg-130 s-pb-lg-250 s-py-md-90 s-py-60">
@@ -19,14 +20,14 @@
                                     </p>
                                     <p class="form-row">
                                         <input type="submit" class="woocommerce-Button button" name="login"
-                                               value="Login">
+                                               value={% trans 'Login' %}>
                                         <label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
                                             {{ login_form.remember_me }}
-                                            <span>Remember me</span>
+                                            <span>{% trans "Remember me" %}</span>
                                         </label>
                                     </p>
                                     <p class="woocommerce-LostPassword lost_password">
-                                        <a href="">Lost your password?</a>
+                                        <a href="">{%  trans "Lost your password?" %}</a>
                                     </p>
                                     {% csrf_token %}
                                 </form>

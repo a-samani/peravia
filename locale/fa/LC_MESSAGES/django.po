@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 14:07+0330\n"
-"PO-Revision-Date: 2024-01-28 10:38+0000\n"
+"POT-Creation-Date: 2024-01-28 14:29+0330\n"
+"PO-Revision-Date: 2024-01-28 11:01+0000\n"
 "Last-Translator: Anonymous User <ali@mail.com>\n"
 "Language-Team: \n"
 "Language: fa\n"
@@ -73,6 +73,18 @@ msgstr "مقدار is_superuser برای کاربر سوپر یوزر باید T
 msgid "email address"
 msgstr "آدرس ایمیل"
 
+#: peravia_accounts/templates/accounts/LoginPage.html:23
+msgid "Login"
+msgstr "ورود"
+
+#: peravia_accounts/templates/accounts/LoginPage.html:26
+msgid "Remember me"
+msgstr "به خاطر سپردن"
+
+#: peravia_accounts/templates/accounts/LoginPage.html:30
+msgid "Lost your password?"
+msgstr "رمز عبور خود را فراموش کرده اید ؟"
+
 #: peravia_blog/templates/news/NewsDetail.html:90
 #: templates/main/Home_Page.html:438
 msgid "Latest News"
@@ -108,6 +120,139 @@ msgstr "پیام"
 #: peravia_contact/templates/contact/Contact_Us_Page.html:85
 msgid "Send message"
 msgstr "ارسال پیام"
+
+#: peravia_products/templates/products/ProductDetail.html:24
+msgid "Description"
+msgstr "توضیحات"
+
+#: peravia_products/templates/products/ProductDetail.html:32
+#, fuzzy
+#| msgid "FAQ & Information"
+msgid "Information"
+msgstr "سوالات متداول"
+
+#: peravia_products/templates/products/ProductDetail.html:36
+#, fuzzy
+#| msgid "FAQ & Information"
+msgid "Additional information"
+msgstr "سوالات متداول"
+
+#: peravia_products/templates/products/ProductDetail.html:39
+#: peravia_products/templates/products/ProductDetail.html:86
+msgid "Characteristics"
+msgstr "مشخصات"
+
+#: peravia_products/templates/products/ProductDetail.html:44
+msgid "Main Application"
+msgstr "برنامه اصلی"
+
+#: peravia_products/templates/products/ProductDetail.html:47
+msgid "Caution"
+msgstr "احتیاط"
+
+#: peravia_products/templates/products/ProductDetail.html:52
+#, fuzzy
+#| msgid "Certificates"
+msgid "Specifications"
+msgstr "گواهینامه ها"
+
+#: peravia_products/templates/products/ProductDetail.html:59
+msgid "Advantages"
+msgstr "مزایا"
+
+#: peravia_products/templates/products/ProductDetail.html:66
+msgid "Health and Safety"
+msgstr "سلامت و امنیت"
+
+#: peravia_products/templates/products/ProductDetail.html:68
+msgid "Do not use as medicine or food product."
+msgstr "به عنوان دارو یا محصول غذایی استفاده نکنید."
+
+#: peravia_products/templates/products/ProductDetail.html:69
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                                    telephone\n"
+#| "                                    number or social media networks.\n"
+#| "                                    "
+msgid ""
+"\n"
+"                                        trans \"If swallowed, get medical assistance. If medical assistance is not immediately\n"
+"                                        available, induce vomiting.\n"
+"                                        "
+msgstr ""
+"\n"
+"تلفن\n"
+"شماره یا شبکه های اجتماعی"
+
+#: peravia_products/templates/products/ProductDetail.html:75
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                                    telephone\n"
+#| "                                    number or social media networks.\n"
+#| "                                    "
+msgid ""
+"\n"
+"                                        After handling wash thoroughly and immediately with soap and water. Launder oily\n"
+"                                        clothing before reuse.\n"
+"                                        "
+msgstr ""
+"\n"
+"تلفن\n"
+"شماره یا شبکه های اجتماعی"
+
+#: peravia_products/templates/products/ProductDetail.html:81
+msgid "Discard oil-soaked shoes or boots."
+msgstr "کفش ها یا چکمه های آغشته به روغن را دور بیندازید."
+
+#: peravia_products/templates/products/ProductDetail.html:97
+#: peravia_products/templates/products/ProductDetail.html:107
+#: templates/shared/Header.html:17 templates/shared/Header.html:25
+msgid "Search"
+msgstr "جستجو"
+
+#: peravia_products/templates/products/ProductDetail.html:103
+#, fuzzy
+#| msgid "Search:"
+msgid "Search for:"
+msgstr "جستجوی"
+
+#: peravia_products/templates/products/ProductDetail.html:112
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#: peravia_team/models.py:13
+msgid "Co-Founder & CEO"
+msgstr "بنیانگذار و مدیرعامل"
+
+#: peravia_team/models.py:14
+msgid "International Procurement Manager"
+msgstr "مدیر تدارکات بین المللی"
+
+#: peravia_team/models.py:15
+msgid "Procurement Manager"
+msgstr "مدیر تدارکات"
+
+#: peravia_team/models.py:16
+msgid "Administrative Manager"
+msgstr "مدیر اداری"
+
+#: peravia_team/models.py:17
+msgid "Financial Manager"
+msgstr "مدیر مالی"
+
+#: peravia_team/models.py:18
+msgid "Industrial Accountant"
+msgstr "حسابدار صنعتی"
+
+#: peravia_team/models.py:19
+msgid "IT Manager"
+msgstr "مدیر فناوری اطلاعات"
+
+#: peravia_team/models.py:20
+msgid "Brand Manager"
+msgstr "مدیر برند"
 
 #: templates/main/About_Us.html:14 templates/main/Home_Page.html:118
 msgid "welcome!"
@@ -393,10 +538,6 @@ msgstr "شماره تماس شما"
 #: templates/shared/Header.html:12 templates/shared/Header.html:61
 msgid "About"
 msgstr "درباره ما"
-
-#: templates/shared/Header.html:17 templates/shared/Header.html:25
-msgid "Search"
-msgstr "جستجو"
 
 #: templates/shared/Header.html:20
 msgid "Search:"
