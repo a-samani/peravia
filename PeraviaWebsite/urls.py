@@ -26,7 +26,7 @@ urlpatterns = i18n_patterns(
     path('p/', include('peravia_products.urls', namespace='product')),
     path('blog/', include('peravia_blog.urls', namespace='blog')),
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url("images/favicon/favicon.ico")), ),
-    path(_('peravia_admin/'), admin.site.urls),
+    path('peravia_admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('rosetta/', include('rosetta.urls')),
 )

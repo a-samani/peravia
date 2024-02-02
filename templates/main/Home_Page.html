@@ -95,11 +95,21 @@
                                 </div>
                             </a>
                             <a href="{{ category.get_absolute_url }}">
-                                <h5>
-                                    {{ category.title|title }}
-                                </h5>
+                                {% if request.LANGUAGE_CODE == 'fa' %}
+                                    <h5>
+                                        {{ category.persian_title|title }}
+                                    </h5>
+                                {% else %}
+                                    <h5>
+                                        {{ category.title|title }}
+                                    </h5>
+                                {% endif %}
                             </a>
-                            <p>{{ category.description }}</p>
+                            {% if request.LANGUAGE_CODE == 'fa' %}
+                                <p>{{ category.persian_description }}</p>
+                            {% else %}
+                                 <p>{{ category.description }}</p>
+                            {% endif %}
                             <a class="btn btn-outline-darkgrey" href="{{ category.get_absolute_url }}">
                                 <i class="fas fa-chevron-right"></i>
                             </a>

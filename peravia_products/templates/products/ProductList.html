@@ -1,5 +1,6 @@
 {% extends 'shared/_MainLayout.html' %}
 {% load static %}
+{% load i18n  %}
 {% block content %}
     {% include 'shared/TitleSection1.html' %}
     <section class="ls s-pt-xl-160 s-pb-xl-280 s-pt-lg-130 s-pb-lg-250 s-py-md-90 s-py-60 c-gutter-30">
@@ -33,19 +34,19 @@
                 </main>
                 <aside class="col-lg-5 col-xl-3">
                     <div class="widget widget_product_search">
-                        <h3 class="widget-title">Search</h3>
+                        <h3 class="widget-title">{% trans "Search" %}</h3>
                         <form role="search" method="get" class="woocommerce-product-search"
                               action="{% url 'product:product_search' %}">
                             <label class="screen-reader-text" for="woocommerce-product-search-field-widget">
-                                Search for:
+                                {% trans "Search for:" %}
                             </label>
                             <input type="search" id="woocommerce-product-search-field-widget" class="search-field"
-                                   placeholder="Search" value="{{ request.GET.q }}" name="q">
-                            <input type="submit" value="Search">
+                                   placeholder="{% trans "Search" %}" value="{{ request.GET.q }}" name="q">
+                            <input type="submit" value="{% trans "Search" %}">
                         </form>
                     </div>
                     <div class="widget woocommerce widget_product_categories">
-                        <h3 class="widget-title">Categories</h3>
+                        <h3 class="widget-title">{% trans "Categories" %}</h3>
                         <ul class="product-categories" id="category_list">
                         </ul>
                     </div>
