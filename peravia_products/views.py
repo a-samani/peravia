@@ -53,6 +53,7 @@ class SubCategoryList(ListView):
     context_object_name = 'categories'
 
     def get_context_data(self, **kwargs):
+        language_code = self.request.LANGUAGE_CODE
         context = super().get_context_data(**kwargs)
         main_category = self.kwargs.get('main_category')
         context['page_name'] = main_category

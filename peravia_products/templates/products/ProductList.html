@@ -8,18 +8,33 @@
             <div class="row">
                 <main class="col-lg-7 col-xl-9">
                     <div>
+
                         <ul class="products columns-3">
                             {% for product in products %}
                                 <li class="product">
                                     <div class="product-inner">
                                         <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
                                            href="{{ product.get_absolute_url }}">
-                                            <img src="{{ product.image.url }}" alt="">
+
+                                            {% if product.image.url %}
+                                                <img src="{{ product.image.url }}" loading="lazy" alt="img">
+                                            {% else %}
+                                                <img src="{% static 'images/cover1.jpg' %}" loading="lazy" alt="img">
+                                            {% endif %}
                                         </a>
                                         <h2 class="woocommerce-loop-product__title">
                                             <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
                                                href="{{ product.get_absolute_url }}">
-                                                {{ product.title }}                                                
+                                                {% if request.LANGUAGE_CODE == 'fa' %}
+                                                    {% if product.persian_title %}
+                                                        {{ product.persian_title }}
+                                                    {% else %}
+                                                        <!-- Handle the case when category.persian_title is null -->
+                                                        {{ product.title }}
+                                                    {% endif %}
+                                                {% else %}
+                                                    {{ product.title }}
+                                                {% endif %}
                                             </a>
                                         </h2>
                                         <div class="product-description-short">
@@ -66,13 +81,17 @@
         }
 
         $(document).ready(function () {
+            var currentLanguage = window.location.pathname.split('/')[1];
             $.ajax({
                 url: '{% url 'get_categories' %}',
                 dataType: 'json',
                 success: function (data) {
                     let categories = JSON.parse(data['categories']);
                     $.each(categories, function (index, value) {
-                        let category_title = value['fields']['title']
+                        let category_title = (currentLanguage === 'fa' && value['fields']['persian_title'] !== null)
+                            ? value['fields']['persian_title']
+                            : value['fields']['title'];
+
                         let category_url = category_title.replace(' ', '-')
                         let url = "{% url 'product:sub_category_list' 'category' %}";
                         url = url.replace('category', category_url);
