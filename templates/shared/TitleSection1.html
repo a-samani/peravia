@@ -7,7 +7,18 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 text-center text-lg-left">
-                <h1>{{ page_name }}</h1>
+                <h1>
+                    {% if request.LANGUAGE_CODE == 'fa' %}
+                        {% if persian_page_name %}
+                            {{ persian_page_name }}
+                        {% else %}
+                            <!-- Handle the case when category.persian_title is null -->
+                            {{ page_name }}
+                        {% endif %}
+                    {% else %}
+                        {{ page_name }}
+                    {% endif %}
+                </h1>
             </div>
             <div class="col-lg-6 ">
                 <div class="breadcrumb-wrap">
@@ -16,7 +27,18 @@
                             <a href="{% url 'home' %}">{% trans "Home" %}</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="#">{{ page_name }}</a>
+                            <a href="#">
+                            {% if request.LANGUAGE_CODE == 'fa' %}
+                        {% if persian_page_name %}
+                            {{ persian_page_name }}
+                        {% else %}
+                            <!-- Handle the case when category.persian_title is null -->
+                            {{ page_name }}
+                        {% endif %}
+                    {% else %}
+                        {{ page_name }}
+                    {% endif %}
+                            </a>
                         </li>
                     </ol>
                 </div>

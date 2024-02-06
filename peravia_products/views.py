@@ -18,9 +18,12 @@ class ProductDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        pk = self.kwargs.get('product_id')
+        product = Product.objects.get(pk=pk, is_active=True)
         slug = self.kwargs.get('slug').upper()
-        context['page_name'] = slug
+        context['page_name'] = product.title
         context['title'] = "Peravia | %s" % slug
+        context['persian_page_name'] = product.persian_title
         return context
 
 
@@ -32,10 +35,14 @@ class ProductsByCategory(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         category = self.kwargs.get('category_name')
+        category_obj = Category.objects.get(title__iexact=category)
         # main_cat = self.kwargs.get('maincategory')
         # context['previous_page'] = main_cat
         context['page_name'] = category
         context['title'] = 'Peravia | %s' % category
+        context['persian_page_name'] = category_obj.persian_title
+        context['persian_title'] = 'پراویا | %s' % category_obj.persian_title
+
         return context
 
     def get_queryset(self):
@@ -53,11 +60,13 @@ class SubCategoryList(ListView):
     context_object_name = 'categories'
 
     def get_context_data(self, **kwargs):
-        language_code = self.request.LANGUAGE_CODE
         context = super().get_context_data(**kwargs)
         main_category = self.kwargs.get('main_category')
+        main_category_obj = MainCategory.objects.get(title__iexact=main_category)
         context['page_name'] = main_category
+        context['persian_page_name'] = main_category_obj.persian_title
         context['title'] = 'Peravia | %s' % main_category
+        context['persian_title'] = 'پراویا | %s' % main_category_obj.persian_title
         return context
     
     def get_queryset(self):

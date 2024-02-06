@@ -184,10 +184,11 @@
                 success: function (data) {
                     let categories = JSON.parse(data['categories']);
                     $.each(categories, function (index, value) {
+                        let send_title = value['fields']['title']
                         let category_title = (currentLanguage === 'fa' && value['fields']['persian_title'] !== null)
                             ? value['fields']['persian_title']
                             : value['fields']['title'];
-                        let category_url = category_title.replace(' ', '-')
+                        let category_url = send_title.replace(' ', '-')
                         let url = "{% url 'product:sub_category_list' 'category' %}";
                         url = url.replace('category', category_url);
                         $('#category_list').append(

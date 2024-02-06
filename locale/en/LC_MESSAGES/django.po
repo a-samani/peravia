@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-04 22:23+0330\n"
+"POT-Creation-Date: 2024-02-07 01:00+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,8 +58,7 @@ msgstr ""
 msgid "Superuser must have is_superuser=True."
 msgstr ""
 
-#: peravia_accounts/models.py:10 peravia_contact/models.py:9
-#: peravia_setting/models.py:35
+#: peravia_accounts/models.py:10 peravia_setting/models.py:35
 msgid "email address"
 msgstr ""
 
@@ -119,41 +118,49 @@ msgid "To make a purchase request and any business connection"
 msgstr ""
 
 #: peravia_contact/templates/contact/Contact_Us_Page.html:39
-#: peravia_contact/templates/contact/Contact_Us_Page.html:57
+#: peravia_contact/templates/contact/Contact_Us_Page.html:58
 #: templates/shared/Footer.html:40 templates/shared/Footer.html:42
 msgid "Full Name"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:47
+#: peravia_contact/templates/contact/Contact_Us_Page.html:48
 msgid "Email address"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:66
+#: peravia_contact/templates/contact/Contact_Us_Page.html:67
 msgid "Subject"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:76
+#: peravia_contact/templates/contact/Contact_Us_Page.html:77
 #: templates/shared/Footer.html:60
 msgid "Message"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:85
+#: peravia_contact/templates/contact/Contact_Us_Page.html:86
 msgid "Send message"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:102
+#: peravia_contact/templates/contact/Contact_Us_Page.html:103
 msgid "Our Address"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:118
+#: peravia_contact/templates/contact/Contact_Us_Page.html:119
 msgid "Our Numbers"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:134
+#: peravia_contact/templates/contact/Contact_Us_Page.html:121
+msgid "Tel"
+msgstr ""
+
+#: peravia_contact/templates/contact/Contact_Us_Page.html:121
+msgid "Fax"
+msgstr ""
+
+#: peravia_contact/templates/contact/Contact_Us_Page.html:135
 msgid "Our Email"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:170
+#: peravia_contact/templates/contact/Contact_Us_Page.html:171
 msgid "Phone number is not valid"
 msgstr ""
 
@@ -652,7 +659,7 @@ msgstr ""
 msgid "persian aviation materials"
 msgstr ""
 
-#: templates/shared/Header.html:54 templates/shared/TitleSection1.html:16
+#: templates/shared/Header.html:54 templates/shared/TitleSection1.html:27
 #: templates/shared/TitleSection2.html:16
 msgid "Home"
 msgstr ""

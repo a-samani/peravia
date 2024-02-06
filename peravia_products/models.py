@@ -98,11 +98,14 @@ class Product(models.Model):
     persian_title = models.CharField(max_length=150, default="", null=True, blank=True)
     slug = models.SlugField(max_length=150)
     application = models.CharField(max_length=250, default="")
+    persian_application = models.CharField(max_length=250, default="", null=True, blank=True)
     is_active = models.BooleanField(default=True)
     description = models.TextField(null=False)
     persian_description = models.TextField(null=True, default="", blank=True)
     main_application = models.TextField(null=False)
+    persian_main_application = models.TextField(null=True, default="", blank=True)
     caution = models.TextField(null=False)
+    persian_caution = models.TextField(null=True, default="", blank=True)
     image = models.ImageField(
         upload_to=upload_image_path, null=True, blank=True)
     characteristics = models.FileField(

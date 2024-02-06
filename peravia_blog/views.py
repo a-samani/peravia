@@ -17,7 +17,9 @@ class PostList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['page_name'] = "Article"
-        context['title'] = "Peravia | article"
+        context['title'] = "پراویا | مقالات" if self.request.LANGUAGE_CODE == 'fa' else "Peravia | article"
+        context['persian_page_name'] = "مقالات"
+        context['persian_title'] = "پراویا | مقالات"
         return context
 
 
@@ -73,7 +75,9 @@ class NewsList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['page_name'] = "News"
-        context['title'] = "Peravia | News"
+        context['title'] = "پراویا | اخبار" if self.request.LANGUAGE_CODE == 'fa' else "Peravia | News"
+        context['persian_page_name'] = "اخبار"
+        context['persian_title'] = "پراویا | اخبار"
         return context
 
 # ----------------------------------------------------------

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-04 22:23+0330\n"
-"PO-Revision-Date: 2024-02-04 22:02+0000\n"
+"POT-Creation-Date: 2024-02-07 01:00+0330\n"
+"PO-Revision-Date: 2024-02-06 21:44+0000\n"
 "Last-Translator: Anonymous User <ali@mail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -49,7 +49,7 @@ msgstr "سوالات متداول"
 
 #: peravia_accounts/managers.py:9
 msgid "The Email must be set"
-msgstr ""
+msgstr "ایمیل باید وارد  شود"
 
 #: peravia_accounts/managers.py:23
 msgid "Superuser must have is_staff=True."
@@ -59,22 +59,21 @@ msgstr ""
 msgid "Superuser must have is_superuser=True."
 msgstr ""
 
-#: peravia_accounts/models.py:10 peravia_contact/models.py:9
-#: peravia_setting/models.py:35
+#: peravia_accounts/models.py:10 peravia_setting/models.py:35
 msgid "email address"
-msgstr ""
+msgstr "ایمیل"
 
 #: peravia_accounts/templates/accounts/LoginPage.html:23
 msgid "Login"
-msgstr ""
+msgstr "ورود"
 
 #: peravia_accounts/templates/accounts/LoginPage.html:26
 msgid "Remember me"
-msgstr ""
+msgstr "مرا بخاطر بسپار"
 
 #: peravia_accounts/templates/accounts/LoginPage.html:30
 msgid "Lost your password?"
-msgstr ""
+msgstr "رمزعبور خود را فراموش کرده اید ؟"
 
 #: peravia_blog/templates/news/NewsDetail.html:90
 #: templates/main/Home_Page.html:477
@@ -97,7 +96,7 @@ msgstr "ادامه مطلب"
 
 #: peravia_blog/templates/news/NewsList.html:52
 msgid "Posts navigation"
-msgstr ""
+msgstr "پست نوگیشن"
 
 #: peravia_blog/templates/news/NewsList.html:57
 msgid "Previous page"
@@ -113,48 +112,56 @@ msgstr "صفحه بعد"
 
 #: peravia_contact/templates/contact/Contact_Us_Page.html:21
 msgid "Drop Us A Line"
-msgstr "نظر دادن"
+msgstr "درخواست"
 
 #: peravia_contact/templates/contact/Contact_Us_Page.html:28
 msgid "To make a purchase request and any business connection"
 msgstr "برای درخواست خرید و هرگونه ارتباط تجاری"
 
 #: peravia_contact/templates/contact/Contact_Us_Page.html:39
-#: peravia_contact/templates/contact/Contact_Us_Page.html:57
+#: peravia_contact/templates/contact/Contact_Us_Page.html:58
 #: templates/shared/Footer.html:40 templates/shared/Footer.html:42
 msgid "Full Name"
 msgstr "نام و نام خانوادگی"
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:47
+#: peravia_contact/templates/contact/Contact_Us_Page.html:48
 msgid "Email address"
 msgstr "آدرس ایمیل"
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:66
+#: peravia_contact/templates/contact/Contact_Us_Page.html:67
 msgid "Subject"
 msgstr "موضوع"
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:76
+#: peravia_contact/templates/contact/Contact_Us_Page.html:77
 #: templates/shared/Footer.html:60
 msgid "Message"
 msgstr "پیام"
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:85
+#: peravia_contact/templates/contact/Contact_Us_Page.html:86
 msgid "Send message"
 msgstr "پیام فرستادن"
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:102
+#: peravia_contact/templates/contact/Contact_Us_Page.html:103
 msgid "Our Address"
 msgstr "آدرس ما"
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:118
+#: peravia_contact/templates/contact/Contact_Us_Page.html:119
 msgid "Our Numbers"
 msgstr "شماره های ما"
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:134
+#: peravia_contact/templates/contact/Contact_Us_Page.html:121
+msgid "Tel"
+msgstr "تلفن"
+
+#: peravia_contact/templates/contact/Contact_Us_Page.html:121
+msgid "Fax"
+msgstr "فکس"
+
+#: peravia_contact/templates/contact/Contact_Us_Page.html:135
 msgid "Our Email"
 msgstr "ایمیل ما"
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:170
+#: peravia_contact/templates/contact/Contact_Us_Page.html:171
 msgid "Phone number is not valid"
 msgstr "شماره تلفن معتبر نیست"
 
@@ -282,7 +289,7 @@ msgstr "خوش آمدی!"
 #: templates/main/About_Us.html:18 templates/main/Home_Page.html:23
 #: templates/main/Home_Page.html:48 templates/main/Home_Page.html:74
 msgid "get a quote"
-msgstr "نظر دادن"
+msgstr "درخواست"
 
 #: templates/main/About_Us.html:24
 msgid ""
@@ -650,7 +657,7 @@ msgstr "کلیدواژه ها را جست و جو کنید"
 msgid "persian aviation materials"
 msgstr "مواد هوانوردی ایرانی"
 
-#: templates/shared/Header.html:54 templates/shared/TitleSection1.html:16
+#: templates/shared/Header.html:54 templates/shared/TitleSection1.html:27
 #: templates/shared/TitleSection2.html:16
 msgid "Home"
 msgstr "صفحه اصلی"

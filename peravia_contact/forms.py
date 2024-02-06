@@ -43,3 +43,13 @@ class ContactForm(forms.Form):
                    'rows': 8}),
         label='Enquiry'
     )
+
+    def __init__(self, *args, **kwargs):
+        lang = kwargs.pop('language', 'en')  # Default to 'en' if language is not provided
+        super(ContactForm, self).__init__(*args, **kwargs)
+        if lang == 'fa':
+            self.fields['fullname'].widget.attrs['placeholder'] = 'نام کامل'
+            self.fields['email'].widget.attrs['placeholder'] = 'ایمیل'
+            self.fields['phone_number'].widget.attrs['placeholder'] = 'تلفن'
+            self.fields['subject'].widget.attrs['placeholder'] = 'موضوع'
+            self.fields['enquiry'].widget.attrs['placeholder'] = 'متن'

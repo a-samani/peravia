@@ -35,6 +35,7 @@ class BlogManager(models.Manager):
 
 class BlogPost(models.Model):
     title = models.CharField(unique=True, max_length=250)
+    persian_title = models.CharField(max_length=250, null=True, default="", blank=True)
     slug = models.SlugField(unique=True, max_length=250)
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -61,8 +62,10 @@ class BlogPost(models.Model):
 
 class News(models.Model):
     title = models.CharField(unique=True, max_length=250)
+    persian_title = models.CharField(unique=True, max_length=250, null=True, default="", blank=True)
     slug = models.SlugField(unique=True, max_length=250)
     summary = models.CharField(max_length=500)
+    persian_summary = models.CharField(max_length=500, null=True, default="", blank=True)
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     content = RichTextUploadingField()

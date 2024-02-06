@@ -36,8 +36,9 @@
                             <div class="row c-mb-10 c-gutter-10">
                                 <div class="col-lg-6">
                                     <div class="form-group has-placeholder">
-                                        <label for="{{ contact_form.fullname.id_for_label }}">{% trans "Full Name" %} <span
-                                                class="required">*</span></label>
+                                        <label for="{{ contact_form.fullname.id_for_label }}">{% trans "Full Name" %}
+                                            <span class="required">*</span>
+                                        </label>
                                         <i class="fas fa-user"></i>
                                         {{ contact_form.fullname }}
                                     </div>
@@ -117,7 +118,7 @@
                                 <h6 class="">
                                     {% trans "Our Numbers" %}
                                 </h6>
-                                <p class="">Tel: {{ settings.phone }}<br>Fax: {{ settings.fax }}</p>
+                                <p class="">{% trans "Tel" %}: {{ settings.phone }}<br>{% trans "Fax" %}: {{ settings.fax }}</p>
                             </div>
                         </div>
                         <div class="divider-50 hidden-below-lg"></div>
