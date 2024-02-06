@@ -47,8 +47,20 @@ INSTALLED_APPS = [
     'peravia_team',
     'ckeditor_uploader',
     'ckeditor',
-    'rosetta'
+    'rosetta',
+    'parler',
 ]
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en',},
+        {'code': 'fa',},
+    ),
+    'default': {
+        'fallback': 'en',             # defaults to PARLER_DEFAULT_LANGUAGE_CODE
+        'hide_untranslated': False,   # the default; let .active_translations() return fallbacks too.
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -97,7 +109,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'TestDB',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'PASSWORD': 'ali',
         'HOST': 'localhost',
         'PORT': '5432'
     }

@@ -53,8 +53,9 @@ class ProductManager(models.Manager):
 
 class MainCategory(models.Model):
     title = models.CharField(max_length=100)
+    persian_title = models.CharField(max_length=100, default="", null=True, blank=True)
     description = models.CharField(max_length=300)
-
+    persian_description = models.CharField(max_length=300, default="", null=True, blank=True)
     class Meta:
         ordering = ['title']
         verbose_name = 'Main Category'
@@ -71,6 +72,7 @@ class MainCategory(models.Model):
 
 class Category(models.Model):
     title = models.CharField(max_length=100)
+    persian_title = models.CharField(max_length=100, default="", null=True, blank=True)
     slug = models.SlugField(max_length=100)
     image = models.ImageField(
         upload_to=upload_category_image_path, null=True, blank=True)
@@ -93,12 +95,17 @@ class Category(models.Model):
 
 class Product(models.Model):
     title = models.CharField(max_length=150)
+    persian_title = models.CharField(max_length=150, default="", null=True, blank=True)
     slug = models.SlugField(max_length=150)
     application = models.CharField(max_length=250, default="")
+    persian_application = models.CharField(max_length=250, default="", null=True, blank=True)
     is_active = models.BooleanField(default=True)
     description = models.TextField(null=False)
+    persian_description = models.TextField(null=True, default="", blank=True)
     main_application = models.TextField(null=False)
+    persian_main_application = models.TextField(null=True, default="", blank=True)
     caution = models.TextField(null=False)
+    persian_caution = models.TextField(null=True, default="", blank=True)
     image = models.ImageField(
         upload_to=upload_image_path, null=True, blank=True)
     characteristics = models.FileField(
@@ -123,6 +130,7 @@ class Product(models.Model):
 
 class Specification(models.Model):
     title = models.CharField(max_length=100)
+    persian_title = models.CharField(max_length=100, default="", null=True, blank=True)
     product = models.ForeignKey(Product, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
@@ -133,6 +141,7 @@ class Specification(models.Model):
 
 class Advantage(models.Model):
     title = models.TextField()
+    persian_title = models.TextField(default="", null=True, blank=True)
     product = models.ManyToManyField(Product)
 
     def __str__(self):

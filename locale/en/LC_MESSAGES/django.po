@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 14:29+0330\n"
+"POT-Creation-Date: 2024-02-07 01:00+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: PeraviaWebsite/settings.py:140
+#: PeraviaWebsite/settings.py:152
 msgid "English"
 msgstr ""
 
-#: PeraviaWebsite/settings.py:141
+#: PeraviaWebsite/settings.py:153
 msgid "Farsi"
-msgstr ""
-
-#: PeraviaWebsite/urls.py:29
-msgid "peravia_admin/"
 msgstr ""
 
 #: PeraviaWebsite/views.py:14
@@ -62,8 +58,7 @@ msgstr ""
 msgid "Superuser must have is_superuser=True."
 msgstr ""
 
-#: peravia_accounts/models.py:10 peravia_contact/models.py:9
-#: peravia_setting/models.py:35
+#: peravia_accounts/models.py:10 peravia_setting/models.py:35
 msgid "email address"
 msgstr ""
 
@@ -80,8 +75,38 @@ msgid "Lost your password?"
 msgstr ""
 
 #: peravia_blog/templates/news/NewsDetail.html:90
-#: templates/main/Home_Page.html:438
+#: templates/main/Home_Page.html:477
 msgid "Latest News"
+msgstr ""
+
+#: peravia_blog/templates/news/NewsList.html:32
+#: templates/main/Home_Page.html:513 templates/main/Home_Page.html:557
+msgid "by"
+msgstr ""
+
+#: peravia_blog/templates/news/NewsList.html:32
+#: templates/main/Home_Page.html:513 templates/main/Home_Page.html:557
+msgid "Admin"
+msgstr ""
+
+#: peravia_blog/templates/news/NewsList.html:47
+msgid "read more"
+msgstr ""
+
+#: peravia_blog/templates/news/NewsList.html:52
+msgid "Posts navigation"
+msgstr ""
+
+#: peravia_blog/templates/news/NewsList.html:57
+msgid "Previous page"
+msgstr ""
+
+#: peravia_blog/templates/news/NewsList.html:62
+msgid "Page"
+msgstr ""
+
+#: peravia_blog/templates/news/NewsList.html:68
+msgid "Next page"
 msgstr ""
 
 #: peravia_contact/templates/contact/Contact_Us_Page.html:21
@@ -93,79 +118,103 @@ msgid "To make a purchase request and any business connection"
 msgstr ""
 
 #: peravia_contact/templates/contact/Contact_Us_Page.html:39
-#: peravia_contact/templates/contact/Contact_Us_Page.html:57
+#: peravia_contact/templates/contact/Contact_Us_Page.html:58
 #: templates/shared/Footer.html:40 templates/shared/Footer.html:42
 msgid "Full Name"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:47
+#: peravia_contact/templates/contact/Contact_Us_Page.html:48
 msgid "Email address"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:66
+#: peravia_contact/templates/contact/Contact_Us_Page.html:67
 msgid "Subject"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:76
+#: peravia_contact/templates/contact/Contact_Us_Page.html:77
 #: templates/shared/Footer.html:60
 msgid "Message"
 msgstr ""
 
-#: peravia_contact/templates/contact/Contact_Us_Page.html:85
+#: peravia_contact/templates/contact/Contact_Us_Page.html:86
 msgid "Send message"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:24
-msgid "Description"
+#: peravia_contact/templates/contact/Contact_Us_Page.html:103
+msgid "Our Address"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:32
-msgid "Information"
+#: peravia_contact/templates/contact/Contact_Us_Page.html:119
+msgid "Our Numbers"
+msgstr ""
+
+#: peravia_contact/templates/contact/Contact_Us_Page.html:121
+msgid "Tel"
+msgstr ""
+
+#: peravia_contact/templates/contact/Contact_Us_Page.html:121
+msgid "Fax"
+msgstr ""
+
+#: peravia_contact/templates/contact/Contact_Us_Page.html:135
+msgid "Our Email"
+msgstr ""
+
+#: peravia_contact/templates/contact/Contact_Us_Page.html:171
+msgid "Phone number is not valid"
 msgstr ""
 
 #: peravia_products/templates/products/ProductDetail.html:36
-msgid "Additional information"
+msgid "Description"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:39
-#: peravia_products/templates/products/ProductDetail.html:86
-msgid "Characteristics"
-msgstr ""
-
-#: peravia_products/templates/products/ProductDetail.html:44
-msgid "Main Application"
-msgstr ""
-
-#: peravia_products/templates/products/ProductDetail.html:47
-msgid "Caution"
-msgstr ""
-
-#: peravia_products/templates/products/ProductDetail.html:52
-msgid "Specifications"
+#: peravia_products/templates/products/ProductDetail.html:55
+msgid "Information"
 msgstr ""
 
 #: peravia_products/templates/products/ProductDetail.html:59
+msgid "Additional information"
+msgstr ""
+
+#: peravia_products/templates/products/ProductDetail.html:62
+#: peravia_products/templates/products/ProductDetail.html:134
+msgid "Characteristics"
+msgstr ""
+
+#: peravia_products/templates/products/ProductDetail.html:67
+msgid "Main Application"
+msgstr ""
+
+#: peravia_products/templates/products/ProductDetail.html:70
+msgid "Caution"
+msgstr ""
+
+#: peravia_products/templates/products/ProductDetail.html:75
+msgid "Specifications"
+msgstr ""
+
+#: peravia_products/templates/products/ProductDetail.html:94
 msgid "Advantages"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:66
+#: peravia_products/templates/products/ProductDetail.html:113
 msgid "Health and Safety"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:68
+#: peravia_products/templates/products/ProductDetail.html:115
 msgid "Do not use as medicine or food product."
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:69
+#: peravia_products/templates/products/ProductDetail.html:117
 msgid ""
 "\n"
-"                                        trans \"If swallowed, get medical "
+"                                        If swallowed, get medical "
 "assistance. If medical assistance is not immediately\n"
 "                                        available, induce vomiting.\n"
 "                                        "
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:75
+#: peravia_products/templates/products/ProductDetail.html:123
 msgid ""
 "\n"
 "                                        After handling wash thoroughly and "
@@ -174,21 +223,26 @@ msgid ""
 "                                        "
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:81
+#: peravia_products/templates/products/ProductDetail.html:129
 msgid "Discard oil-soaked shoes or boots."
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:97
-#: peravia_products/templates/products/ProductDetail.html:107
+#: peravia_products/templates/products/ProductDetail.html:145
+#: peravia_products/templates/products/ProductDetail.html:155
+#: peravia_products/templates/products/ProductList.html:52
+#: peravia_products/templates/products/ProductList.html:59
+#: peravia_products/templates/products/ProductList.html:60
 #: templates/shared/Header.html:17 templates/shared/Header.html:25
 msgid "Search"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:103
+#: peravia_products/templates/products/ProductDetail.html:151
+#: peravia_products/templates/products/ProductList.html:56
 msgid "Search for:"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:112
+#: peravia_products/templates/products/ProductDetail.html:160
+#: peravia_products/templates/products/ProductList.html:64
 msgid "Categories"
 msgstr ""
 
@@ -224,16 +278,16 @@ msgstr ""
 msgid "Brand Manager"
 msgstr ""
 
-#: templates/main/About_Us.html:14 templates/main/Home_Page.html:118
+#: templates/main/About_Us.html:14 templates/main/Home_Page.html:141
 msgid "welcome!"
 msgstr ""
 
 #: templates/main/About_Us.html:18 templates/main/Home_Page.html:23
-#: templates/main/Home_Page.html:47 templates/main/Home_Page.html:73
+#: templates/main/Home_Page.html:48 templates/main/Home_Page.html:74
 msgid "get a quote"
 msgstr ""
 
-#: templates/main/About_Us.html:24 templates/main/Home_Page.html:128
+#: templates/main/About_Us.html:24
 msgid ""
 "\n"
 "                        Faraz Aseman Parsian Company is a private joint "
@@ -242,7 +296,7 @@ msgid ""
 "                        "
 msgstr ""
 
-#: templates/main/About_Us.html:30 templates/main/Home_Page.html:134
+#: templates/main/About_Us.html:30
 msgid ""
 "\n"
 "                        It relies on scientific and technical ability of the "
@@ -282,15 +336,15 @@ msgid ""
 "the fuel that allows common people to attain uncommon results."
 msgstr ""
 
-#: templates/main/FAQ.html:15 templates/main/Home_Page.html:256
+#: templates/main/FAQ.html:15 templates/main/Home_Page.html:288
 msgid "FAQ & Information"
 msgstr ""
 
-#: templates/main/FAQ.html:28 templates/main/Home_Page.html:267
+#: templates/main/FAQ.html:28 templates/main/Home_Page.html:299
 msgid "Get to know us"
 msgstr ""
 
-#: templates/main/FAQ.html:35 templates/main/Home_Page.html:274
+#: templates/main/FAQ.html:35
 msgid ""
 "\n"
 "                                    Faraz Aseman Parsian Company (privately "
@@ -313,11 +367,11 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/main/FAQ.html:54 templates/main/Home_Page.html:293
+#: templates/main/FAQ.html:54 templates/main/Home_Page.html:331
 msgid "What types of product does Peravia include?"
 msgstr ""
 
-#: templates/main/FAQ.html:61 templates/main/Home_Page.html:301
+#: templates/main/FAQ.html:61
 msgid ""
 "\n"
 "                                    Peravia includes four product "
@@ -329,7 +383,7 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/main/FAQ.html:75 templates/main/Home_Page.html:315
+#: templates/main/FAQ.html:75 templates/main/Home_Page.html:353
 msgid "What can we do to buy a product or establish a business relationship?"
 msgstr ""
 
@@ -365,114 +419,196 @@ msgstr ""
 msgid "Oils,Lubricants and Greases"
 msgstr ""
 
-#: templates/main/Home_Page.html:24 templates/main/Home_Page.html:49
-#: templates/main/Home_Page.html:74
+#: templates/main/Home_Page.html:24 templates/main/Home_Page.html:50
+#: templates/main/Home_Page.html:75
 msgid "or"
 msgstr ""
 
-#: templates/main/Home_Page.html:25 templates/main/Home_Page.html:51
-#: templates/main/Home_Page.html:75
+#: templates/main/Home_Page.html:26 templates/main/Home_Page.html:52
+#: templates/main/Home_Page.html:77
 msgid "Request a Callback"
 msgstr ""
 
-#: templates/main/Home_Page.html:34
+#: templates/main/Home_Page.html:35
 msgid "img"
 msgstr ""
 
-#: templates/main/Home_Page.html:41
+#: templates/main/Home_Page.html:42
 msgid "2.There is no impasse"
 msgstr ""
 
-#: templates/main/Home_Page.html:43
+#: templates/main/Home_Page.html:44
 msgid "Knowledge-based and eco-friendly company"
 msgstr ""
 
-#: templates/main/Home_Page.html:68
+#: templates/main/Home_Page.html:69
 msgid "3.The first in the middle east"
 msgstr ""
 
-#: templates/main/Home_Page.html:70
+#: templates/main/Home_Page.html:71
 msgid "In commercial aviation lubricants"
 msgstr ""
 
-#: templates/main/Home_Page.html:168 templates/shared/Footer.html:12
+#: templates/main/Home_Page.html:151
+msgid ""
+"\n"
+"                            Faraz Aseman Parsian Company is a private joint "
+"stock company registered under\n"
+"                            the Peravia brand.\n"
+"                        "
+msgstr ""
+
+#: templates/main/Home_Page.html:157
+msgid ""
+"\n"
+"                            It relies on scientific and technical ability of "
+"the most prominent domestic specialists.\n"
+"                            Also, in line with its values, design and "
+"manufactures various fluids used in the aviation\n"
+"                            industry has compiled with reliable "
+"international and national standards. Faraz Aseman\n"
+"                            Parsian\n"
+"                            is currently the only producer of these fluids "
+"in Iran and the only specialized company\n"
+"                            producing\n"
+"                            aviation fluids in the Middle East. It has tried "
+"to fulfill its social responsibility in\n"
+"                            protecting\n"
+"                            the environment by innovating, diversifying and "
+"developing biodegradable products. This\n"
+"                            company\n"
+"                            believes\n"
+"                            that there is no impasse to supply the products "
+"needed by customers. Faraz Aseman Parsian\n"
+"                            offers\n"
+"                            its products\n"
+"                            to its customers with quality guarantee,fixed "
+"price in Rials and permanent and easy supply\n"
+"                            with\n"
+"                            the largest\n"
+"                            number of product baskets compared to similar "
+"foreign companies.\n"
+"                        "
+msgstr ""
+
+#: templates/main/Home_Page.html:196 templates/shared/Footer.html:12
 #: templates/shared/Header.html:44
 msgid "Peravia"
 msgstr ""
 
-#: templates/main/Home_Page.html:174
+#: templates/main/Home_Page.html:202
 msgid ""
 "\n"
-"                            Peravia is a high-tech chemical company, that "
-"specifically produces aviation engine oils,\n"
-"                            lubricants, and greases.In addition to aviation "
-"products,\n"
-"                            this company produces engine oils and lubricants "
-"for\n"
-"                            other industries such as the automotive "
+"                                Peravia is a high-tech chemical company, "
+"that specifically produces aviation engine\n"
+"                                oils,\n"
+"                                lubricants, and greases.In addition to "
+"aviation products,\n"
+"                                this company produces engine oils and "
+"lubricants for\n"
+"                                other industries such as the automotive "
 "industry\n"
 "                            "
 msgstr ""
 
-#: templates/main/Home_Page.html:198
+#: templates/main/Home_Page.html:227
 msgid "Quality and Price"
 msgstr ""
 
-#: templates/main/Home_Page.html:204
+#: templates/main/Home_Page.html:233
 msgid ""
 "\n"
-"                            Due to the fact that production costs in Iran "
-"are low, as a result, the price of the product\n"
-"                            will be offered to the market more economically. "
-"On the other hand, the quality of peravia\n"
-"                            products is equal to and higher than similar "
+"                                Due to the fact that production costs in "
+"Iran are low, as a result, the price of the\n"
+"                                product\n"
+"                                will be offered to the market more "
+"economically. On the other hand, the quality of\n"
+"                                peravia\n"
+"                                products is equal to and higher than similar "
 "products in the world.\n"
 "                            "
 msgstr ""
 
-#: templates/main/Home_Page.html:230
+#: templates/main/Home_Page.html:261
 msgid "Product Customization"
 msgstr ""
 
-#: templates/main/Home_Page.html:236
+#: templates/main/Home_Page.html:267
 msgid ""
 "\n"
-"                            Due to the weather, operating conditions and "
+"                                Due to the weather, operating conditions and "
 "needs of different companies in different\n"
-"                            countries, Peravia has the ability to offer the "
-"product according to different conditions.\n"
-"                            In addition, Peravia strives to offer a complete "
-"portfolio of high-demand products.\n"
+"                                countries, Peravia has the ability to offer "
+"the product according to different\n"
+"                                conditions.\n"
+"                                In addition, Peravia strives to offer a "
+"complete portfolio of high-demand products.\n"
 "                            "
 msgstr ""
 
-#: templates/main/Home_Page.html:322
-#, python-format
+#: templates/main/Home_Page.html:306
 msgid ""
 "\n"
-"                                    To make a purchase request and any "
-"business connection, you can apply through the\n"
-"                                    <a href=\"%(link)s %(target)s\">contact "
-"us</a> section on the site,\n"
-"                                    telephone\n"
-"                                    number or social media networks.\n"
+"                                        Faraz Aseman Parsian Company "
+"(privately held Company), registered under the\n"
+"                                        Peravia\n"
+"                                        brand, relying on its scientific and "
+"technical ability and using the capacity of\n"
+"                                        the\n"
+"                                        most prominent domestic specialists, "
+"as well as in line with its values, designs\n"
+"                                        and\n"
+"                                        manufactures various fluids used in "
+"the aviation industry has complied with\n"
+"                                        reliable\n"
+"                                        international and national "
+"standards.\n"
+"                                        The company, which is currently the "
+"only producer of these fluids in Iran and\n"
+"                                        the\n"
+"                                        only specialized company producing "
+"aviation fluids in the Middle East, has tried\n"
+"                                        to\n"
+"                                        fulfill its social responsibility in "
+"protecting the environment by innovating,\n"
+"                                        diversifying and developing "
+"biodegradable products.\n"
 "                                    "
 msgstr ""
 
-#: templates/main/Home_Page.html:357
+#: templates/main/Home_Page.html:339
+msgid ""
+"\n"
+"                                        Peravia includes four product "
+"categories: piston engine oils, jet engine oils,\n"
+"                                        hydraulic fluid and greases.\n"
+"                                        Peravia product development plan is "
+"to produce and supply all materials of the\n"
+"                                        aviation industry in the coming "
+"years.\n"
+"                                    "
+msgstr ""
+
+#: templates/main/Home_Page.html:360
+#, python-format
+msgid ""
+"\n"
+"                                        To make a purchase request and any "
+"business connection, you can apply through\n"
+"                                        the\n"
+"                                        <a href=\"%(link)s "
+"%(target)s\">contact us</a> section on the site,\n"
+"                                        telephone\n"
+"                                        number or social media networks.\n"
+"                                    "
+msgstr ""
+
+#: templates/main/Home_Page.html:396
 msgid "Certificates"
 msgstr ""
 
-#: templates/main/Home_Page.html:443
+#: templates/main/Home_Page.html:482
 msgid "our blog"
-msgstr ""
-
-#: templates/main/Home_Page.html:471 templates/main/Home_Page.html:512
-msgid "by"
-msgstr ""
-
-#: templates/main/Home_Page.html:471 templates/main/Home_Page.html:512
-msgid "Admin"
 msgstr ""
 
 #: templates/shared/Footer.html:13
@@ -523,7 +659,7 @@ msgstr ""
 msgid "persian aviation materials"
 msgstr ""
 
-#: templates/shared/Header.html:54 templates/shared/TitleSection1.html:16
+#: templates/shared/Header.html:54 templates/shared/TitleSection1.html:27
 #: templates/shared/TitleSection2.html:16
 msgid "Home"
 msgstr ""

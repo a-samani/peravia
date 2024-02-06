@@ -3,14 +3,20 @@
 <script src="{% static 'js/main.js' %}"></script>
 <script>
     $(document).ready(function () {
+        var currentLanguage = window.location.pathname.split('/')[1];
+
+        // Log the current language to the console
+        
         $.ajax({
             url: '{% url 'get_site_setting' %}',
             dataType: 'json',
             success: function (data) {
                 let categories = JSON.parse(data.main_categories)
-                $.each(categories,function(index, value)
-                {
-                    let category_title = value['fields']['title']
+                $.each(categories, function (index, value) {
+                    let category_title = (currentLanguage === 'fa' && value['fields']['persian_title'] !== null)
+                        ? value['fields']['persian_title']
+                        : value['fields']['title'];
+
                     let url = "{% url 'product:sub_category_list' 'main_category' %}";
                     url = url.replace('main_category', category_title);
                     $("#category_ul").append(`<li><a href="${url}">${category_title}</a></li>`)

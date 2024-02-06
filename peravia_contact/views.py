@@ -3,10 +3,11 @@ from .forms import ContactForm
 from django.contrib import messages
 from .models import Contact, WriteUs
 from peravia_setting.models import SiteSetting , SocialMedia
-
+from django.utils.translation import gettext_lazy as _
 
 # ----------------------------------------------------------
 def contact_us_page(request):
+    language_code = request.LANGUAGE_CODE
     if request.method == 'POST':
         contact_form = ContactForm(data=request.POST)
         if contact_form.is_valid():
@@ -24,11 +25,14 @@ def contact_us_page(request):
             messages.success(request, 'We will be in touch soon')
             return redirect('/')
         messages.error(request, 'Something went wrong')
-    form = ContactForm()
+    form = ContactForm(language=language_code)
+    title = 'Peravia | Contact Us' if language_code == 'en' else 'پراویا | تماس با ما'
     return render(request, 'contact/Contact_Us_Page.html',
                   context={'contact_form': form,
                            'page_name': 'Contact Us',
-                           'title': 'Peravia | Contact Us',
+                           'persian_page_name': 'تماس با ما',
+                           'title': title,
+                           'persian_title': 'پراویا | تماس با ما',
                            'settings': SiteSetting.objects.first(),
                            'social_media': SocialMedia.objects.all()})
 

@@ -22,7 +22,8 @@
                                             <a href="{% url 'contact:contact_page' %}"
                                                class="btn btn-outline-darkgrey big-btn">{% trans "get a quote" %}</a>
                                             <span class="text-divider">{% trans "or" %}</span>
-                                            <a href="#write_us" class="btn just-link">{% trans "Request a Callback" %}</a>
+                                            <a href="#write_us"
+                                               class="btn just-link">{% trans "Request a Callback" %}</a>
                                         </div>
                                     </div> <!-- eof .intro_layers -->
                                 </div> <!-- eof .intro_layers_wrapper -->
@@ -67,12 +68,13 @@
                                         <div class="intro_layer">
                                             <h6 class="intro_before_featured_word">{% trans "3.The first in the middle east" %}</h6>
                                             <h4 class="text-capitalize intro_featured_word">
-                                               {% trans  "In commercial aviation lubricants" %}
+                                                {% trans "In commercial aviation lubricants" %}
                                             </h4>
                                             <a href="{% url 'contact:contact_page' %}"
                                                class="btn btn-outline-darkgrey big-btn">{% trans "get a quote" %}</a>
-                                            <span class="text-divider">{% trans "or"%}</span>
-                                            <a href="#write_us" class="btn just-link">{% trans "Request a Callback" %}</a>
+                                            <span class="text-divider">{% trans "or" %}</span>
+                                            <a href="#write_us"
+                                               class="btn just-link">{% trans "Request a Callback" %}</a>
                                         </div>
                                     </div> <!-- eof .intro_layers -->
                                 </div> <!-- eof .intro_layers_wrapper -->
@@ -92,14 +94,35 @@
                             <a class="link-icon" href="{{ category.get_absolute_url }}">
                                 <div class="icon-styled  fs-50">
                                     <i class="ico ico-{{ category.title }}"></i>
+
                                 </div>
                             </a>
                             <a href="{{ category.get_absolute_url }}">
                                 <h5>
-                                    {{ category.title|title }}
+                                    {% if request.LANGUAGE_CODE == 'fa' %}
+                                        {% if category.persian_title %}
+                                            {{ category.persian_title|title }}
+                                        {% else %}
+                                            <!-- Handle the case when category.persian_title is null -->
+                                            {{ category.title|title }}
+                                        {% endif %}
+                                    {% else %}
+                                        {{ category.title|title }}
+
+                                    {% endif %}
                                 </h5>
                             </a>
-                            <p>{{ category.description }}</p>
+                            {% if request.LANGUAGE_CODE == 'fa' %}
+                                {% if category.persian_description %}
+                                    <p>{{ category.persian_description }}</p>
+                                {% else %}
+                                    <!-- Handle the case when category.persian_title is null -->
+                                    <p>{{ category.persian_description }}</p>
+                                {% endif %}
+                                <p>{{ category.persian_description }}</p>
+                            {% else %}
+                                <p>{{ category.description }}</p>
+                            {% endif %}
                             <a class="btn btn-outline-darkgrey" href="{{ category.get_absolute_url }}">
                                 <i class="fas fa-chevron-right"></i>
                             </a>
@@ -115,7 +138,7 @@
                 <div class="col-12 col-lg-3 text-center">
                     <h2 class="special-heading text-center">
 								<span class="text-capitalize">
-                                    {% trans "welcome!"%}
+                                    {% trans "welcome!" %}
 								</span>
                     </h2>
                     <div class="divider-30"></div>
@@ -126,26 +149,30 @@
                     <div class="divider--5"></div>
                     <p class="excerpt">
                         {% blocktrans %}
-                        Faraz Aseman Parsian Company is a private joint stock company registered under
-                        the Peravia brand.
+                            Faraz Aseman Parsian Company is a private joint stock company registered under
+                            the Peravia brand.
                         {% endblocktrans %}
                     </p>
                     <p style="text-align:left">
                         {% blocktrans %}
-                        It relies on scientific and technical ability of the most prominent domestic specialists.
-                        Also, in line with its values, design and manufactures various fluids used in the aviation
-                        industry has compiled with reliable international and national standards. Faraz Aseman Parsian
-                        is currently the only producer of these fluids in Iran and the only specialized company
-                        producing
-                        aviation fluids in the Middle East. It has tried to fulfill its social responsibility in
-                        protecting
-                        the environment by innovating, diversifying and developing biodegradable products. This company
-                        believes
-                        that there is no impasse to supply the products needed by customers. Faraz Aseman Parsian offers
-                        its products
-                        to its customers with quality guarantee,fixed price in Rials and permanent and easy supply with
-                        the largest
-                        number of product baskets compared to similar foreign companies.
+                            It relies on scientific and technical ability of the most prominent domestic specialists.
+                            Also, in line with its values, design and manufactures various fluids used in the aviation
+                            industry has compiled with reliable international and national standards. Faraz Aseman
+                            Parsian
+                            is currently the only producer of these fluids in Iran and the only specialized company
+                            producing
+                            aviation fluids in the Middle East. It has tried to fulfill its social responsibility in
+                            protecting
+                            the environment by innovating, diversifying and developing biodegradable products. This
+                            company
+                            believes
+                            that there is no impasse to supply the products needed by customers. Faraz Aseman Parsian
+                            offers
+                            its products
+                            to its customers with quality guarantee,fixed price in Rials and permanent and easy supply
+                            with
+                            the largest
+                            number of product baskets compared to similar foreign companies.
                         {% endblocktrans %}
                     </p>
                 </div>
@@ -154,7 +181,8 @@
     </section>
     <section class="ls  s-py-xl-160 s-py-lg-130 s-py-md-90 s-py-60 text-sm-left text-center container-px-0">
         <div class="cover-image s-cover-left">
-            <a href="{% static 'images/logo.png' %}" class="photoswipe-link side-video" data-width="800" data-height="800" data-iframe="https://www.youtube.com/embed/GhthHC0s38A"></a>
+            <a href="{% static 'images/logo.png' %}" class="photoswipe-link side-video" data-width="800"
+               data-height="800" data-iframe="https://www.youtube.com/embed/GhthHC0s38A"></a>
             <img src="{% static 'images/logo.png' %}" alt="01">
         </div>
         <div class="container-fluid">
@@ -172,10 +200,11 @@
                         <div class="divider-30 hidden-above-lg"></div>
                         <p>
                             {% blocktrans %}
-                            Peravia is a high-tech chemical company, that specifically produces aviation engine oils,
-                            lubricants, and greases.In addition to aviation products,
-                            this company produces engine oils and lubricants for
-                            other industries such as the automotive industry
+                                Peravia is a high-tech chemical company, that specifically produces aviation engine
+                                oils,
+                                lubricants, and greases.In addition to aviation products,
+                                this company produces engine oils and lubricants for
+                                other industries such as the automotive industry
                             {% endblocktrans %}
                         </p>
                         <div class="divider-50 hidden-below-lg"></div>
@@ -202,9 +231,11 @@
                         <div class="divider-30 hidden-above-lg"></div>
                         <p>
                             {% blocktrans %}
-                            Due to the fact that production costs in Iran are low, as a result, the price of the product
-                            will be offered to the market more economically. On the other hand, the quality of peravia
-                            products is equal to and higher than similar products in the world.
+                                Due to the fact that production costs in Iran are low, as a result, the price of the
+                                product
+                                will be offered to the market more economically. On the other hand, the quality of
+                                peravia
+                                products is equal to and higher than similar products in the world.
                             {% endblocktrans %}
                         </p>
                         <div class="divider-45 hidden-below-lg"></div>
@@ -234,9 +265,10 @@
                         <div class="divider-30 hidden-above-lg"></div>
                         <p>
                             {% blocktrans %}
-                            Due to the weather, operating conditions and needs of different companies in different
-                            countries, Peravia has the ability to offer the product according to different conditions.
-                            In addition, Peravia strives to offer a complete portfolio of high-demand products.
+                                Due to the weather, operating conditions and needs of different companies in different
+                                countries, Peravia has the ability to offer the product according to different
+                                conditions.
+                                In addition, Peravia strives to offer a complete portfolio of high-demand products.
                             {% endblocktrans %}
                         </p>
                         <div class="divider-45 hidden-below-lg"></div>
@@ -272,15 +304,21 @@
                                  aria-labelledby="collapse01_header" data-parent="#accordion01">
                                 <div class="card-body">
                                     {% blocktrans %}
-                                    Faraz Aseman Parsian Company (privately held Company), registered under the Peravia
-                                    brand, relying on its scientific and technical ability and using the capacity of the
-                                    most prominent domestic specialists, as well as in line with its values, designs and
-                                    manufactures various fluids used in the aviation industry has complied with reliable
-                                    international and national standards.
-                                    The company, which is currently the only producer of these fluids in Iran and the
-                                    only specialized company producing aviation fluids in the Middle East, has tried to
-                                    fulfill its social responsibility in protecting the environment by innovating,
-                                    diversifying and developing biodegradable products.
+                                        Faraz Aseman Parsian Company (privately held Company), registered under the
+                                        Peravia
+                                        brand, relying on its scientific and technical ability and using the capacity of
+                                        the
+                                        most prominent domestic specialists, as well as in line with its values, designs
+                                        and
+                                        manufactures various fluids used in the aviation industry has complied with
+                                        reliable
+                                        international and national standards.
+                                        The company, which is currently the only producer of these fluids in Iran and
+                                        the
+                                        only specialized company producing aviation fluids in the Middle East, has tried
+                                        to
+                                        fulfill its social responsibility in protecting the environment by innovating,
+                                        diversifying and developing biodegradable products.
                                     {% endblocktrans %}
                                 </div>
                             </div>
@@ -299,10 +337,10 @@
                                  aria-labelledby="collapse01_header" data-parent="#accordion01">
                                 <div class="card-body">
                                     {% blocktrans %}
-                                    Peravia includes four product categories: piston engine oils, jet engine oils,
-                                    hydraulic fluid and greases.
-                                    Peravia product development plan is to produce and supply all materials of the
-                                    aviation industry in the coming years.
+                                        Peravia includes four product categories: piston engine oils, jet engine oils,
+                                        hydraulic fluid and greases.
+                                        Peravia product development plan is to produce and supply all materials of the
+                                        aviation industry in the coming years.
                                     {% endblocktrans %}
                                 </div>
                             </div>
@@ -320,10 +358,11 @@
                                  data-parent="#accordion01">
                                 <div class="card-body">
                                     {% blocktrans with link=url target='contact:contact_page' %}
-                                    To make a purchase request and any business connection, you can apply through the
-                                    <a href="{{ link }} {{target }}">contact us</a> section on the site,
-                                    telephone
-                                    number or social media networks.
+                                        To make a purchase request and any business connection, you can apply through
+                                        the
+                                        <a href="{{ link }} {{ target }}">contact us</a> section on the site,
+                                        telephone
+                                        number or social media networks.
                                     {% endblocktrans %}
                                 </div>
                             </div>
@@ -446,8 +485,9 @@
                     <div class="divider-30 hidden-above-lg"></div>
                     <div class="shortcode-posts row tiled-layout c-gutter-30 c-mb-30">
                         <div class="bigitem col-xl-6 col-lg-5">
-                            {% for news in newslist|slice:':1'%}
-                                <article class="vertical-item ls rounded post type-post status-publish format-standard has-post-thumbnail">
+                            {% for news in newslist|slice:':1' %}
+                                <article
+                                        class="vertical-item ls rounded post type-post status-publish format-standard has-post-thumbnail">
                                     <div class="item-media post-thumbnail">
                                         <a href="{{ post.get_absolute_url }}">
                                             {% if post.image %}
@@ -463,11 +503,13 @@
                                                 <div class="byline">
                                                     <span class="date">
                                                         <a href="#" rel="bookmark">
-                                                            <time class="published entry-date" datetime="{{ news.created_on|date:'D d M Y' }}">{{ news.created_on|date:'D d M Y' }}</time>
+                                                            <time class="published entry-date"
+                                                                  datetime="{{ news.created_on|date:'D d M Y' }}">{{ news.created_on|date:'D d M Y' }}</time>
                                                         </a>
                                                     </span>
                                                     <span class="author vcard">
-                                                        <a class="url fn n" href="#" rel="author"><span>{% trans "by" %}</span> {% trans 'Admin' %}</a>
+                                                        <a class="url fn n" href="#"
+                                                           rel="author"><span>{% trans "by" %}</span> {% trans 'Admin' %}</a>
                                                     </span>
                                                 </div>
                                             </div>
@@ -475,7 +517,7 @@
                                                 <a href="{{ news.get_absolute_url }}" rel="bookmark">
                                                     {{ news.title|title }}
                                                 </a>
-                                            </h4>                                            
+                                            </h4>
                                         </header>
                                         <div class="entry-content">
                                             <p>
@@ -487,8 +529,9 @@
                             {% endfor %}
                         </div>
                         <div class="smallitem col-xl-6 col-lg-7">
-                            {% for news in newslist|slice:'1:'%}
-                                <article class="vertical-item side-item ls rounded post type-post status-publish format-standard has-post-thumbnail">
+                            {% for news in newslist|slice:'1:' %}
+                                <article
+                                        class="vertical-item side-item ls rounded post type-post status-publish format-standard has-post-thumbnail">
                                     <div class="item-media post-thumbnail">
                                         <a href="{{ news.get_absolute_url }}">
                                             {% if news.news_image.url %}
@@ -504,11 +547,13 @@
                                                 <div class="byline">
                                                     <span class="date">
                                                         <a href="#" rel="bookmark">
-                                                            <time class="published entry-date" datetime="{{ news.created_on|date:'D d M Y' }}">{{ news.created_on|date:'D d M Y' }}</time>
+                                                            <time class="published entry-date"
+                                                                  datetime="{{ news.created_on|date:'D d M Y' }}">{{ news.created_on|date:'D d M Y' }}</time>
                                                         </a>
                                                     </span>
                                                     <span class="author vcard">
-                                                        <a class="url fn n" href="#" rel="author"><span>{% trans "by" %}</span> {% trans 'Admin' %}</a>
+                                                        <a class="url fn n" href="#"
+                                                           rel="author"><span>{% trans "by" %}</span> {% trans 'Admin' %}</a>
                                                     </span>
                                                 </div>
                                             </div>

@@ -1,5 +1,5 @@
 {% extends 'shared/_MainLayout.html' %}
-{% load i18n  %}
+{% load i18n %}
 {% block content %}
     {% include 'shared/TitleSection1.html' %}
     <section class="ls s-pt-xl-160 s-pb-xl-280 s-pt-lg-130 s-pb-lg-250 s-py-md-90 s-py-60 c-gutter-30">
@@ -12,17 +12,40 @@
                                 <div data-thumb="{{ product.image.url }}">
                                     <a href="{{ product.image.url }}">
                                         <img src="{{ product.image.url }}" alt="" data-caption=""
-                                            data-src="{{ product.image.url }}" data-large_image="{{ product.image.url }}"
-                                            data-large_image_width="1000" data-large_image_height="1000">
+                                             data-src="{{ product.image.url }}"
+                                             data-large_image="{{ product.image.url }}"
+                                             data-large_image_width="1000" data-large_image_height="1000">
                                     </a>
                                 </div>
                             </figure>
                         </div>
                         <div class="summary entry-summary">
-                            <h1 class="product_title entry-title">{{ product.title }}</h1>
+                            <h1 class="product_title entry-title">
+                                {% if request.LANGUAGE_CODE == 'fa' %}
+                                    {% if product.persian_title %}
+                                        {{ product.persian_title }}
+                                    {% else %}
+                                        <!-- Handle the case when category.persian_title is null -->
+                                        {{ product.title }}
+                                    {% endif %}
+                                {% else %}
+                                    {{ product.title }}
+                                {% endif %}
+                                / </h1>
                             <div>
                                 <h2>{% trans "Description" %}</h2>
-                                <p>{{ product.description }}</p>
+                                <p>
+                                    {% if request.LANGUAGE_CODE == 'fa' %}
+                                        {% if product.persian_description %}
+                                            {{ product.persian_description }}
+                                        {% else %}
+                                            <!-- Handle the case when category.persian_title is null -->
+                                            {{ product.description }}
+                                        {% endif %}
+                                    {% else %}
+                                        {{ product.description }}
+                                    {% endif %}
+                                </p>
                             </div>
                         </div>
                         <div class="woocommerce-tabs wc-tabs-wrapper">
@@ -52,22 +75,47 @@
                                 <h2>{% trans "Specifications" %}</h2>
                                 <ul>
                                     {% for spec in product.specification_set.all %}
-                                        <li>{{ spec.title }}</li>
+                                        <li>
+                                            {% if request.LANGUAGE_CODE == 'fa' %}
+                                                {% if spec.persian_title %}
+                                                    {{ spec.persian_title }}
+                                                {% else %}
+                                                    <!-- Handle the case when category.persian_title is null -->
+                                                    {{ spec.title }}
+                                                {% endif %}
+                                            {% else %}
+                                                {{ spec.title }}
+                                            {% endif %}
+
+                                        </li>
                                     {% endfor %}
                                 </ul>
                                 <hr>
                                 <h2>{% trans "Advantages" %}</h2>
                                 <ul>
                                     {% for adv in product.advantage_set.all %}
-                                        <li>{{ adv.title }}</li>
+                                        <li>
+                                            {% if request.LANGUAGE_CODE == 'fa' %}
+                                                {% if adv.persian_title %}
+                                                    {{ adv.persian_title }}
+                                                {% else %}
+                                                    <!-- Handle the case when category.persian_title is null -->
+                                                    {{ adv.title }}
+                                                {% endif %}
+                                            {% else %}
+                                                {{ adv.title }}
+                                            {% endif %}
+
+                                        </li>
                                     {% endfor %}
                                 </ul>
                                 <hr>
                                 <h2>{% trans "Health and Safety" %}</h2>
                                 <ul>
                                     <li>{% trans "Do not use as medicine or food product." %}</li>
-                                    <li>{% blocktrans %}
-                                        trans "If swallowed, get medical assistance. If medical assistance is not immediately
+                                    <li>
+                                        {% blocktrans %}
+                                        If swallowed, get medical assistance. If medical assistance is not immediately
                                         available, induce vomiting.
                                         {% endblocktrans %}
                                     </li>
@@ -129,14 +177,18 @@
         }
 
         $(document).ready(function () {
+            var currentLanguage = window.location.pathname.split('/')[1];
             $.ajax({
                 url: '{% url 'get_categories' %}',
                 dataType: 'json',
                 success: function (data) {
                     let categories = JSON.parse(data['categories']);
                     $.each(categories, function (index, value) {
-                        let category_title = value['fields']['title']
-                        let category_url = category_title.replace(' ', '-')
+                        let send_title = value['fields']['title']
+                        let category_title = (currentLanguage === 'fa' && value['fields']['persian_title'] !== null)
+                            ? value['fields']['persian_title']
+                            : value['fields']['title'];
+                        let category_url = send_title.replace(' ', '-')
                         let url = "{% url 'product:sub_category_list' 'category' %}";
                         url = url.replace('category', category_url);
                         $('#category_list').append(

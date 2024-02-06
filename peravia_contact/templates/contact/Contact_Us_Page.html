@@ -36,8 +36,9 @@
                             <div class="row c-mb-10 c-gutter-10">
                                 <div class="col-lg-6">
                                     <div class="form-group has-placeholder">
-                                        <label for="{{ contact_form.fullname.id_for_label }}">{% trans "Full Name" %} <span
-                                                class="required">*</span></label>
+                                        <label for="{{ contact_form.fullname.id_for_label }}">{% trans "Full Name" %}
+                                            <span class="required">*</span>
+                                        </label>
                                         <i class="fas fa-user"></i>
                                         {{ contact_form.fullname }}
                                     </div>
@@ -99,7 +100,7 @@
                             </div>
                             <div class="media-body">
                                 <h6 class="">
-                                    Our Address
+                                    {% trans "Our Address" %}
                                 </h6>
                                 <p class="">{{ settings.address }} </p>
                             </div>
@@ -115,9 +116,9 @@
                             </div>
                             <div class="media-body">
                                 <h6 class="">
-                                    Our Numbers
+                                    {% trans "Our Numbers" %}
                                 </h6>
-                                <p class="">Tel: {{ settings.phone }}<br>Fax: {{ settings.fax }}</p>
+                                <p class="">{% trans "Tel" %}: {{ settings.phone }}<br>{% trans "Fax" %}: {{ settings.fax }}</p>
                             </div>
                         </div>
                         <div class="divider-50 hidden-below-lg"></div>
@@ -131,7 +132,7 @@
                             </div>
                             <div class="media-body">
                                 <h6 class="">
-                                    Our Email
+                                    {% trans "Our Email" %}
                                 </h6>
                                 <p class="">{{ settings.support_email }}</p>
                             </div>
@@ -167,7 +168,7 @@
             phoneInputField.value = phoneInput.getNumber();
             phone_valid = phoneInput.isValidNumber();
             if (!phone_valid && phoneInputField.value !== "") {
-                $('#phone_valid_alert').html('Phone number is not valid').css('color', 'red');
+                $('#phone_valid_alert').html('{% trans "Phone number is not valid" %}').css('color', 'red');
             } else {
                 $('#phone_valid_alert').hide();
             }
