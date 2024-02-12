@@ -104,12 +104,13 @@ WSGI_APPLICATION = 'PeraviaWebsite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'TestDB',
-        'USER': 'postgres',
-        'PASSWORD': 'ali',
+        'NAME': 'peraviac_db',
+        'USER': 'peraviac_user',
+        'PASSWORD': '010i^aF8HN,1',
         'HOST': 'localhost',
         'PORT': '5432'
     }
