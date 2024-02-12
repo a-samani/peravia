@@ -132,7 +132,10 @@
                             </div>
                             <div class="panel wc-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
                                 <h2>{% trans "Characteristics" %}</h2>
-                                <iframe src="{{ product.characteristics.url }}" frameBorder="0" scrolling="auto" height="100%" width="100%" ></iframe>
+                                {% if product.characteristics.url != null %}
+                                	<iframe src="{{ product.characteristics.url }}" frameBorder="0" scrolling="auto" height="100%" width="100%" ></iframe>
+                                {% endif %}
+
                             </div>
                         </div>
                     </div>
