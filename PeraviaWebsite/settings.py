@@ -28,7 +28,7 @@ DEBUG = True
 
 AUTH_USER_MODEL = 'peravia_accounts.CustomUser'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['peravia.co']
 
 # Application definition
 
