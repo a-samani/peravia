@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from .models import Product, Specification, Advantage, Category, MainCategory
 
+from .models import AdvantageProduct
 
 # ----------------------------------------------------------
 class ProductAdmin(admin.ModelAdmin):
@@ -21,9 +22,16 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 # ----------------------------------------------------------
+class AdvantageProductAdmin(admin.ModelAdmin):
+    # Define how AdvantageProduct should be displayed in the admin panel
+    list_display = ['advantage', 'product']
+
+
+# ----------------------------------------------------------
 admin.site.register(Product,ProductAdmin)
 admin.site.register(Specification)
 admin.site.register(Advantage)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(MainCategory)
+admin.site.register(AdvantageProduct, AdvantageProductAdmin)
 

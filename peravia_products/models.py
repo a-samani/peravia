@@ -142,7 +142,18 @@ class Specification(models.Model):
 class Advantage(models.Model):
     title = models.TextField()
     persian_title = models.TextField(null=True, blank=True)
-    product = models.ManyToManyField(Product)
+    products = models.ManyToManyField(Product, through='AdvantageProduct')
 
     def __str__(self):
         return self.title
+
+
+class AdvantageProduct(models.Model):
+    advantage = models.ForeignKey(Advantage, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+    # Add any additional fields if needed
+
+    class Meta:
+        # Define any unique constraints or other meta options if needed
+        pass
