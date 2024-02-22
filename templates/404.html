@@ -57,10 +57,16 @@
                         <img src="{% static 'img/404.png' %}" alt="">
                         <h3 class="text-center">The Page You Requested Cannot Be Found!</h3>
                         <div class="d-flex flex-wrap justify-content-center">
-                            <a class="btn btn-darkgrey big-btn" href="/">back home</a>
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% if LANGUAGE_CODE == 'en' %}
+                                <a class="btn btn-darkgrey big-btn" href="/en/">back home</a>
+                            {% elif LANGUAGE_CODE == 'fa' %}
+                                <a class="btn btn-darkgrey big-btn" href="/fa/">back home</a>
+                            {% else %}
+                                <a class="btn btn-darkgrey big-btn" href="/">back home</a>
+                            {% endif %}
                             <a class="btn btn-darkgrey big-btn" href="{% url 'contact:contact_page' %}">contact us</a>
                         </div>
-
                     </div>
                 </div>
             </div>
