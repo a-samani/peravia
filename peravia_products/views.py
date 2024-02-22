@@ -35,7 +35,8 @@ class ProductsByCategory(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         category = self.kwargs.get('category_name')
-        category_obj = Category.objects.get(title__iexact=category)
+        s_cat = category.replace('-', ' ')
+        category_obj = Category.objects.get(title__iexact=s_cat)
         # main_cat = self.kwargs.get('maincategory')
         # context['previous_page'] = main_cat
         context['page_name'] = category
@@ -87,8 +88,10 @@ class ProductSearchView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        print(self.request.GET.get('q'))
         search_context = self.request.GET.get('q')
         context['page_name'] = 'Search Product'
+        context['persian_page_name'] = 'جستجوی محصولات'
         context['title'] = 'Peravia | Search for %s' % search_context
         return context
 

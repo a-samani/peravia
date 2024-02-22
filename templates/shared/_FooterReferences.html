@@ -16,9 +16,9 @@
                     let category_title = (currentLanguage === 'fa' && value['fields']['persian_title'] !== null)
                         ? value['fields']['persian_title']
                         : value['fields']['title'];
-
+                    let category_address = value['fields']['title']
                     let url = "{% url 'product:sub_category_list' 'main_category' %}";
-                    url = url.replace('main_category', category_title);
+                    url = url.replace('main_category', category_address);
                     $("#category_ul").append(`<li><a href="${url}">${category_title}</a></li>`)
                 });
                 let site_setting = JSON.parse(data.site_setting)[0]
