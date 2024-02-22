@@ -141,7 +141,7 @@ class Specification(models.Model):
 
 class Advantage(models.Model):
     title = models.TextField()
-    persian_title = models.TextField(default="", null=True, blank=True)
+    persian_title = models.TextField(null=True, blank=True)
     product = models.ManyToManyField(Product)
 
     def __str__(self):

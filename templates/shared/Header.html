@@ -2,6 +2,9 @@
 {% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
 <body>
 <div class="header_absolute">
     <header class="page_header_side header_slide header-special header_side_right ds">
@@ -46,12 +49,20 @@
 									</span>
                     </a>
                 </div>
+                {% get_current_language as CURRENT_LANGUAGE %}
+                {% get_available_languages as AVAILABLE_LANGUAGES %}
+                {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
                 <div class="col-xl-6 col-1 text-left">
                     <!-- main nav start -->
                     <nav class="top-nav">
                         <ul class="nav sf-menu">
                             <li>
-                                <a href="/">{% trans "Home" %}</a>
+                                {% if request.LANGUAGE_CODE == 'fa' %}
+                                    <a href="/fa">{% trans "Home" %}</a>
+                                {% else %}
+                                    <a href="/en">{% trans "Home" %}</a>
+                                {% endif %}
+                                
                             </li>
                             <li>
                                 <a href="#">{% trans "Products" %}</a>
@@ -68,10 +79,27 @@
                             </li>
                             <li>
                                 <a href="#">{% trans "Blog" %}</a>
-                                <ul>
+                                 <ul>
                                     <li><a href="{% url 'blog:news_list' %}">{% trans "News" %}</a></li>
                                     <li><a href="{% url 'blog:article_list' %}">{% trans "Articles" %}</a></li>
                                 </ul>
+                            </li>
+                            <li>
+                                <i style="margin-left: 15px;margin-right: 15px" class="fas fa-globe-americas"></i>
+                                <ul>
+                                    {% for language in languages %}
+                                        <li>
+
+                                            <a href="/{{ language.code }}/{{ request.get_full_path|slice:"4:" }}"
+                                                    {% if language.code == CURRENT_LANGUAGE %}
+                                               class="active"
+                                                    {% endif %}>
+                                                {{ language.name_local }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                               
                             </li>
                         </ul>
                     </nav>

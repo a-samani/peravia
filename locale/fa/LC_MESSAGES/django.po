@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-07 01:00+0330\n"
-"PO-Revision-Date: 2024-02-06 21:44+0000\n"
+"POT-Creation-Date: 2024-02-21 22:04+0330\n"
+"PO-Revision-Date: 2024-02-21 18:35+0000\n"
 "Last-Translator: Anonymous User <ali@mail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -43,7 +43,7 @@ msgstr "درباره  ما"
 msgid "Peravia | FAQ"
 msgstr "پراویا | سوالات متداول"
 
-#: PeraviaWebsite/views.py:31 templates/shared/Header.html:64
+#: PeraviaWebsite/views.py:31 templates/shared/Header.html:75
 msgid "FAQ"
 msgstr "سوالات متداول"
 
@@ -231,21 +231,21 @@ msgstr ""
 msgid "Discard oil-soaked shoes or boots."
 msgstr "کفش ها یا چکمه های آغشته به روغن را دور بیندازید."
 
-#: peravia_products/templates/products/ProductDetail.html:145
-#: peravia_products/templates/products/ProductDetail.html:155
+#: peravia_products/templates/products/ProductDetail.html:148
+#: peravia_products/templates/products/ProductDetail.html:158
 #: peravia_products/templates/products/ProductList.html:52
 #: peravia_products/templates/products/ProductList.html:59
 #: peravia_products/templates/products/ProductList.html:60
-#: templates/shared/Header.html:17 templates/shared/Header.html:25
+#: templates/shared/Header.html:20 templates/shared/Header.html:28
 msgid "Search"
 msgstr "جستجو کردن"
 
-#: peravia_products/templates/products/ProductDetail.html:151
+#: peravia_products/templates/products/ProductDetail.html:154
 #: peravia_products/templates/products/ProductList.html:56
 msgid "Search for:"
 msgstr "جستجو برای:"
 
-#: peravia_products/templates/products/ProductDetail.html:160
+#: peravia_products/templates/products/ProductDetail.html:163
 #: peravia_products/templates/products/ProductList.html:64
 msgid "Categories"
 msgstr "دسته بندی ها"
@@ -284,12 +284,13 @@ msgstr "مدیر برند"
 
 #: templates/main/About_Us.html:14 templates/main/Home_Page.html:141
 msgid "welcome!"
-msgstr "خوش آمدی!"
+msgstr "خوش آمدید!"
 
 #: templates/main/About_Us.html:18 templates/main/Home_Page.html:23
 #: templates/main/Home_Page.html:48 templates/main/Home_Page.html:74
+#: templates/main/Home_Page.html:145
 msgid "get a quote"
-msgstr "درخواست"
+msgstr "مشاوره"
 
 #: templates/main/About_Us.html:24
 msgid ""
@@ -440,7 +441,7 @@ msgstr "یا"
 #: templates/main/Home_Page.html:26 templates/main/Home_Page.html:52
 #: templates/main/Home_Page.html:77
 msgid "Request a Callback"
-msgstr "درخواست پاسخ به تماس"
+msgstr "درخواست تماس"
 
 #: templates/main/Home_Page.html:35
 msgid "img"
@@ -501,7 +502,7 @@ msgstr ""
 "در حال حاضر تنها تولید کننده این سیالات در ایران و تنها شرکت تخصصی تولید کننده سیالات هوانوردی در خاورمیانه می باشد. تلاش کرده است با نوآوری، تنوع و توسعه محصولات زیست تخریب پذیر مسئولیت اجتماعی خود را در حفاظت از محیط زیست انجام دهد. این شرکت معتقد است برای تامین محصولات مورد نیاز مشتریان بن بست وجود ندارد. فراز آسمان پارسیان محصولات خود را با ضمانت کیفیت، قیمت ثابت ریالی و عرضه دائمی و آسان با بیشترین تعداد سبد کالا نسبت به شرکت های مشابه خارجی به مشتریان خود عرضه می کند."
 
 #: templates/main/Home_Page.html:196 templates/shared/Footer.html:12
-#: templates/shared/Header.html:44
+#: templates/shared/Header.html:47
 msgid "Peravia"
 msgstr "پرویا"
 
@@ -641,47 +642,52 @@ msgstr "تمامی حقوق محفوظ است"
 msgid "Your Phone Number here"
 msgstr "شماره تلفن شما اینجاست"
 
-#: templates/shared/Header.html:12 templates/shared/Header.html:61
+#: templates/shared/Header.html:15 templates/shared/Header.html:72
 msgid "About"
 msgstr "در باره"
 
-#: templates/shared/Header.html:20
+#: templates/shared/Header.html:23
 msgid "Search:"
 msgstr "جستجو کردن:"
 
-#: templates/shared/Header.html:23
+#: templates/shared/Header.html:26
 msgid "Search keyword"
 msgstr "کلیدواژه ها را جست و جو کنید"
 
-#: templates/shared/Header.html:45
+#: templates/shared/Header.html:48
 msgid "persian aviation materials"
 msgstr "مواد هوانوردی ایرانی"
 
-#: templates/shared/Header.html:54 templates/shared/TitleSection1.html:27
+#: templates/shared/Header.html:61 templates/shared/Header.html:63
+#: templates/shared/TitleSection1.html:27
 #: templates/shared/TitleSection2.html:16
 msgid "Home"
 msgstr "صفحه اصلی"
 
-#: templates/shared/Header.html:57
+#: templates/shared/Header.html:68
 msgid "Products"
 msgstr "محصولات"
 
-#: templates/shared/Header.html:67
+#: templates/shared/Header.html:78
 msgid "Contact"
 msgstr "مخاطب"
 
-#: templates/shared/Header.html:70
+#: templates/shared/Header.html:81
+#| msgid "Blog  "
 msgid "Blog"
 msgstr "بلاگ"
 
-#: templates/shared/Header.html:72
+#: templates/shared/Header.html:83
 msgid "News"
 msgstr "اخبار"
 
-#: templates/shared/Header.html:73
+#: templates/shared/Header.html:84
 msgid "Articles"
 msgstr "مقالات"
 
-#: templates/shared/Header.html:92
+#: templates/shared/Header.html:120
 msgid "menu"
 msgstr "فهرست"
+
+#~ msgid "Language"
+#~ msgstr "زبان"

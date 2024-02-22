@@ -25,8 +25,12 @@ class Team(models.Model):
     family = models.CharField(max_length=200)
     position = models.CharField(max_length=200, choices=Positions)
     rank = models.IntegerField(choices=Rank, default=0)
-    member_image = models.ImageField(upload_to=upload_image_path,blank=True,null=True)
+    member_image = models.ImageField(upload_to=upload_image_path, blank=True, null=True)
     linkedin = models.CharField(max_length=250)
+    persian_name = models.CharField(max_length=150, null=True, default="", blank=True)
+    persian_family = models.CharField(max_length=200, null=True, default="", blank=True)
+    persian_position = models.CharField(max_length=200, choices=Positions, null=True, default="", blank=True)
+
 
     class Meta:
         ordering = ['rank']
