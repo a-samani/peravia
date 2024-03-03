@@ -13,6 +13,9 @@ from PeraviaWebsite import settings
 from django.utils.translation import gettext_lazy as _
 from django.conf.urls.i18n import i18n_patterns
 # ----------------------------------------------------------
+urlpatterns = [
+    path('', RedirectView.as_view(url='/fa/', permanent=True)),
+]
 urlpatterns = i18n_patterns(
 
     path('', homepage, name='home'),
