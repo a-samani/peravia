@@ -68,9 +68,9 @@ class News(models.Model):
     persian_summary = models.CharField(max_length=500, null=True, default="", blank=True)
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
-    content = RichTextUploadingField()
+    content = RichTextUploadingField(null=True,)
     news_image = models.ImageField(
-        upload_to=upload_image_path, blank=True, null=True)
+        upload_to=upload_image_path, blank=True, null=True, default="")
 
     class Meta:
         ordering = ['-created_on']

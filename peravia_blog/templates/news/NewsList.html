@@ -11,11 +11,13 @@
           <article class="vertical-item ls text-center rounded post type-post status-publish format-standard has-post-thumbnail">
             <div class="item-media post-thumbnail">
               <a href="{{ news.get_absolute_url }}">
-                {% if news.news_image.url%}
-                  <img src="{{ news.news_image.url }}" alt="">
-                {% else %}
-                  <img src="{% static 'images/blog/01.jpg' %}" alt="">
-                {% endif %}
+                  {% if news.news_image %}
+                      {% if news.news_image.url %}
+                          <img src="{{ news.news_image.url }}" alt="">
+                      {% else %}
+                          <img src="{% static 'images/blog/01.jpg' %}" alt="">
+                      {% endif %}
+                  {% endif %}
               </a>
             </div><!-- .post-thumbnail -->
             <div class="item-content">
