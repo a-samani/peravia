@@ -3,7 +3,74 @@
 {% load static %}
 {% block content %}
     <html lang="en">
+        <head>
+        <style>
+            /* Overlay styles */
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+                z-index: 9999; /* Ensure the overlay appears on top */
+                display: none; /* Initially hidden */
+            }
+
+            /* Pop-up styles */
+            .popup {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                z-index: 10000; /* Ensure the pop-up appears on top of the overlay */
+                display: none; /* Initially hidden */
+            }
+
+            /* OK button styles */
+            .ok-btn {
+                margin-top: 10px;
+                padding: 10px 20px;
+                background-color: #007bff; /* Blue color */
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
     <body>
+<!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Pop-up -->
+    <div id="popup" class="popup">
+        <p>{% trans "You can download the catalogue from the news page!" %}</p>
+        <button id="okButton" class="ok-btn">{% trans "OK" %}</button>
+    </div>
+
+    <!-- JavaScript for modal -->
+    <script>
+        // Get the modal elements
+        var overlay = document.getElementById("overlay");
+        var popup = document.getElementById("popup");
+        var okButton = document.getElementById("okButton");
+
+        // Display the modal
+        window.onload = function() {
+            overlay.style.display = "block";
+            popup.style.display = "block";
+        }
+
+        // Close the modal when the user clicks on OK button
+        okButton.onclick = function() {
+            overlay.style.display = "none";
+            popup.style.display = "none";
+        }
+    </script>
     <section class="page_slider">
         <div class="flexslider">
             <ul class="slides">
@@ -191,10 +258,16 @@
                 </div>
                 <div class="col-xs-12 col-12 col-lg-6">
                     <div class="content-center">
-                        <h2 class="special-heading numeric text-sm-left text-center">
+
+                        {% if request.LANGUAGE_CODE == 'fa' %}
+                            <h2 class="special-heading numeric text-sm-left text-center">
                             <span class="text-capitalize">
-                                {% trans "Peravia" %}
-                            </span>
+                        {% else %}
+                            <h2 class="special-heading numeric text-sm-left text-center">
+                            <span class="text-capitalize">
+                        {% endif %}
+                        {% trans "Peravia" %}
+                        </span>
                         </h2>
                         <div class="divider-45 hidden-below-lg"></div>
                         <div class="divider-30 hidden-above-lg"></div>
@@ -222,10 +295,15 @@
             <div class="row">
                 <div class="col-xs-12 col-12 col-lg-6">
                     <div class="content-center">
-                        <h2 class="special-heading numeric text-sm-left text-center">
-									<span class="text-capitalize">
-                                        {% trans "Quality and Price" %}
-									</span>
+                        {% if request.LANGUAGE_CODE == 'fa' %}
+                            <h2 class="special-heading numeric text-sm-left text-center">
+                            <span class="text-capitalize">
+                        {% else %}
+                            <h2 class="special-heading numeric text-sm-left text-center">
+                            <span class="text-capitalize">
+                        {% endif %}
+                        {% trans "Quality and Price" %}
+                        </span>
                         </h2>
                         <div class="divider-45 hidden-below-lg"></div>
                         <div class="divider-30 hidden-above-lg"></div>
@@ -256,10 +334,15 @@
                 </div>
                 <div class="col-xs-12 col-12 col-lg-6">
                     <div class="content-center">
-                        <h2 class="special-heading numeric text-sm-left text-center">
+                        {% if request.LANGUAGE_CODE == 'fa' %}
+                            <h2 class="special-heading numeric text-sm-left text-center">
                             <span class="text-capitalize">
-                                {% trans "Product Customization" %}
-                            </span>
+                        {% else %}
+                            <h2 class="special-heading numeric text-sm-left text-center">
+                            <span class="text-capitalize">
+                        {% endif %}
+                        {% trans "Product Customization" %}
+                        </span>
                         </h2>
                         <div class="divider-45 hidden-below-lg"></div>
                         <div class="divider-30 hidden-above-lg"></div>

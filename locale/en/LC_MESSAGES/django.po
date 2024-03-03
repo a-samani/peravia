@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 22:04+0330\n"
+"POT-Creation-Date: 2024-03-04 01:33+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: PeraviaWebsite/settings.py:152
+#: PeraviaWebsite/settings.py:153
 msgid "English"
 msgstr ""
 
-#: PeraviaWebsite/settings.py:153
+#: PeraviaWebsite/settings.py:154
 msgid "Farsi"
 msgstr ""
 
@@ -75,17 +75,17 @@ msgid "Lost your password?"
 msgstr ""
 
 #: peravia_blog/templates/news/NewsDetail.html:90
-#: templates/main/Home_Page.html:477
+#: templates/main/Home_Page.html:560
 msgid "Latest News"
 msgstr ""
 
 #: peravia_blog/templates/news/NewsList.html:32
-#: templates/main/Home_Page.html:513 templates/main/Home_Page.html:557
+#: templates/main/Home_Page.html:596 templates/main/Home_Page.html:640
 msgid "by"
 msgstr ""
 
 #: peravia_blog/templates/news/NewsList.html:32
-#: templates/main/Home_Page.html:513 templates/main/Home_Page.html:557
+#: templates/main/Home_Page.html:596 templates/main/Home_Page.html:640
 msgid "Admin"
 msgstr ""
 
@@ -278,13 +278,13 @@ msgstr ""
 msgid "Brand Manager"
 msgstr ""
 
-#: templates/main/About_Us.html:14 templates/main/Home_Page.html:141
+#: templates/main/About_Us.html:14 templates/main/Home_Page.html:208
 msgid "welcome!"
 msgstr ""
 
-#: templates/main/About_Us.html:18 templates/main/Home_Page.html:23
-#: templates/main/Home_Page.html:48 templates/main/Home_Page.html:74
-#: templates/main/Home_Page.html:145
+#: templates/main/About_Us.html:18 templates/main/Home_Page.html:90
+#: templates/main/Home_Page.html:115 templates/main/Home_Page.html:141
+#: templates/main/Home_Page.html:212
 msgid "get a quote"
 msgstr ""
 
@@ -337,11 +337,11 @@ msgid ""
 "the fuel that allows common people to attain uncommon results."
 msgstr ""
 
-#: templates/main/FAQ.html:15 templates/main/Home_Page.html:288
+#: templates/main/FAQ.html:15 templates/main/Home_Page.html:371
 msgid "FAQ & Information"
 msgstr ""
 
-#: templates/main/FAQ.html:28 templates/main/Home_Page.html:299
+#: templates/main/FAQ.html:28 templates/main/Home_Page.html:382
 msgid "Get to know us"
 msgstr ""
 
@@ -368,7 +368,7 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/main/FAQ.html:54 templates/main/Home_Page.html:331
+#: templates/main/FAQ.html:54 templates/main/Home_Page.html:414
 msgid "What types of product does Peravia include?"
 msgstr ""
 
@@ -384,7 +384,7 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/main/FAQ.html:75 templates/main/Home_Page.html:353
+#: templates/main/FAQ.html:75 templates/main/Home_Page.html:436
 msgid "What can we do to buy a product or establish a business relationship?"
 msgstr ""
 
@@ -412,45 +412,53 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/main/Home_Page.html:18
+#: templates/main/Home_Page.html:51
+msgid "You can download the catalogue from the news page!"
+msgstr ""
+
+#: templates/main/Home_Page.html:52
+msgid "OK"
+msgstr ""
+
+#: templates/main/Home_Page.html:85
 msgid "1.Peravia"
 msgstr ""
 
-#: templates/main/Home_Page.html:20
+#: templates/main/Home_Page.html:87
 msgid "Oils,Lubricants and Greases"
 msgstr ""
 
-#: templates/main/Home_Page.html:24 templates/main/Home_Page.html:50
-#: templates/main/Home_Page.html:75
+#: templates/main/Home_Page.html:91 templates/main/Home_Page.html:117
+#: templates/main/Home_Page.html:142
 msgid "or"
 msgstr ""
 
-#: templates/main/Home_Page.html:26 templates/main/Home_Page.html:52
-#: templates/main/Home_Page.html:77
+#: templates/main/Home_Page.html:93 templates/main/Home_Page.html:119
+#: templates/main/Home_Page.html:144
 msgid "Request a Callback"
 msgstr ""
 
-#: templates/main/Home_Page.html:35
+#: templates/main/Home_Page.html:102
 msgid "img"
 msgstr ""
 
-#: templates/main/Home_Page.html:42
+#: templates/main/Home_Page.html:109
 msgid "2.There is no impasse"
 msgstr ""
 
-#: templates/main/Home_Page.html:44
+#: templates/main/Home_Page.html:111
 msgid "Knowledge-based and eco-friendly company"
 msgstr ""
 
-#: templates/main/Home_Page.html:69
+#: templates/main/Home_Page.html:136
 msgid "3.The first in the middle east"
 msgstr ""
 
-#: templates/main/Home_Page.html:71
+#: templates/main/Home_Page.html:138
 msgid "In commercial aviation lubricants"
 msgstr ""
 
-#: templates/main/Home_Page.html:151
+#: templates/main/Home_Page.html:218
 msgid ""
 "\n"
 "                            Faraz Aseman Parsian Company is a private joint "
@@ -459,7 +467,7 @@ msgid ""
 "                        "
 msgstr ""
 
-#: templates/main/Home_Page.html:157
+#: templates/main/Home_Page.html:224
 msgid ""
 "\n"
 "                            It relies on scientific and technical ability of "
@@ -492,12 +500,12 @@ msgid ""
 "                        "
 msgstr ""
 
-#: templates/main/Home_Page.html:196 templates/shared/Footer.html:12
+#: templates/main/Home_Page.html:269 templates/shared/Footer.html:12
 #: templates/shared/Header.html:47
 msgid "Peravia"
 msgstr ""
 
-#: templates/main/Home_Page.html:202
+#: templates/main/Home_Page.html:275
 msgid ""
 "\n"
 "                                Peravia is a high-tech chemical company, "
@@ -512,11 +520,11 @@ msgid ""
 "                            "
 msgstr ""
 
-#: templates/main/Home_Page.html:227
+#: templates/main/Home_Page.html:305
 msgid "Quality and Price"
 msgstr ""
 
-#: templates/main/Home_Page.html:233
+#: templates/main/Home_Page.html:311
 msgid ""
 "\n"
 "                                Due to the fact that production costs in "
@@ -530,11 +538,11 @@ msgid ""
 "                            "
 msgstr ""
 
-#: templates/main/Home_Page.html:261
+#: templates/main/Home_Page.html:344
 msgid "Product Customization"
 msgstr ""
 
-#: templates/main/Home_Page.html:267
+#: templates/main/Home_Page.html:350
 msgid ""
 "\n"
 "                                Due to the weather, operating conditions and "
@@ -547,7 +555,7 @@ msgid ""
 "                            "
 msgstr ""
 
-#: templates/main/Home_Page.html:306
+#: templates/main/Home_Page.html:389
 msgid ""
 "\n"
 "                                        Faraz Aseman Parsian Company "
@@ -577,7 +585,7 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/main/Home_Page.html:339
+#: templates/main/Home_Page.html:422
 msgid ""
 "\n"
 "                                        Peravia includes four product "
@@ -590,7 +598,7 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/main/Home_Page.html:360
+#: templates/main/Home_Page.html:443
 #, python-format
 msgid ""
 "\n"
@@ -604,11 +612,11 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/main/Home_Page.html:396
+#: templates/main/Home_Page.html:479
 msgid "Certificates"
 msgstr ""
 
-#: templates/main/Home_Page.html:482
+#: templates/main/Home_Page.html:565
 msgid "our blog"
 msgstr ""
 
