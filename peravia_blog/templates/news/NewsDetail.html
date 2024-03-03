@@ -8,16 +8,21 @@
     <div class="row">
       <main class="col-lg-7 col-xl-8">
         <article class="vertical-item single-post bordered post type-post status-publish format-standard has-post-thumbnail">
-          <!-- .post-thumbnail -->
-          <div class="item-media post-thumbnail">
-            {% if news.news_image %}
-                      {% if news.news_image.url %}
-                          <img src="{{ news.news_image.url }}" alt="">
-                      {% else %}
-                          <img src="{% static 'images/blog/01.jpg' %}" alt="">
-                      {% endif %}
-                  {% endif %}
-          </div>
+            <!-- .post-thumbnail -->
+            <div class="item-media post-thumbnail">
+                <a href="{{ news.pdf_file.url }}" target="_blank">
+
+
+                    {% if news.news_image %}
+                        {% if news.news_image.url %}
+                            <img src="{{ news.news_image.url }}" alt="">
+                        {% else %}
+                            <img src="{% static 'images/blog/01.jpg' %}" alt="">
+                        {% endif %}
+                    {% endif %}
+                </a>
+
+            </div>
           <div class="item-content">
             <div class="entry-content">
               {{ post.content|safe }}
