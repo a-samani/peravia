@@ -71,6 +71,7 @@ class News(models.Model):
     content = RichTextUploadingField(null=True,)
     news_image = models.ImageField(
         upload_to=upload_image_path, blank=True, null=True, default="")
+    pdf_file = models.FileField(upload_to=upload_image_path, blank=True, null=True)  # New field for PDF files
 
     class Meta:
         ordering = ['-created_on']
