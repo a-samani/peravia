@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 22:04+0330\n"
-"PO-Revision-Date: 2024-02-21 18:35+0000\n"
+"POT-Creation-Date: 2024-03-04 01:33+0330\n"
+"PO-Revision-Date: 2024-03-03 22:04+0000\n"
 "Last-Translator: Anonymous User <ali@mail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,11 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: PeraviaWebsite/settings.py:152
+#: PeraviaWebsite/settings.py:153
 msgid "English"
 msgstr "انگلیسی"
 
-#: PeraviaWebsite/settings.py:153
+#: PeraviaWebsite/settings.py:154
 msgid "Farsi"
 msgstr "فارسی"
 
@@ -76,17 +76,17 @@ msgid "Lost your password?"
 msgstr "رمزعبور خود را فراموش کرده اید ؟"
 
 #: peravia_blog/templates/news/NewsDetail.html:90
-#: templates/main/Home_Page.html:477
+#: templates/main/Home_Page.html:560
 msgid "Latest News"
 msgstr "آخرین اخبار"
 
 #: peravia_blog/templates/news/NewsList.html:32
-#: templates/main/Home_Page.html:513 templates/main/Home_Page.html:557
+#: templates/main/Home_Page.html:596 templates/main/Home_Page.html:640
 msgid "by"
 msgstr "توسط"
 
 #: peravia_blog/templates/news/NewsList.html:32
-#: templates/main/Home_Page.html:513 templates/main/Home_Page.html:557
+#: templates/main/Home_Page.html:596 templates/main/Home_Page.html:640
 msgid "Admin"
 msgstr "ادمین"
 
@@ -282,13 +282,13 @@ msgstr "مدیر فناوری اطلاعات"
 msgid "Brand Manager"
 msgstr "مدیر برند"
 
-#: templates/main/About_Us.html:14 templates/main/Home_Page.html:141
+#: templates/main/About_Us.html:14 templates/main/Home_Page.html:208
 msgid "welcome!"
 msgstr "خوش آمدید!"
 
-#: templates/main/About_Us.html:18 templates/main/Home_Page.html:23
-#: templates/main/Home_Page.html:48 templates/main/Home_Page.html:74
-#: templates/main/Home_Page.html:145
+#: templates/main/About_Us.html:18 templates/main/Home_Page.html:90
+#: templates/main/Home_Page.html:115 templates/main/Home_Page.html:141
+#: templates/main/Home_Page.html:212
 msgid "get a quote"
 msgstr "مشاوره"
 
@@ -351,11 +351,11 @@ msgstr ""
 "دستاوردهای فردی به سمت اهداف سازمانی. این سوختی است که به مردم عادی اجازه می"
 " دهد تا به نتایج غیر معمول دست یابند."
 
-#: templates/main/FAQ.html:15 templates/main/Home_Page.html:288
+#: templates/main/FAQ.html:15 templates/main/Home_Page.html:371
 msgid "FAQ & Information"
 msgstr "پرسش و پاسخ و اطلاعات"
 
-#: templates/main/FAQ.html:28 templates/main/Home_Page.html:299
+#: templates/main/FAQ.html:28 templates/main/Home_Page.html:382
 msgid "Get to know us"
 msgstr "با ما آشنا بشو"
 
@@ -377,7 +377,7 @@ msgstr ""
 "شرکت فراز آسمان پارسیان (شرکت خصوصی) ثبت شده با برند پرویا با تکیه بر توان علمی و فنی خود و با استفاده از توان برجسته ترین متخصصان داخلی و در راستای ارزش های خود، انواع سیالات مورد استفاده را طراحی و تولید می کند. صنعت هوانوردی با استانداردهای معتبر بین المللی و ملی مطابقت دارد.\n"
 "این شرکت که در حال حاضر تنها تولید کننده این سیالات در ایران و تنها شرکت تخصصی تولید سیالات هوانوردی در خاورمیانه است، با نوآوری، تنوع و توسعه محصولات زیست تخریب پذیر سعی در انجام مسئولیت اجتماعی خود در حفاظت از محیط زیست کرده است."
 
-#: templates/main/FAQ.html:54 templates/main/Home_Page.html:331
+#: templates/main/FAQ.html:54 templates/main/Home_Page.html:414
 msgid "What types of product does Peravia include?"
 msgstr "پرویا شامل چه نوع محصولاتی است؟"
 
@@ -394,7 +394,7 @@ msgstr ""
 "پراویا شامل چهار دسته محصول است: روغن موتور پیستونی، روغن موتور جت، مایع هیدرولیک و گریس.\n"
 "برنامه توسعه محصول پراویا تولید و تامین کلیه مواد صنعت هوانوردی در سالهای آینده است."
 
-#: templates/main/FAQ.html:75 templates/main/Home_Page.html:353
+#: templates/main/FAQ.html:75 templates/main/Home_Page.html:436
 msgid "What can we do to buy a product or establish a business relationship?"
 msgstr "برای خرید محصول یا ایجاد رابطه تجاری چه کنیم؟"
 
@@ -425,45 +425,53 @@ msgstr ""
 "\n"
 "شماره تلفن یا شبکه های اجتماعی"
 
-#: templates/main/Home_Page.html:18
+#: templates/main/Home_Page.html:51
+msgid "You can download the catalogue from the news page!"
+msgstr "می‌توانید کاتالوگ محصولات را از قسمت اخبار دانلود کنید"
+
+#: templates/main/Home_Page.html:52
+msgid "OK"
+msgstr "باشه"
+
+#: templates/main/Home_Page.html:85
 msgid "1.Peravia"
 msgstr "1.پراویا"
 
-#: templates/main/Home_Page.html:20
+#: templates/main/Home_Page.html:87
 msgid "Oils,Lubricants and Greases"
 msgstr "روغن ها، روان کننده ها و گریس ها"
 
-#: templates/main/Home_Page.html:24 templates/main/Home_Page.html:50
-#: templates/main/Home_Page.html:75
+#: templates/main/Home_Page.html:91 templates/main/Home_Page.html:117
+#: templates/main/Home_Page.html:142
 msgid "or"
 msgstr "یا"
 
-#: templates/main/Home_Page.html:26 templates/main/Home_Page.html:52
-#: templates/main/Home_Page.html:77
+#: templates/main/Home_Page.html:93 templates/main/Home_Page.html:119
+#: templates/main/Home_Page.html:144
 msgid "Request a Callback"
 msgstr "درخواست تماس"
 
-#: templates/main/Home_Page.html:35
+#: templates/main/Home_Page.html:102
 msgid "img"
 msgstr "عکس"
 
-#: templates/main/Home_Page.html:42
+#: templates/main/Home_Page.html:109
 msgid "2.There is no impasse"
 msgstr "2. هیچ بن بست وجود ندارد"
 
-#: templates/main/Home_Page.html:44
+#: templates/main/Home_Page.html:111
 msgid "Knowledge-based and eco-friendly company"
 msgstr "شرکت دانش بنیان و دوستدار محیط زیست"
 
-#: templates/main/Home_Page.html:69
+#: templates/main/Home_Page.html:136
 msgid "3.The first in the middle east"
 msgstr "3. اولین در خاورمیانه"
 
-#: templates/main/Home_Page.html:71
+#: templates/main/Home_Page.html:138
 msgid "In commercial aviation lubricants"
 msgstr "در روان کننده های هوانوردی تجاری"
 
-#: templates/main/Home_Page.html:151
+#: templates/main/Home_Page.html:218
 msgid ""
 "\n"
 "                            Faraz Aseman Parsian Company is a private joint stock company registered under\n"
@@ -473,7 +481,7 @@ msgstr ""
 "\n"
 "شرکت فراز آسمان پارسیان یک شرکت سهامی خاص است که با برند پرویا به ثبت رسیده است."
 
-#: templates/main/Home_Page.html:157
+#: templates/main/Home_Page.html:224
 msgid ""
 "\n"
 "                            It relies on scientific and technical ability of the most prominent domestic specialists.\n"
@@ -501,12 +509,12 @@ msgstr ""
 "همچنین در راستای ارزش های خود، طراحی و ساخت انواع سیالات مورد استفاده در صنعت هوانوردی را با استانداردهای معتبر بین المللی و ملی تدوین کرده است. فراز آسمان پارسیان\n"
 "در حال حاضر تنها تولید کننده این سیالات در ایران و تنها شرکت تخصصی تولید کننده سیالات هوانوردی در خاورمیانه می باشد. تلاش کرده است با نوآوری، تنوع و توسعه محصولات زیست تخریب پذیر مسئولیت اجتماعی خود را در حفاظت از محیط زیست انجام دهد. این شرکت معتقد است برای تامین محصولات مورد نیاز مشتریان بن بست وجود ندارد. فراز آسمان پارسیان محصولات خود را با ضمانت کیفیت، قیمت ثابت ریالی و عرضه دائمی و آسان با بیشترین تعداد سبد کالا نسبت به شرکت های مشابه خارجی به مشتریان خود عرضه می کند."
 
-#: templates/main/Home_Page.html:196 templates/shared/Footer.html:12
+#: templates/main/Home_Page.html:269 templates/shared/Footer.html:12
 #: templates/shared/Header.html:47
 msgid "Peravia"
 msgstr "پرویا"
 
-#: templates/main/Home_Page.html:202
+#: templates/main/Home_Page.html:275
 msgid ""
 "\n"
 "                                Peravia is a high-tech chemical company, that specifically produces aviation engine\n"
@@ -519,11 +527,11 @@ msgstr ""
 "\n"
 "پراویا یک شرکت شیمیایی با فناوری پیشرفته است که به طور خاص روغن موتورهای هوانوردی، روان کننده ها و گریس ها را تولید می کند. این شرکت علاوه بر محصولات هوانوردی، روغن موتور و روان کننده های صنایع دیگر مانند صنعت خودروسازی را نیز تولید می کند."
 
-#: templates/main/Home_Page.html:227
+#: templates/main/Home_Page.html:305
 msgid "Quality and Price"
 msgstr "کیفیت و قیمت"
 
-#: templates/main/Home_Page.html:233
+#: templates/main/Home_Page.html:311
 msgid ""
 "\n"
 "                                Due to the fact that production costs in Iran are low, as a result, the price of the\n"
@@ -536,11 +544,11 @@ msgstr ""
 "\n"
 "با توجه به پایین بودن هزینه های تولید در ایران، در نتیجه قیمت محصول به صرفه تری به بازار عرضه می شود. از طرفی کیفیت محصولات پرویا برابر و بالاتر از محصولات مشابه در دنیاست."
 
-#: templates/main/Home_Page.html:261
+#: templates/main/Home_Page.html:344
 msgid "Product Customization"
 msgstr "شخصی سازی محصول"
 
-#: templates/main/Home_Page.html:267
+#: templates/main/Home_Page.html:350
 msgid ""
 "\n"
 "                                Due to the weather, operating conditions and needs of different companies in different\n"
@@ -553,7 +561,7 @@ msgstr ""
 "با توجه به آب و هوا، شرایط بهره برداری و نیاز شرکت های مختلف در کشورهای مختلف، پرویا این قابلیت را دارد که محصول را با توجه به شرایط مختلف عرضه کند.\n"
 "علاوه بر این، پرویا در تلاش است تا مجموعه کاملی از محصولات پر تقاضا را ارائه دهد."
 
-#: templates/main/Home_Page.html:306
+#: templates/main/Home_Page.html:389
 msgid ""
 "\n"
 "                                        Faraz Aseman Parsian Company (privately held Company), registered under the\n"
@@ -576,7 +584,7 @@ msgstr ""
 "\n"
 "شرکت فراز آسمان پارسیان (شرکت خصوصی) ثبت شده با برند پرویا با تکیه بر توان علمی و فنی خود و با استفاده از توان برجسته ترین متخصصان داخلی و در راستای ارزش های خود، انواع سیالات مورد استفاده را طراحی و تولید می کند. صنعت هوانوردی استانداردهای معتبر بین المللی و ملی را رعایت کرده است. این شرکت که در حال حاضر تنها تولید کننده این سیالات در ایران و تنها شرکت تخصصی تولید کننده سیالات هوانوردی در خاورمیانه است، سعی کرده مسئولیت اجتماعی خود را در حفاظت از محیط زیست انجام دهد. با نوآوری، تنوع و توسعه محصولات زیست تخریب پذیر."
 
-#: templates/main/Home_Page.html:339
+#: templates/main/Home_Page.html:422
 msgid ""
 "\n"
 "                                        Peravia includes four product categories: piston engine oils, jet engine oils,\n"
@@ -588,7 +596,7 @@ msgstr ""
 "\n"
 "پراویا شامل چهار دسته محصول روغن موتور پیستونی، روغن موتور جت، سیال هیدرولیک و گریس می باشد. برنامه توسعه محصول پراویا تولید و تامین کلیه مواد صنعت هوانوردی در سال های آتی است."
 
-#: templates/main/Home_Page.html:360
+#: templates/main/Home_Page.html:443
 #, python-format
 msgid ""
 "\n"
@@ -602,11 +610,11 @@ msgstr ""
 "\n"
 "برای ارسال درخواست خرید و برقراری ارتباط تجاری، می‌توانید از طریق بخش <a href='%(link)s %(target)s'>تماس با ما</a> در سایت، شماره تلفن یا شبکه‌های اجتماعی درخواست خود را ارسال کنید."
 
-#: templates/main/Home_Page.html:396
+#: templates/main/Home_Page.html:479
 msgid "Certificates"
 msgstr "گواهینامه ها"
 
-#: templates/main/Home_Page.html:482
+#: templates/main/Home_Page.html:565
 msgid "our blog"
 msgstr "وبلاگ ما"
 
@@ -673,7 +681,6 @@ msgid "Contact"
 msgstr "مخاطب"
 
 #: templates/shared/Header.html:81
-#| msgid "Blog  "
 msgid "Blog"
 msgstr "بلاگ"
 
