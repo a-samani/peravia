@@ -36,9 +36,12 @@ class ProductsByCategory(ListView):
         context = super().get_context_data(**kwargs)
         category = self.kwargs.get('category_name')
         s_cat = category.replace('-', ' ')
-        category_obj = Category.objects.get(title__iexact=s_cat)
-        # main_cat = self.kwargs.get('maincategory')
-        # context['previous_page'] = main_cat
+        try:
+            category_obj = Category.objects.get(title__iexact=s_cat)
+        except:
+            category_obj = Category.objects.get(slug__iexact=category)
+        main_cat = self.kwargs.get('maincategory')
+        context['previous_page'] = main_cat
         context['page_name'] = category
         context['title'] = 'Peravia | %s' % category
         context['persian_page_name'] = category_obj.persian_title
@@ -47,8 +50,11 @@ class ProductsByCategory(ListView):
         return context
 
     def get_queryset(self):
-        category_name = self.kwargs.get('category_name').replace('-', ' ')
-        category = Category.objects.get(title__iexact=category_name)
+        category_name = self.kwargs.get('category_name')
+        try:
+            category = Category.objects.get(title__iexact=category_name.replace('-', ' '))
+        except:
+            category = Category.objects.get(slug__iexact=category_name)
         if category is None:
             raise Http404('Not found')
         return Product.objects.get_products_by_category(category_name=category_name)
