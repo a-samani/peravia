@@ -8,7 +8,6 @@
             <div class="row">
                 <main class="col-lg-7 col-xl-9">
                     <div>
-
                         <ul class="products columns-3">
                             {% for product in products %}
                                 <li class="product">
@@ -16,7 +15,7 @@
                                         <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
                                            href="{{ product.get_absolute_url }}">
 
-                                            {% if product.image.url %}
+                                            {% if product.image %}
                                                 <img src="{{ product.image.url }}" loading="lazy" alt="img">
                                             {% else %}
                                                 <img src="{% static 'images/cover1.jpg' %}" loading="lazy" alt="img">
