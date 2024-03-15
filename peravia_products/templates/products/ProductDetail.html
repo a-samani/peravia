@@ -1,6 +1,8 @@
 {% extends 'shared/_MainLayout.html' %}
 {% load i18n %}
+{% load static %}
 {% block content %}
+
     {% include 'shared/TitleSection1.html' %}
     <section class="ls s-pt-xl-160 s-pb-xl-280 s-pt-lg-130 s-pb-lg-250 s-py-md-90 s-py-60 c-gutter-30">
         <div class="container">
@@ -9,14 +11,21 @@
                     <div class="product type-product ">
                         <div class="images" data-columns="1">
                             <figure>
-                                <div data-thumb="{{ product.image.url }}">
-                                    <a href="{{ product.image.url }}">
-                                        <img src="{{ product.image.url }}" alt="" data-caption=""
-                                             data-src="{{ product.image.url }}"
-                                             data-large_image="{{ product.image.url }}"
+                                <div {% if product.image %}data-thumb="{{ product.image.url }}"
+                                     {% else %}data-thumb="{% static 'images/cover1.jpg' %}"{% endif %}>
+                                    <a {% if product.image %}href="{{ product.image.url }}"
+                                       {% else %}href="{% static 'images/cover1.jpg' %}"{% endif %}>
+                                        <img {% if product.image %}src="{{ product.image.url }}"
+                                             {% else %}src="{% static 'images/cover1.jpg' %}"{% endif %}
+                                             alt="" data-caption=""
+                                             data-src="
+                                                     {% if product.image %}{{ product.image.url }}{% else %}{% static 'images/placeholder.jpg' %}{% endif %}"
+                                             data-large_image="
+                                                     {% if product.image %}{{ product.image.url }}{% else %}{% static 'images/placeholder.jpg' %}{% endif %}"
                                              data-large_image_width="1000" data-large_image_height="1000">
                                     </a>
                                 </div>
+
                             </figure>
                         </div>
                         <div class="summary entry-summary">
