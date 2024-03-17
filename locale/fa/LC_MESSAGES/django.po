@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-04 01:33+0330\n"
-"PO-Revision-Date: 2024-03-17 09:30+0000\n"
+"POT-Creation-Date: 2024-03-17 13:48+0330\n"
+"PO-Revision-Date: 2024-03-17 10:19+0000\n"
 "Last-Translator: Anonymous User <ali@mail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -75,38 +75,38 @@ msgstr "مرا بخاطر بسپار"
 msgid "Lost your password?"
 msgstr "رمزعبور خود را فراموش کرده اید ؟"
 
-#: peravia_blog/templates/news/NewsDetail.html:90
+#: peravia_blog/templates/news/NewsDetail.html:97
 #: templates/main/Home_Page.html:560
 msgid "Latest News"
 msgstr "آخرین اخبار"
 
-#: peravia_blog/templates/news/NewsList.html:32
+#: peravia_blog/templates/news/NewsList.html:34
 #: templates/main/Home_Page.html:596 templates/main/Home_Page.html:640
 msgid "by"
 msgstr "توسط"
 
-#: peravia_blog/templates/news/NewsList.html:32
+#: peravia_blog/templates/news/NewsList.html:34
 #: templates/main/Home_Page.html:596 templates/main/Home_Page.html:640
 msgid "Admin"
 msgstr "ادمین"
 
-#: peravia_blog/templates/news/NewsList.html:47
+#: peravia_blog/templates/news/NewsList.html:49
 msgid "read more"
 msgstr "ادامه مطلب"
 
-#: peravia_blog/templates/news/NewsList.html:52
+#: peravia_blog/templates/news/NewsList.html:54
 msgid "Posts navigation"
 msgstr "پست نوگیشن"
 
-#: peravia_blog/templates/news/NewsList.html:57
+#: peravia_blog/templates/news/NewsList.html:59
 msgid "Previous page"
 msgstr "صفحه قبل"
 
-#: peravia_blog/templates/news/NewsList.html:62
+#: peravia_blog/templates/news/NewsList.html:64
 msgid "Page"
 msgstr "صفحه"
 
-#: peravia_blog/templates/news/NewsList.html:68
+#: peravia_blog/templates/news/NewsList.html:70
 msgid "Next page"
 msgstr "صفحه بعد"
 
@@ -165,48 +165,48 @@ msgstr "ایمیل ما"
 msgid "Phone number is not valid"
 msgstr "شماره تلفن معتبر نیست"
 
-#: peravia_products/templates/products/ProductDetail.html:36
+#: peravia_products/templates/products/ProductDetail.html:45
 msgid "Description"
 msgstr "توضیحات"
 
-#: peravia_products/templates/products/ProductDetail.html:55
+#: peravia_products/templates/products/ProductDetail.html:64
 msgid "Information"
 msgstr "اطلاعات"
 
-#: peravia_products/templates/products/ProductDetail.html:59
+#: peravia_products/templates/products/ProductDetail.html:68
 msgid "Additional information"
 msgstr "اطلاعات تکمیلی"
 
-#: peravia_products/templates/products/ProductDetail.html:62
-#: peravia_products/templates/products/ProductDetail.html:134
+#: peravia_products/templates/products/ProductDetail.html:71
+#: peravia_products/templates/products/ProductDetail.html:143
 msgid "Characteristics"
 msgstr "مشخصات"
 
-#: peravia_products/templates/products/ProductDetail.html:67
+#: peravia_products/templates/products/ProductDetail.html:76
 msgid "Main Application"
 msgstr "برنامه اصلی"
 
-#: peravia_products/templates/products/ProductDetail.html:70
+#: peravia_products/templates/products/ProductDetail.html:79
 msgid "Caution"
 msgstr "احتیاط"
 
-#: peravia_products/templates/products/ProductDetail.html:75
+#: peravia_products/templates/products/ProductDetail.html:84
 msgid "Specifications"
 msgstr "مشخصات فنی"
 
-#: peravia_products/templates/products/ProductDetail.html:94
+#: peravia_products/templates/products/ProductDetail.html:103
 msgid "Advantages"
 msgstr "مزایای"
 
-#: peravia_products/templates/products/ProductDetail.html:113
+#: peravia_products/templates/products/ProductDetail.html:122
 msgid "Health and Safety"
 msgstr "سلامت و امنیت"
 
-#: peravia_products/templates/products/ProductDetail.html:115
+#: peravia_products/templates/products/ProductDetail.html:124
 msgid "Do not use as medicine or food product."
 msgstr "به عنوان دارو یا محصول غذایی استفاده نکنید"
 
-#: peravia_products/templates/products/ProductDetail.html:117
+#: peravia_products/templates/products/ProductDetail.html:126
 msgid ""
 "\n"
 "                                        If swallowed, get medical assistance. If medical assistance is not immediately\n"
@@ -217,7 +217,7 @@ msgstr ""
 "در صورت بلعیده شدن، از کمک پزشکی استفاده کنید.\n"
 "اگر کمک پزشکی بلافاصله در دسترس نیست، استفراغ را تحریک کنید."
 
-#: peravia_products/templates/products/ProductDetail.html:123
+#: peravia_products/templates/products/ProductDetail.html:132
 msgid ""
 "\n"
 "                                        After handling wash thoroughly and immediately with soap and water. Launder oily\n"
@@ -227,26 +227,26 @@ msgstr ""
 "\n"
 "پس از دست زدن به طور کامل و بلافاصله با آب و صابون بشویید. لباس های روغنی را قبل از استفاده مجدد بشویید."
 
-#: peravia_products/templates/products/ProductDetail.html:129
+#: peravia_products/templates/products/ProductDetail.html:138
 msgid "Discard oil-soaked shoes or boots."
 msgstr "کفش ها یا چکمه های آغشته به روغن را دور بیندازید."
 
-#: peravia_products/templates/products/ProductDetail.html:148
-#: peravia_products/templates/products/ProductDetail.html:158
-#: peravia_products/templates/products/ProductList.html:52
+#: peravia_products/templates/products/ProductDetail.html:157
+#: peravia_products/templates/products/ProductDetail.html:167
+#: peravia_products/templates/products/ProductList.html:51
+#: peravia_products/templates/products/ProductList.html:58
 #: peravia_products/templates/products/ProductList.html:59
-#: peravia_products/templates/products/ProductList.html:60
 #: templates/shared/Header.html:20 templates/shared/Header.html:28
 msgid "Search"
 msgstr "جستجو کردن"
 
-#: peravia_products/templates/products/ProductDetail.html:154
-#: peravia_products/templates/products/ProductList.html:56
+#: peravia_products/templates/products/ProductDetail.html:163
+#: peravia_products/templates/products/ProductList.html:55
 msgid "Search for:"
 msgstr "جستجو برای:"
 
-#: peravia_products/templates/products/ProductDetail.html:163
-#: peravia_products/templates/products/ProductList.html:64
+#: peravia_products/templates/products/ProductDetail.html:172
+#: peravia_products/templates/products/ProductList.html:63
 msgid "Categories"
 msgstr "دسته بندی ها"
 
@@ -548,6 +548,23 @@ msgstr ""
 msgid "Product Customization"
 msgstr "شخصی سازی محصول"
 
+#: templates/main/Home_Page.html:350
+#| msgid ""
+#| "\n"
+#| "                                Due to the fact that production costs in Iran are low, as a result, the price of the\n"
+#| "                                product\n"
+#| "                                will be offered to the market more economically. On the other hand, the quality of\n"
+#| "                                peravia\n"
+#| "                                products is equal to and higher than similar products in the world.\n"
+#| "                            "
+msgid ""
+"\n"
+"                                Due to the weather, operating conditions and needs of different companies in different\n"
+"                                countries, Peravia has the ability to offer the product according to different\n"
+"                                conditions.\n"
+"                                In addition, Peravia strives to offer a complete portfolio of high-demand products.\n"
+"                            "
+msgstr ""
 
 #: templates/main/Home_Page.html:389
 msgid ""

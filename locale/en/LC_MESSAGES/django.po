@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-04 01:33+0330\n"
+"POT-Creation-Date: 2024-03-17 13:48+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,38 +74,38 @@ msgstr ""
 msgid "Lost your password?"
 msgstr ""
 
-#: peravia_blog/templates/news/NewsDetail.html:90
+#: peravia_blog/templates/news/NewsDetail.html:97
 #: templates/main/Home_Page.html:560
 msgid "Latest News"
 msgstr ""
 
-#: peravia_blog/templates/news/NewsList.html:32
+#: peravia_blog/templates/news/NewsList.html:34
 #: templates/main/Home_Page.html:596 templates/main/Home_Page.html:640
 msgid "by"
 msgstr ""
 
-#: peravia_blog/templates/news/NewsList.html:32
+#: peravia_blog/templates/news/NewsList.html:34
 #: templates/main/Home_Page.html:596 templates/main/Home_Page.html:640
 msgid "Admin"
 msgstr ""
 
-#: peravia_blog/templates/news/NewsList.html:47
+#: peravia_blog/templates/news/NewsList.html:49
 msgid "read more"
 msgstr ""
 
-#: peravia_blog/templates/news/NewsList.html:52
+#: peravia_blog/templates/news/NewsList.html:54
 msgid "Posts navigation"
 msgstr ""
 
-#: peravia_blog/templates/news/NewsList.html:57
+#: peravia_blog/templates/news/NewsList.html:59
 msgid "Previous page"
 msgstr ""
 
-#: peravia_blog/templates/news/NewsList.html:62
+#: peravia_blog/templates/news/NewsList.html:64
 msgid "Page"
 msgstr ""
 
-#: peravia_blog/templates/news/NewsList.html:68
+#: peravia_blog/templates/news/NewsList.html:70
 msgid "Next page"
 msgstr ""
 
@@ -164,48 +164,48 @@ msgstr ""
 msgid "Phone number is not valid"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:36
+#: peravia_products/templates/products/ProductDetail.html:45
 msgid "Description"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:55
+#: peravia_products/templates/products/ProductDetail.html:64
 msgid "Information"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:59
+#: peravia_products/templates/products/ProductDetail.html:68
 msgid "Additional information"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:62
-#: peravia_products/templates/products/ProductDetail.html:134
+#: peravia_products/templates/products/ProductDetail.html:71
+#: peravia_products/templates/products/ProductDetail.html:143
 msgid "Characteristics"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:67
+#: peravia_products/templates/products/ProductDetail.html:76
 msgid "Main Application"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:70
+#: peravia_products/templates/products/ProductDetail.html:79
 msgid "Caution"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:75
+#: peravia_products/templates/products/ProductDetail.html:84
 msgid "Specifications"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:94
+#: peravia_products/templates/products/ProductDetail.html:103
 msgid "Advantages"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:113
+#: peravia_products/templates/products/ProductDetail.html:122
 msgid "Health and Safety"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:115
+#: peravia_products/templates/products/ProductDetail.html:124
 msgid "Do not use as medicine or food product."
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:117
+#: peravia_products/templates/products/ProductDetail.html:126
 msgid ""
 "\n"
 "                                        If swallowed, get medical "
@@ -214,7 +214,7 @@ msgid ""
 "                                        "
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:123
+#: peravia_products/templates/products/ProductDetail.html:132
 msgid ""
 "\n"
 "                                        After handling wash thoroughly and "
@@ -223,26 +223,26 @@ msgid ""
 "                                        "
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:129
+#: peravia_products/templates/products/ProductDetail.html:138
 msgid "Discard oil-soaked shoes or boots."
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:148
-#: peravia_products/templates/products/ProductDetail.html:158
-#: peravia_products/templates/products/ProductList.html:52
+#: peravia_products/templates/products/ProductDetail.html:157
+#: peravia_products/templates/products/ProductDetail.html:167
+#: peravia_products/templates/products/ProductList.html:51
+#: peravia_products/templates/products/ProductList.html:58
 #: peravia_products/templates/products/ProductList.html:59
-#: peravia_products/templates/products/ProductList.html:60
 #: templates/shared/Header.html:20 templates/shared/Header.html:28
 msgid "Search"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:154
-#: peravia_products/templates/products/ProductList.html:56
+#: peravia_products/templates/products/ProductDetail.html:163
+#: peravia_products/templates/products/ProductList.html:55
 msgid "Search for:"
 msgstr ""
 
-#: peravia_products/templates/products/ProductDetail.html:163
-#: peravia_products/templates/products/ProductList.html:64
+#: peravia_products/templates/products/ProductDetail.html:172
+#: peravia_products/templates/products/ProductList.html:63
 msgid "Categories"
 msgstr ""
 
